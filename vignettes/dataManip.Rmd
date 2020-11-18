@@ -1,0 +1,164 @@
+---
+title: "Cleaning and formatting the insect pathogen data"
+author: "Tad Dallas"
+output:
+  pdf_document:
+    latex_engine: xelatex
+    toc: yes
+  html_document:
+    fig_height: 6
+    fig_width: 6
+    highlight: tango
+    theme: journal
+vignette: >
+  %\VignetteIndexEntry{Put the title of your vignette here}
+  %\VignetteEngine{knitr::rmarkdown}
+  \usepackage[utf8]{inputenc}
+---
+
+
+
+
+### Loading in and cleaning/manipulating data
+
+
+
+
+PROTOZOANS!!!!!
+
+```{r}
+
+# protozoans #nrow 7164
+data(nvpassoc)
+
+cols <- c('Host', 'Pathogen', 'HighTaxon', 'LowTaxon', 'HostTissueInfected', 'LogMaxDose', 'HostStageTested')
+proto <- nvpassoc[ ,which(colnames(nvpassoc) %in% cols)]
+neg <- negative[which(negative$Group=='Protozoa'), which(colnames(negative) %in% cols)]
+
+proto <- as.data.frame(proto[ ,c(4,1,2,3,5)])
+proto$LogMaxDose <- NA
+proto$HostStageTested <- NA
+proto2 <- proto[ ,c(1,2,3,4,6,7,5)]
+
+neg2 <- neg[ ,c(4,1,5,6,2,3)]
+neg2$HostTissueInfected <- NA
+
+pDat <- cbind(presence=c(rep(1,nrow(proto2)), rep(0, nrow(neg2))), 
+	rbind(proto2, neg2))
+pDat <- as.data.frame(pDat)
+
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+NEMATODES!!!!
+
+
+```{r}
+
+# nematodes #nrow 234
+data(nematode)
+
+
+nema <- nematode[,c(2,3,4,5,7,8,9,10,12,13)]
+colnames(nema)[2] <- 'Pathogen'
+colnames(nema)[3:4] <- c('Order', 'Family')
+
+neg3 <- as.data.frame(negative[ ,c(7,2,11,12,6)])
+colnames(neg3)[5] <- 'StageInfected'
+neg3$TissueInfected <- NA
+neg3$FieldOrLab <- NA
+neg3$Country <- NA
+neg3$AssociatedBacterium <- NA
+neg3$IntermediateHost <- NA
+
+nDat <- cbind(presence=c(rep(1,nrow(nema)), rep(0, nrow(neg3))), 
+	rbind(nema, neg3))
+nDat <- as.data.frame(nDat)
+
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+VIRUSES!!!!!!
+
+
+```{r}
+
+data(negative)
+data(viruses)
+
+dat <- viruses[,c(2,5,3,4)]
+
+neg <- negative[which(negative$Group=='Viruses'), c(7,2,9,10,5:6,8,11:12)]
+colnames(neg)[2] <- 'Virus'
+
+dat$LogMaxDose <- NA
+dat$HostStageTested <- NA
+dat$Group <- 'Viruses'
+dat$Order <- NA
+dat$Family <- NA
+
+vDat <- cbind(presence=c(rep(1,nrow(dat)), rep(0, nrow(neg))), 
+	rbind(dat, neg))
+vDat <- as.data.frame(vDat)
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+```{r}
+
+
+write.csv(vDat, file='vDat.csv')
+write.csv(nDat, file='nDat.csv')
+write.csv(pDat, file='pDat.csv')
+
+
+```
+
+
+
+
+
+
+
