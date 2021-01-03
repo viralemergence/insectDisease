@@ -14,8 +14,7 @@
 #'   \item Host. Host species examined
 #'   \item Order. Host taxonomic order.
 #'   \item Family. Host taxonomic family.
-#'   \item HostStageTested. Host stage exposed to pathogen (e.g. Larvae, Nymph, Adult, or 
-#'      Egg\Larva\Pupa) 
+#'   \item HostStageTested. Host stage exposed to pathogen (e.g. Larvae, Nymph, Adult)
 #'   \item HostTissueInfected. Host tissue infected
 #'   \item FieldOrLab. Was this a field or lab tested association?
 #'   \item Country. What country did the interaction occur in?

@@ -12,8 +12,7 @@
 #'   \item DateEntered. Date of initial data entry
 #'   \item DateModified. Modification date of entry
 #'   \item LogMaxDose. Dosage, in many different units
-#'   \item HostStageTested. Host stage exposed to pathogen (e.g. Larvae, Nymph, Adult, or 
-#'      Egg\Larva\Pupa) 
+#'   \item HostStageTested. Host stage exposed to pathogen (e.g. Larvae, Nymph, Adult)
 #'   \item Host. Host species examined
 #'   \item Group. Pathogen group (e.g. viruses) 
 #'   \item HighTaxon. General classification of pathogen (e.g. DNA virus)
