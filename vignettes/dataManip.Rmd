@@ -10,10 +10,6 @@ output:
     fig_width: 6
     highlight: tango
     theme: journal
-vignette: >
-  %\VignetteIndexEntry{Put the title of your vignette here}
-  %\VignetteEngine{knitr::rmarkdown}
-  \usepackage[utf8]{inputenc}
 ---
 
 
