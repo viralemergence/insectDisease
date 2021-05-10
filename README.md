@@ -1,5 +1,7 @@
 ### *insectDisease*: insect disease data from the USDA packaged as an R package
 
+David Onstad from the USDA provided us with this USDA-gathered insect disease database, sometimes referred to as the "Ecological Database of the World's Insect Pathogens" or EDWIP. Files have been converted from SQL to csv, and ported into R for easy exploration and analysis. Thanks to the Macroecology of Infectious Disease RCN for funding and support.
+
 
 ### Install
 
