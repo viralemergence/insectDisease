@@ -177,7 +177,7 @@ vDat <- as.data.frame(vDat)
 
 
 
-```{r}
+```{r, eval=FALSE}
 
 write.csv(vDat, file='../inst/doc/vDat.csv')
 write.csv(nDat, file='../inst/doc/nDat.csv')
@@ -353,8 +353,8 @@ Read in cached taxonomy (to do this every time would be computationally costly).
 
 ```{r eval=TRUE}
 
-hostTaxonomy <- read.csv('../data/hostTaxonomy.csv')
-pathTaxonomy <- read.csv('../data/pathTaxonomy.csv')
+data(hostTaxonomy)
+data(pathTaxonomy)
 
 ```
 
@@ -475,7 +475,7 @@ edwip3$Group[which(edwip3$HighTaxon == 'Microspora')] <- 'Fungi'
 edwip3$X <- NULL
 
 
-write.csv(edwip3, file='../inst/doc/edwip.csv')
+write.csv(edwip3, file='edwip.csv')
 
 ```
 

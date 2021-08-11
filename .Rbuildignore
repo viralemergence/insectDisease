@@ -3,3 +3,5 @@ manuscript
 csv
 .git
 .gitignore
+^doc$
+^Meta$
