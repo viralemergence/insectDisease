@@ -1,1 +1,5 @@
 ^\.travis\.yml$
+manuscript
+csv
+.git
+.gitignore

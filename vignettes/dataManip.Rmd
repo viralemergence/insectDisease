@@ -1,31 +1,75 @@
 ---
 title: "Cleaning and formatting the insect pathogen data"
 author: "Tad Dallas"
-output:
-  pdf_document:
-    latex_engine: xelatex
-    toc: yes
-  html_document:
-    fig_height: 6
-    fig_width: 6
-    highlight: tango
-    theme: journal
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteIndexEntry{Cleaning and formatting the insect pathogen data}
+  %\VignetteEncoding{UTF-8}
 ---
 
 
 
 
-### Loading in and cleaning/manipulating data
-
-
-
-
-PROTOZOANS!!!!!
+## load required packages for vignette
 
 ```{r}
 
-# protozoans #nrow 7164
+library(insectDisease)
+library(plyr)
+library(dplyr)
+library(corrplot)
+
+```
+
+
+
+
+## Loading in and cleaning/manipulating data
+
+This outputs all the `.rda` files to `.csv` for longer-term shelf stability. 
+
+```{r}
+
+files <- list.files('data')
+
+lapply(files, function(x){
+  nm <- gsub('.rda', '', x)
+  nm <- gsub('.csv', '', nm)
+  if(grepl('csv', x)){
+    tmp <- read.csv(paste('data/',x,sep=''))
+    write.csv(tmp, paste('csv/', nm,'.csv', sep=''))
+  }else{
+    load(paste('data/',x,sep=''))
+    write.csv(get(nm), paste('csv/', nm,'.csv', sep=''))
+  }
+})
+
+```
+
+
+
+
+
+
+
+### Non-interactions
+
+```{r}
+
+data(negative)
+
+```
+
+
+
+
+### Protozoans
+
+```{r}
+
 data(nvpassoc)
+
 
 cols <- c('Host', 'Pathogen', 'HighTaxon', 'LowTaxon', 'HostTissueInfected', 'LogMaxDose', 'HostStageTested')
 proto <- nvpassoc[ ,which(colnames(nvpassoc) %in% cols)]
@@ -57,31 +101,28 @@ pDat <- as.data.frame(pDat)
 
 
 
-NEMATODES!!!!
+### Nematodes
 
 
 ```{r}
 
-# nematodes #nrow 234
 data(nematode)
 
+## Tried to add citations in, but couldn't determine citations for negatives.
+## There's also issues with the index being non-unique among data types (bad form). 
+#data(nemaref)
+#cites <- as.data.frame(table(nemaref$ERNnem))
+#colnames(cites) <- c('ERNnem', 'citations')
+#cites$ERNnem <- as.numeric(cites$ERNnem)
+#nematode <- left_join(nematode, cites, by='ERNnem')
 
-nema <- nematode[,c(2,3,4,5,7,8,9,10,12,13)]
+nema <- nematode[,c(2,3,4,5,7,8,9,10,12,13)]   #,16)]
 colnames(nema)[2] <- 'Pathogen'
 colnames(nema)[3:4] <- c('Order', 'Family')
 
-neg3 <- as.data.frame(negative[ ,c(7,2,11,12,6)])
-colnames(neg3)[5] <- 'StageInfected'
-neg3$TissueInfected <- NA
-neg3$FieldOrLab <- NA
-neg3$Country <- NA
-neg3$AssociatedBacterium <- NA
-neg3$IntermediateHost <- NA
 
-nDat <- cbind(presence=c(rep(1,nrow(nema)), rep(0, nrow(neg3))), 
-	rbind(nema, neg3))
-nDat <- as.data.frame(nDat)
-
+## There is no failed infection data for nematodes, as far as I can tell
+nDat <- as.data.frame(nema)
 
 ```
 
@@ -100,17 +141,11 @@ nDat <- as.data.frame(nDat)
 
 
 
-
-
-
-
-
-VIRUSES!!!!!!
+### Viruses
 
 
 ```{r}
 
-data(negative)
 data(viruses)
 
 dat <- viruses[,c(2,5,3,4)]
@@ -144,14 +179,444 @@ vDat <- as.data.frame(vDat)
 
 ```{r}
 
-
-write.csv(vDat, file='vDat.csv')
-write.csv(nDat, file='nDat.csv')
-write.csv(pDat, file='pDat.csv')
-
+write.csv(vDat, file='../inst/doc/vDat.csv')
+write.csv(nDat, file='../inst/doc/nDat.csv')
+write.csv(pDat, file='../inst/doc/pDat.csv')
 
 ```
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+### Mashing everything together in one file 
+
+Note that this will lose some information specific to EDWIP subgroups, such as 'Host tissue infected', which is only available for nematodes (and is almost entirely labeled as 'hemocoel'). 
+
+
+```{r}
+
+cols <- c('Host', 'Pathogen', 'HighTaxon', 'LowTaxon', 'HostTissueInfected', 'LogMaxDose', 'HostStageTested', 'Group')
+
+colnames(nvpassoc)[9] <- 'HostStageTested'
+prot2 <- nvpassoc[ ,which(colnames(nvpassoc) %in% cols)]
+prot2$LogMaxDose <- NA
+
+
+nega2 <- negative[, which(colnames(negative) %in% cols)]
+nega2$HostTissueInfected <- NA
+
+
+nema2 <- nematode[, c(2,3,4,5,8,7,7,1)]
+nema2[,6] <- NA
+nema2[,8] <- 'Nematode'
+colnames(nema2) <- cols
+
+viru2 <- viruses[,c(2,5,3,4,7,1,6,1)]
+viru2[,6] <- NA
+viru2[,8] <- 'Viruses'
+colnames(viru2) <- cols
+
+prot2$interaction <- 1
+nema2$interaction <- 1
+viru2$interaction <- 1
+nega2$interaction <- 0
+
+edwip <- rbind(prot2[,order(colnames(prot2))], 
+  nema2[,order(colnames(nema2))],
+  viru2[,order(colnames(viru2))], 
+  nega2[,order(colnames(nega2))])  
+edwip$Group <- as.character(edwip$Group)
+edwip$Host <- trimws(as.character(edwip$Host))
+edwip$Pathogen <- trimws(as.character(edwip$Pathogen))
+
+edwip$Group[which(edwip$Group == 'Mollicutes')] <- "Bacteria"
+
+```
+
+
+
+
+
+Mashing in host 'status'
+
+```{r}
+
+data(hosts)
+status <- data.frame(Host= hosts$HostSpecies, 
+  insectStatus=as.character(hosts$InsectStatus))
+status$insectStatus[which(status$insectStatus %in% c('','uncertain', 'unknown species'))] <- NA
+status <- status[-which(duplicated(status$Host)),]
+
+edwip <- left_join(edwip, status, by='Host')
+
+```
+
+
+
+
+
+
+
+Getting host taxonomic data
+
+```{r}
+
+hdict <- function(names) { 
+  names.orig <- names
+  names <- str_replace(names, " cf\\.","")
+  names <- str_replace(names, " sp\\.","")
+  names <- str_replace(names, " gen\\.","")
+  u <- get_uid(names, 
+    rank_filter = c("subspecies", "species", "genus", "family", "order", "class"), 
+    division_filter = "vertebrates", ask = FALSE)
+  c <- classification(u)
+  n <- !is.na(u)
+  attributes(u) <- NULL
+  s <- unlist(lapply(c, function(x){tryCatch(x$name[[which(x$rank=="species")]], error = function(e) {NA})}), use.names = FALSE)
+  g <- unlist(lapply(c, function(x){tryCatch(x$name[[which(x$rank=="genus")]], error = function(e) {NA})}), use.names = FALSE)
+  f <- unlist(lapply(c, function(x){tryCatch(x$name[[which(x$rank=="family")]], error = function(e) {NA})}), use.names = FALSE)
+  o <- unlist(lapply(c, function(x){tryCatch(x$name[[which(x$rank=="order")]], error = function(e) {NA})}), use.names = FALSE)
+  c2 <- unlist(lapply(c, function(x){tryCatch(x$name[[which(x$rank=="class")]], error = function(e) {NA})}), use.names = FALSE)
+  
+  levels <- c("species", "genus", "family", "order", "class")
+  u <- unlist(lapply(c, function(x){tryCatch(last(na.omit(x[x$rank %in% levels,'id'])), 
+    error = function(e) {NA})}), use.names = FALSE)
+  
+  ret <- data.frame(HostOriginal = names.orig,
+           HostTaxID = u,
+           HostNCBIResolved = n, 
+           Host = s,
+           HostGenus = g,
+           HostFamily = f,
+           HostOrder = o, 
+           HostClass = c2) %>% mutate_cond(HostNCBIResolved == FALSE, Host = HostOriginal) 
+  ret$Host <- NULL
+  return(ret)
+}
+
+
+
+pdict <- function(names) { 
+  names.orig <- names
+  u <- get_uid(names, ask = FALSE)
+  c <- classification(u)
+  n <- !is.na(u)
+  attributes(u) <- NULL
+  s <- unlist(lapply(c, function(x){tryCatch(x$name[[which(x$rank=="species")]], error = function(e) {NA})}), use.names = FALSE)
+  g <- unlist(lapply(c, function(x){tryCatch(x$name[[which(x$rank=="genus")]], error = function(e) {NA})}), use.names = FALSE)
+  f <- unlist(lapply(c, function(x){tryCatch(x$name[[which(x$rank=="family")]], error = function(e) {NA})}), use.names = FALSE)
+  o <- unlist(lapply(c, function(x){tryCatch(x$name[[which(x$rank=="order")]], error = function(e) {NA})}), use.names = FALSE)
+  c2 <- unlist(lapply(c, function(x){tryCatch(x$name[[which(x$rank=="class")]], error = function(e) {NA})}), use.names = FALSE)
+  k <- unlist(lapply(c, function(x){tryCatch(x$name[[which(x$rank=="kingdom")]], error = function(e) {NA})}), use.names = FALSE)  
+  levels <- c("species", "genus", "family", "order", "class")
+  u <- unlist(lapply(c, function(x){
+    tryCatch(last(na.omit(x[x$rank %in% levels,'id'])), 
+      error = function(e) {NA})
+    }), 
+    use.names = FALSE)
+
+  ret <- data.frame(
+    PathOriginal=names.orig, 
+    PathTaxID = u,
+    PathNCBIResolved = n, 
+    PathGenus = g,
+    PathFamily = f,
+    PathOrder = o, 
+    PathClass = c2,
+    PathKingdom= k) %>% 
+  mutate_cond(PathNCBIResolved == FALSE, Path = PathOriginal) 
+  ret$PathOriginal <- NULL
+  return(ret)  
+}
+
+```
+
+
+
+
+
+
+
+### Providing a taxonomic backbone to host and pathogen records
+
+Read in cached taxonomy (to do this every time would be computationally costly).
+
+```{r eval=TRUE}
+
+hostTaxonomy <- read.csv('../data/hostTaxonomy.csv')
+pathTaxonomy <- read.csv('../data/pathTaxonomy.csv')
+
+```
+
+
+
+Set eval to FALSE, but users can run this. For now, we will cache the taxonomic data and read it in to format the data below. 
+
+```{r eval=FALSE}
+
+hostTaxonomy <- hdict(edwip$Host)
+pathTaxonomy <- pdict(as.character(edwip$Pathogen))
+
+```
+
+
+
+
+
+
+
+
+```{r}
+
+edwip2 <- cbind(hostTaxonomy, pathTaxonomy, edwip)
+edwip2$X <- NULL
+
+```
+
+
+```{r}
+
+#' Programmatically adjust pathogen "Group" column based on taxonomy
+#'
+#' @param dat the data.frame containing a column "Group"
+#' @param tax the taxonomy data.frame from above
+#'
+#' @return dat, but with updated "Group" designations based on taxonomy
+
+fillTaxon <- function(edwip){
+    
+  protzC <- c('Kinetoplastea')
+  bactC <- c('Gammaproteobacteria', 'Bacilli')
+  
+  fungz <- c('Unikaryon ixodis', 'Tompetchia webberi', 
+    'Sphaerostilbe auranticola', 'Erynia sepulchralis',
+    'Furia vomitoriae', 'Hymenostilbe sp.', 'Hymenostilbe spp.', 
+    'Aquamortierella elegans', "Sorosporella sp.", "Coreomycetopsis oedipus",
+    "Termitaria coronata", "Herpomyces paranensis", "Herpomyces tricuspidatus", 
+    "Herpomyces arietinus", "Herpomyces nyctoborae", "Strongwellsea sp. nov. 1", 
+    "Strongwellsea sp. nov. 2", "Strongwellsea sp. nov. 3", 
+    "Strongwellsea sp. nov. 6", "Strongwellsea sp. nov. 5", 
+    "Strongwellsea sp. nov. 4", "Eryniopsis lampyridarum", 
+    "Entomophthora erupta", "Erynia erinacea", "Erynia spp.",
+    "Thaxterosporium turbinatum", "Diheterospora sp.", "Neozygites cf floridana", 
+    "Coelomomyces sp.", "Pandora gammae", "Myiophagus sp.", 
+    "Septobasidium spp.", "Neozygites cucumeriformis", 
+    "Synnematium sp.", "Fusarium oxysporum var. orthoceras", 
+    "Fusarium sp. near solani","Apergillus sp.","Leptolegnia sp.", 
+    "Zoophthora curvispora")
+
+  virz <- c("Thymelicus lineola NPV", 
+    "Carposina niponensis GV", "Colias eurytheme NPV", 
+    "Celerio euphorbiae NPV", "Aedes taeniorhynchus IV (RMIV)", 
+    "Bombyx mori CPV", "Dendrolimus spectabilis CPV")
+
+  protz <- c('Gregarina guatemalensis', 'Hoplorhynchus polyhamatus', 
+    'Adelina legeri', "Leishmania major") 
+
+  bactz <- c("Rickettsiella sp.", "Pseudomonas florescens", "Bacillus tuviensis")
+
+  # now go through rows where group is unknown and try to fix that
+  for(i in 1:nrow(edwip)){
+    if(edwip$Group[i] %in% c('', 'Not defined in EDWIP')){
+
+      if(!is.na(edwip$PathKingdom[i]) & edwip$PathKingdom[i] == 'Fungi'){
+        edwip$Group[i] <- 'Fungi'
+      }
+      if(edwip$PathClass[i] %in% bactC | edwip$Pathogen[i] %in% bactz){
+        edwip$Group[i] <- 'Bacteria'
+      }
+      if(edwip$PathClass[i] %in% protzC | edwip$Pathogen[i] %in% protz){
+        edwip$Group[i] <- 'Protozoa'
+      }
+      if(edwip$Pathogen[i] %in% fungz){
+        edwip$Group[i] <- 'Fungi'
+      }
+      if(edwip$Pathogen[i] %in% virz){
+        edwip$Group[i] <- 'Viruses'
+      }
+
+    }
+  }
+  return(edwip)
+}
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+```{r}
+
+edwip3 <- fillTaxon(edwip2)
+
+
+
+# microsporidians used to be considered protozoa, but are now fungi.
+edwip3$Group[which(edwip3$PathKingdom == 'Fungi' & edwip3$Group != 'Fungi')] <- 'Fungi'
+edwip3$Group[which(edwip3$HighTaxon == 'Microspora')] <- 'Fungi'
+edwip3$X <- NULL
+
+
+write.csv(edwip3, file='../inst/doc/edwip.csv')
+
+```
+
+
+
+
+
+
+
+
+
+
+### Visualizing the data
+
+Reproducing figures from the manuscript
+
+> Dallas, Onstad, and Carlson. 2022. "  " journal
+
+
+
+```{r}
+
+bubble <- edwip3 %>%
+  group_by(Group) %>% 
+  summarise(n=length(Host), 
+    nHosts=length(unique(Host)), 
+    nPaths=length(unique(Pathogen)), 
+    positives=sum(interaction==1, na.rm=TRUE), 
+    negatives=sum(interaction==0, na.rm=TRUE)
+  ) 
+
+
+
+colorz <- c('#E5FCC2', '#9DE0AD', '#45ADA8', '#547980', '#594F4F')
+
+
+pdf('bubble.pdf')
+
+par(mar=c(4,6,0.5,0.5))
+plot(x=1:2, 
+  y=1:2, type='n', las=1,
+  ylim=c(0,6), 
+  xaxt='n', yaxt='n',
+  xlim=c(0.75,2.25), 
+  xlab='Host-parasite interaction', 
+  ylab='')
+
+scul <- sqrt(c(unlist(bubble[,6]), unlist(bubble[,5])))
+scul <- 20*(scul / max(scul))
+
+points(x=sort(rep(c(1,2),5)), 
+  y=rep(1:5, 2), 
+  col=1,
+  bg=adjustcolor(colorz, 0.75), 
+  cex=scul,
+  pch=21)
+
+text(x=c(1.2,1.35,1.6), 
+  y=rep(5.25,3), cex=0.85, adj=0,
+  c('Hosts', 'Pathogens', 'Interactions'))
+
+text(x=rep(1.2, 5), 
+  y=1:5, cex=1, adj=0,
+  paste(bubble$nHosts))
+
+text(x=rep(1.4, 5), 
+  y=1:5, cex=1, adj=0,
+  paste(bubble$nPaths))
+
+text(x=rep(1.6, 5), 
+  y=1:5, cex=1, adj=0,
+  paste(bubble$n))
+
+axis(1, at = c(1,2), 
+  labels=c("Negative", "Positive")
+)
+
+axis(2, at = 1:5, las=1,
+  labels=bubble$Group
+)
+
+dev.off()
+
+```
+
+
+
+
+
+
+
+
+
+
+
+Diversity begets diversity, but not really
+
+```{r}
+
+tmp <- as.data.frame.matrix(
+  with(edwip3[which(edwip3$interaction==1),], 
+    table(Host, Group)
+  )
+)
+
+
+## Corplot
+pdf('corPlot.pdf', height=9,width=9)
+par(mar=c(2,2,0.5,0.5))
+
+corrplot.mixed(cor(tmp, method='spearman'), 
+	lower='number', upper='ellipse',
+	cl.lim=c(0,1),
+	tl.col=1, 
+  insig='label_sig',
+  number.cex=1.5, 
+	addgrid.col=grey(0.5,0.5), 
+	mar=c(0,0,1,0)
+)
+dev.off()
+
+```
+
+
+
+
+
+
+
+Relationship between positive and negative interactions for host species
+
+```{r}
+
+tmp2 <- edwip3 %>%
+  group_by(Host, Group) %>%
+  summarise(nPos=sum(interaction==1), 
+  nNeg=sum(interaction==0))
+
+cor.test(tmp2$nPos, tmp2$nNeg, method='spearman')
+
+```
 
 
 

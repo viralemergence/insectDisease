@@ -15,7 +15,7 @@ Data frames can be grouped by parasite type, as `nemaref`, `nematode` and `newne
 *When using this database, cite this reference*
 
 Braxton, S. M., et al. "Description and analysis of two internet-based databases of insect
-pathogens: EDWIP and VIDIL." Journal of invertebrate pathology 83.3 (2003): 185-195.
+pathogens: EDWIP and VIDIL." Journal of Invertebrate Pathology 83.3 (2003): 185-195.
 
 Also, this database was originally created by the following people, to whom we are indebted:
 

@@ -1,13 +1,21 @@
 Package: insectDisease
 Title: Ecological Database of the World's Insect Pathogens
-Version: 1.0
+Version: 1.0.2
 Author: David Onstad
 Maintainer: Tad Dallas <tad.a.dallas@gmail.com>
 Description: David Onstad from the USDA provided us with this USDA-gathered insect disease database, sometimes referred to as the "Ecological Database of the World's Insect Pathogens" or EDWIP. Files have been converted from SQL to csv, and ported into R for easy exploration and analysis. Thanks to the Macroecology of Infectious Disease RCN for funding and support.
-Depends: R (>= 4.0.0)
+Depends: 
+  R (>= 3.6.3)
+Imports:
+  plyr,
+  dplyr, 
+  corrplot,
+  taxize
 License: GPL-2
 LazyData: true
 RoxygenNote: 7.1.1
 VignetteBuilder: knitr
 Suggests: knitr, rmarkdown
+
+
 

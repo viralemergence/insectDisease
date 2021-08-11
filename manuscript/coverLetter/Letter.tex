@@ -1,0 +1,86 @@
+\documentclass[12pt]{article}
+\usepackage[letterpaper,margin=1cm,bottom=2cm,top=3cm,nohead]{geometry}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{setspace}
+\usepackage{amsthm}
+\newcommand{\email}[1]{\href{mailto:#1}{\tt \textcolor{cornflower}{#1}}}
+\usepackage{xcolor}
+\definecolor{plum}{rgb}{0.36078, 0.20784, 0.4}
+\definecolor{chameleon}{rgb}{0.30588, 0.60392, 0.023529}
+\definecolor{cornflower}{rgb}{0.12549, 0.29020, 0.52941}
+\definecolor{scarlet}{rgb}{0.8, 0, 0}
+\definecolor{brick}{rgb}{0.64314, 0, 0}
+\usepackage[%
+    colorlinks=true,  %display links in different colors
+    linkcolor=cornflower, %internal links
+    citecolor=scarlet, %references to a bibliography
+    urlcolor=chameleon %URLs
+]{hyperref}
+\usepackage{graphicx}
+\setlength{\parskip}{0.75em}
+\setlength{\parindent}{1.75em}
+\usepackage{afterpage}
+\usepackage[strict]{changepage}
+\pagestyle{empty}
+
+
+\begin{document}
+
+\begin{minipage}[c]{8in}\vskip-2cm
+\begin{flushleft}
+	\begin{minipage}[c]{4cm}
+		\begin{flushleft}
+			\includegraphics*[width=4cm]{lsu.png}%
+		\end{flushleft}
+	\end{minipage}
+	\,\,
+	\begin{minipage}[c]{0.25cm}
+		\vrule depth 0.1\textheight
+	\end{minipage}
+	\,
+	\begin{minipage}[c]{8cm}
+		\footnotesize
+		{\sffamily
+			Tad Dallas \\
+			Department of Biological Sciences \\
+			Louisiana State University \\
+			Baton Rouge, LA 70802 \\
+			phone: +1 225 239 0410  \\
+			\email{tad.a.dallas@gmail.com}
+		}
+	\end{minipage}
+\end{flushleft}
+\end{minipage}
+
+
+\begin{adjustwidth}{4em}{4em}
+~\vskip.4cm
+\hfill \today
+\vskip.5cm
+
+
+
+{\noindent Dear \textit{Ecology Letters} editorial board,} \vskip4pt
+
+Please find the enclosed manuscript ``A latitudinal signal in the relationship between species geographic range size and climatic niche area'', which we submit for consideration as a research article. \\
+
+Species with wider climatic niche breadths are expected to be more widely distributed geographically. But while there appears to be strong evidence for this relationship, an understanding of when deviations would be expected as a result of geographic effects or species traits is an open question. Here, we use data on over 3000 species of mammal, bird, and tree, relating the model residuals from the relationship between geographic range size and climatic niche area to species traits and geographic position, and compare these residuals to what would be expected under a null model. \\
+
+We find evidence for an effect of species latitudinal centre on model residuals, suggesting the existence of a consistent spatial signal in deviation from range size -- climatic niche area scaling relationships across a diverse set of species. Some species traits were also important (e.g., body size for mammals), but the distribution of model residuals comparing empirical to null relationship did not differ appreciably. Together, our analyses suggest that geographic range size -- climatic niche area relationships are more a function of the landscape and a spatially autocorrelated environment than driven by species traits. \\
+
+We believe this article will be of interest to a broad range of ecologists and biogeographers, as it addresses a longstanding question in ecology concerning the link between species niche and distribution. In advance, we appreciate your consideration and assistance. Please don't hesitate to contact us with any questions. 
+
+
+\changepage{}{}{}{}{}{1cm}{}{}{}
+
+\vskip1cm
+\hfill
+\noindent\begin{minipage}[b]{7cm}
+    Sincerely,\\ ~
+    Tad Dallas
+\end{minipage}
+
+\end{adjustwidth}
+\end{document}
