@@ -7,6 +7,7 @@
 #'
 #' @return a data.frame with nrow == length(species) 
 #' @name getNCBI
+#' @export
 #' @usage getNCBI('Peromyscus')
 
 

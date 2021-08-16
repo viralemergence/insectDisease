@@ -32,7 +32,7 @@
 #' @usage data(new_asso)
 #' @format A data.frame of not good records
 
-
+"new_asso"
 
 
 #' newnema
@@ -62,7 +62,7 @@
 #' @usage data(newnema)
 #' @format A data.frame 
 
-
+"newnema"
 
 
 
@@ -83,4 +83,6 @@
 #' @usage data(noassref)
 #' @format A data.frame 
 
+
+"noassref"
 
