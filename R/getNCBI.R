@@ -7,19 +7,29 @@
 #'
 #' @return a data.frame with nrow == length(species) 
 #' @name getNCBI
+#' @importFrom taxize classification get_uid
+#' @importFrom stats na.omit 
+#' @importFrom utils tail
+#' @importFrom dplyr mutate
 #' @export
-#' @usage getNCBI('Peromyscus')
+
 
 
 getNCBI <- function(species, host=TRUE){ 
+
+  mutate_cond <- function(.data, condition, ..., envir = parent.frame()) {
+    condition <- eval(substitute(condition), .data, envir)
+    .data[condition, ] <- dplyr::mutate(.data[condition, ], ...)
+    .data
+  }
   names.orig <- species
-  species <- str_replace(species, " cf\\.","")
-  species <- str_replace(species, " sp\\.","")
-  species <- str_replace(species, " gen\\.","")
-  u <- get_uid(species, 
+  species <- gsub(" cf\\.","", species)
+  species <- gsub(" sp\\.","", species)
+  species <- gsub(" gen\\.","",species)
+  u <- taxize::get_uid(species, 
     rank_filter = c("subspecies", "species", "genus", "family", "order", "class"), 
     division_filter = "vertebrates", ask = FALSE)
-  c <- classification(u)
+  c <- taxize::classification(u)
   n <- !is.na(u)
   attributes(u) <- NULL
   s <- unlist(lapply(c, function(x){tryCatch(x$name[[which(x$rank=="species")]], error = function(e) {NA})}), use.names = FALSE)
@@ -29,18 +39,20 @@ getNCBI <- function(species, host=TRUE){
   c2 <- unlist(lapply(c, function(x){tryCatch(x$name[[which(x$rank=="class")]], error = function(e) {NA})}), use.names = FALSE)
   k <- unlist(lapply(c, function(x){tryCatch(x$name[[which(x$rank=="kingdom")]], error = function(e) {NA})}), use.names = FALSE)  
   levels <- c("species", "genus", "family", "order", "class")
-  u <- unlist(lapply(c, function(x){tryCatch(last(na.omit(x[x$rank %in% levels,'id'])), 
-    error = function(e) {NA})}), use.names = FALSE)
+  u <- unlist(lapply(c, function(x){
+    tryCatch(tail(na.omit(x[x$rank %in% levels,'id']),1), 
+      error = function(e) {NA})}), use.names = FALSE)
   
   if(host){  
     ret <- data.frame(HostOriginal = names.orig,
-             HostTaxID = u,
-             HostNCBIResolved = n, 
-             Host = s,
-             HostGenus = g,
-             HostFamily = f,
-             HostOrder = o, 
-             HostClass = c2) %>% mutate_cond(HostNCBIResolved == FALSE, Host = HostOriginal) 
+      HostTaxID = u,
+      HostNCBIResolved = n, 
+      Host = s,
+      HostGenus = g,
+      HostFamily = f,
+      HostOrder = o, 
+      HostClass = c2) 
+    ret <- mutate_cond(ret, ret$HostNCBIResolved == FALSE, Host = ret$HostOriginal) 
     ret$Host <- NULL
   }
   if(host==FALSE){
@@ -52,8 +64,8 @@ getNCBI <- function(species, host=TRUE){
       PathFamily = f,
       PathOrder = o, 
       PathClass = c2,
-      PathKingdom= k) %>% 
-    mutate_cond(PathNCBIResolved == FALSE, Path = PathOriginal) 
+      PathKingdom= k) 
+    ret <- mutate_cond(ret, ret$PathNCBIResolved == FALSE, Path = ret$PathOriginal) 
     ret$PathOriginal <- NULL
   }
   return(ret)
