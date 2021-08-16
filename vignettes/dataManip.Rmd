@@ -267,83 +267,7 @@ edwip <- left_join(edwip, status, by='Host')
 
 
 
-Getting host taxonomic data
-
-```{r}
-
-hdict <- function(names) { 
-  names.orig <- names
-  names <- str_replace(names, " cf\\.","")
-  names <- str_replace(names, " sp\\.","")
-  names <- str_replace(names, " gen\\.","")
-  u <- get_uid(names, 
-    rank_filter = c("subspecies", "species", "genus", "family", "order", "class"), 
-    division_filter = "vertebrates", ask = FALSE)
-  c <- classification(u)
-  n <- !is.na(u)
-  attributes(u) <- NULL
-  s <- unlist(lapply(c, function(x){tryCatch(x$name[[which(x$rank=="species")]], error = function(e) {NA})}), use.names = FALSE)
-  g <- unlist(lapply(c, function(x){tryCatch(x$name[[which(x$rank=="genus")]], error = function(e) {NA})}), use.names = FALSE)
-  f <- unlist(lapply(c, function(x){tryCatch(x$name[[which(x$rank=="family")]], error = function(e) {NA})}), use.names = FALSE)
-  o <- unlist(lapply(c, function(x){tryCatch(x$name[[which(x$rank=="order")]], error = function(e) {NA})}), use.names = FALSE)
-  c2 <- unlist(lapply(c, function(x){tryCatch(x$name[[which(x$rank=="class")]], error = function(e) {NA})}), use.names = FALSE)
-  
-  levels <- c("species", "genus", "family", "order", "class")
-  u <- unlist(lapply(c, function(x){tryCatch(last(na.omit(x[x$rank %in% levels,'id'])), 
-    error = function(e) {NA})}), use.names = FALSE)
-  
-  ret <- data.frame(HostOriginal = names.orig,
-           HostTaxID = u,
-           HostNCBIResolved = n, 
-           Host = s,
-           HostGenus = g,
-           HostFamily = f,
-           HostOrder = o, 
-           HostClass = c2) %>% mutate_cond(HostNCBIResolved == FALSE, Host = HostOriginal) 
-  ret$Host <- NULL
-  return(ret)
-}
-
-
-
-pdict <- function(names) { 
-  names.orig <- names
-  u <- get_uid(names, ask = FALSE)
-  c <- classification(u)
-  n <- !is.na(u)
-  attributes(u) <- NULL
-  s <- unlist(lapply(c, function(x){tryCatch(x$name[[which(x$rank=="species")]], error = function(e) {NA})}), use.names = FALSE)
-  g <- unlist(lapply(c, function(x){tryCatch(x$name[[which(x$rank=="genus")]], error = function(e) {NA})}), use.names = FALSE)
-  f <- unlist(lapply(c, function(x){tryCatch(x$name[[which(x$rank=="family")]], error = function(e) {NA})}), use.names = FALSE)
-  o <- unlist(lapply(c, function(x){tryCatch(x$name[[which(x$rank=="order")]], error = function(e) {NA})}), use.names = FALSE)
-  c2 <- unlist(lapply(c, function(x){tryCatch(x$name[[which(x$rank=="class")]], error = function(e) {NA})}), use.names = FALSE)
-  k <- unlist(lapply(c, function(x){tryCatch(x$name[[which(x$rank=="kingdom")]], error = function(e) {NA})}), use.names = FALSE)  
-  levels <- c("species", "genus", "family", "order", "class")
-  u <- unlist(lapply(c, function(x){
-    tryCatch(last(na.omit(x[x$rank %in% levels,'id'])), 
-      error = function(e) {NA})
-    }), 
-    use.names = FALSE)
-
-  ret <- data.frame(
-    PathOriginal=names.orig, 
-    PathTaxID = u,
-    PathNCBIResolved = n, 
-    PathGenus = g,
-    PathFamily = f,
-    PathOrder = o, 
-    PathClass = c2,
-    PathKingdom= k) %>% 
-  mutate_cond(PathNCBIResolved == FALSE, Path = PathOriginal) 
-  ret$PathOriginal <- NULL
-  return(ret)  
-}
-
-```
-
-
-
-
+### Getting host taxonomic data
 
 
 
@@ -364,8 +288,8 @@ Set eval to FALSE, but users can run this. For now, we will cache the taxonomic 
 
 ```{r eval=FALSE}
 
-hostTaxonomy <- hdict(edwip$Host)
-pathTaxonomy <- pdict(as.character(edwip$Pathogen))
+hostTaxonomy <- getNCBI(edwip$Host, host=TRUE)
+pathTaxonomy <- getNCBI(as.character(edwip$Pathogen), host=FALSE)
 
 ```
 

@@ -1,7 +1,7 @@
 ### *insectDisease*: insect disease data from the USDA's Ecological Database of the World's Insect Pathogens
 
+[![R build status](https://github.com/viralemergence/insectDisease/workflows/R-CMD-check/badge.svg)](https://github.com/viralemergence/insectDisease/actions)
 
-[![Build Status](https://travis-ci.org/viralemergence/insectDisease.png?branch=master)](https://travis-ci.org/viralemergence/insectDisease)
 
 
 
