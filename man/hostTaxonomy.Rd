@@ -11,9 +11,8 @@ A data.frame
 data(hostTaxonomy)
 }
 \description{
-Cached version of host taxonomy (see vignette for code to build from scratch)
-}
-\details{
+Host taxonomic cached data from NCBI (see vignette for code to re-make)
+
 \itemize{
   \item HostOriginal original host name from EDWIP
   \item HostTaxID NCBI taxonomic ID

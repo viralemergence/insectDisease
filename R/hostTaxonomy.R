@@ -1,8 +1,7 @@
 #' Cached version of host taxonomy (see vignette for code to build from scratch)
 #'
 #' 
-#' 
-#' 
+#' @description Host taxonomic cached data from NCBI (see vignette for code to re-make)
 #'
 #' \itemize{
 #'   \item HostOriginal original host name from EDWIP
