@@ -11,12 +11,17 @@ A data.frame
 data(noassref)
 }
 \description{
+These data are included because they were originally part of the EDWIP data. 
+We caution the user in using these data, as they do not have associated 
+metadata that the other records have.
+}
+\details{
 \itemize{
   \item RefCode. Index of reference 
   \item ERNntr. EDWIP record number
   \item Host. Host species
   \item Pathogen. Pathogen species
-  \item Citation. Citation for host-nematode record
+  \item Citation. Citation for host-pathogen record
  }
 }
 \keyword{datasets}

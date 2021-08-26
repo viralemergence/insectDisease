@@ -27,6 +27,11 @@
 #'   \item CommonNameOther. Other common names?
 #'   \item Complete. Is this record complete?
 #'   \item AdditionalReferences. Additional reference indices. 
+#'   \item HostTaxID. Host NCBI ID number
+#'   \item HostGenus. Host genus
+#'   \item HostFamily. Host family
+#'   \item HostOrder. Host order
+#'   \item HostClass. Host class
 #'  }
 #'
 #' @docType data

@@ -36,6 +36,11 @@ Data on host species taxonomy, habitat, diet preferences, and distribution (in C
   \item CommonNameOther. Other common names?
   \item Complete. Is this record complete?
   \item AdditionalReferences. Additional reference indices. 
+  \item HostTaxID. Host NCBI ID number
+  \item HostGenus. Host genus
+  \item HostFamily. Host family
+  \item HostOrder. Host order
+  \item HostClass. Host class
  }
 }
 \keyword{datasets}

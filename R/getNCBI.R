@@ -28,8 +28,8 @@ getNCBI <- function(species, host=TRUE){
   species <- gsub(" gen\\.","",species)
   u <- taxize::get_uid(species, 
     rank_filter = c("subspecies", "species", "genus", "family", "order", "class"), 
-    division_filter = "vertebrates", ask = FALSE)
-  c <- taxize::classification(u)
+      ask = FALSE)
+  c <- taxize::classification(u, batch_size=50, max_tries=500)
   n <- !is.na(u)
   attributes(u) <- NULL
   s <- unlist(lapply(c, function(x){tryCatch(x$name[[which(x$rank=="species")]], error = function(e) {NA})}), use.names = FALSE)
@@ -44,29 +44,24 @@ getNCBI <- function(species, host=TRUE){
       error = function(e) {NA})}), use.names = FALSE)
   
   if(host){  
-    ret <- data.frame(HostOriginal = names.orig,
+    ret <- data.frame(
+      HostSpecies = names.orig,
       HostTaxID = u,
-      HostNCBIResolved = n, 
-      Host = s,
       HostGenus = g,
       HostFamily = f,
       HostOrder = o, 
       HostClass = c2) 
-    ret <- mutate_cond(ret, ret$HostNCBIResolved == FALSE, Host = ret$HostOriginal) 
     ret$Host <- NULL
   }
   if(host==FALSE){
     ret <- data.frame(
-      PathOriginal=names.orig, 
+      PathogenSpecies=names.orig, 
       PathTaxID = u,
-      PathNCBIResolved = n, 
       PathGenus = g,
       PathFamily = f,
       PathOrder = o, 
       PathClass = c2,
       PathKingdom= k) 
-    ret <- mutate_cond(ret, ret$PathNCBIResolved == FALSE, Path = ret$PathOriginal) 
-    ret$PathOriginal <- NULL
   }
   return(ret)
 }

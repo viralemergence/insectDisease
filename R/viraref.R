@@ -8,8 +8,20 @@
 #'   \item RefCode. Index of reference obtained from `nematode` data frame
 #'   \item Citation. Reference.
 #'   \item ERNv. EDWIP record number
-#'   \item Host. Host species
-#'   \item Virus. Virus name
+#'   \item HostSpecies. Host species
+#'   \item PathogenSpecies. Virus name
+#'   \item HostTaxID. Host NCBI ID number
+#'   \item HostGenus. Host genus
+#'   \item HostFamily. Host family
+#'   \item HostOrder. Host order
+#'   \item HostClass. Host class
+#'   \item PathTaxID. Pathogen NCBI ID number
+#'   \item PathGenus. Pathogen genus
+#'   \item PathFamily. Pathogen family
+#'   \item PathOrder. Pathogen order
+#'   \item PathClass. Pathogen class
+#'   \item PathKingdom. Pathogen kingdom
+
 #'  }
 #'
 #' @docType data

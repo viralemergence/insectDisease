@@ -14,9 +14,8 @@ data(hostTaxonomy)
 Host taxonomic cached data from NCBI (see vignette for code to re-make)
 
 \itemize{
-  \item HostOriginal original host name from EDWIP
+  \item HostSpecies original host name from EDWIP
   \item HostTaxID NCBI taxonomic ID
-  \item HostNCBIResolved is the host found in NCBI
   \item HostGenus host genus
   \item HostFamily host family
   \item HostOrder host order

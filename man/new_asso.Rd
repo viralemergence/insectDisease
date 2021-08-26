@@ -16,6 +16,14 @@ data(new_asso)
 data(newnema)
 }
 \description{
+These data are included because they were originally part of the EDWIP data. 
+We caution the user to not use these data, as we do not believe the records 
+are correct.
+
+These data are included because they were originally part of the EDWIP data. 
+These data are identical to the `nematode` data, as far as we can tell.
+}
+\details{
 \itemize{
   \item ERNnew
   \item HostSpecies

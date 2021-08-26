@@ -17,13 +17,9 @@ as follows:
 \details{
 \itemize{
   \item ERNnvp. EDWIP record number
-  \item Pathogen. Pathogen species
+  \item PathogenSpecies. Pathogen species
   \item Group. Pathogen group (e.g. Protozoa)
-  \item HighTaxon. General classification of pathogen (e.g. Microspora)
-  \item LowTaxon. More specific classification of pathogen (e.g. Microsporea)
-  \item Host. Host species examined
-  \item Order. Host taxonomic order.
-  \item Family. Host taxonomic family.
+  \item HostSpecies. Host species examined
   \item HostStageTested. Host stage exposed to pathogen (e.g. Larvae, Nymph, Adult)
   \item HostTissueInfected. Host tissue infected
   \item FieldOrLab. Was this a field or lab tested association?
@@ -32,6 +28,17 @@ as follows:
   \item DateEntered. Date of initial data entry
   \item DateModified. Modification date of entry
   \item BiogeographicRegion. Biogeographic region (or some combination thereof)
+  \item HostTaxID. Host NCBI ID number
+  \item HostGenus. Host genus
+  \item HostFamily. Host family
+  \item HostOrder. Host order
+  \item HostClass. Host class
+  \item PathTaxID. Pathogen NCBI ID number
+  \item PathGenus. Pathogen genus
+  \item PathFamily. Pathogen family
+  \item PathOrder. Pathogen order
+  \item PathClass. Pathogen class
+  \item PathKingdom. Pathogen kingdom
  }
 }
 \keyword{datasets}

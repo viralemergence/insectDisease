@@ -5,9 +5,10 @@
 #' 
 #' \itemize{
 #'   \item ERNv. EDWIP record number
-#'   \item Host. Host species
-#'   \item HighTaxon. General classification of pathogen (e.g. Microspora)
-#'   \item LowTaxon. More specific classification of pathogen (e.g. Microsporea)
+#'   \item HostSpecies. Host species
+#'   \item VirusType. DNA or RNA virus
+#'   \item Group. Viruses.
+#'   \item PathogenSpecies. Viral family 
 #'   \item Virus. Virus identity
 #'   \item HostStageInfected. Host stage infected
 #'   \item HostTissueInfected. Host tissue infected
@@ -18,6 +19,17 @@
 #'   \item ModificationDate. Modification date of entry (wrong)
 #'   \item ProvinceA. Canadian provinces where host-virus interaction occurs
 #'   \item PathogenValue. Is there value to the pathogen (can it be used as a control agent?)
+#'   \item HostTaxID. Host NCBI ID number
+#'   \item HostGenus. Host genus
+#'   \item HostFamily. Host family
+#'   \item HostOrder. Host order
+#'   \item HostClass. Host class
+#'   \item PathTaxID. Pathogen NCBI ID number
+#'   \item PathGenus. Pathogen genus
+#'   \item PathFamily. Pathogen family
+#'   \item PathOrder. Pathogen order
+#'   \item PathClass. Pathogen class
+#'   \item PathKingdom. Pathogen kingdom
 #'  }
 #'
 #' @docType data

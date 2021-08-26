@@ -27,240 +27,44 @@ library(corrplot)
 
 ## Loading in and cleaning/manipulating data
 
-This outputs all the `.rda` files to `.csv` for longer-term shelf stability. 
+This outputs all the `.csv` files to `.rda` for use in the package. The `.csv` files are the data with updated taxonomic backbone. See the help files for each data object (`?nvpassoc`) for information on each specific data subfile. 
 
-```{r}
+```{r eval=FALSE}
 
-files <- list.files('data')
-
-lapply(files, function(x){
-  nm <- gsub('.rda', '', x)
-  nm <- gsub('.csv', '', nm)
-  if(grepl('csv', x)){
-    tmp <- read.csv(paste('data/',x,sep=''))
-    write.csv(tmp, paste('csv/', nm,'.csv', sep=''))
-  }else{
-    load(paste('data/',x,sep=''))
-    write.csv(get(nm), paste('csv/', nm,'.csv', sep=''))
-  }
-})
-
-```
-
-
+assocref <- read.csv('csv/assocref.csv')
+citation <- read.csv('csv/citation.csv')
+hosts <- read.csv('csv/hosts.csv')
+hostTaxonomy <- read.csv('csv/hostTaxonomy.csv')
+negative <- read.csv('csv/negative.csv')
+nemaref <- read.csv('csv/nemaref.csv')
+nematode <- read.csv('csv/nematode.csv')
+new_asso <- read.csv('csv/new_asso.csv')
+newnema <- read.csv('csv/newnema.csv')
+noassref <- read.csv('csv/noassref.csv')
+nvpassoc <- read.csv('csv/nvpassoc.csv')
+pathogen <- read.csv('csv/pathogen.csv')
+pathTaxonomy <- read.csv('csv/pathTaxonomy.csv')
+viraref <- read.csv('csv/viraref.csv')
+viruses <- read.csv('csv/viruses.csv')
 
 
-
-
-
-### Non-interactions
-
-```{r}
-
-data(negative)
-
-```
-
-
-
-
-### Protozoans
-
-```{r}
-
-data(nvpassoc)
-
-
-cols <- c('Host', 'Pathogen', 'HighTaxon', 'LowTaxon', 'HostTissueInfected', 'LogMaxDose', 'HostStageTested')
-proto <- nvpassoc[ ,which(colnames(nvpassoc) %in% cols)]
-neg <- negative[which(negative$Group=='Protozoa'), which(colnames(negative) %in% cols)]
-
-proto <- as.data.frame(proto[ ,c(4,1,2,3,5)])
-proto$LogMaxDose <- NA
-proto$HostStageTested <- NA
-proto2 <- proto[ ,c(1,2,3,4,6,7,5)]
-
-neg2 <- neg[ ,c(4,1,5,6,2,3)]
-neg2$HostTissueInfected <- NA
-
-pDat <- cbind(presence=c(rep(1,nrow(proto2)), rep(0, nrow(neg2))), 
-	rbind(proto2, neg2))
-pDat <- as.data.frame(pDat)
-
+save(assocref, file="data/assocref.rda", compress='xz')
+save(citation, file="data/citation.rda", compress='xz')
+save(hosts, file="data/hosts.rda", compress='xz')
+save(hostTaxonomy, file="data/hostTaxonomy.rda", compress='xz')
+save(negative, file="data/negative.rda", compress='xz')
+save(nemaref, file="data/nemaref.rda", compress='xz')
+save(nematode, file="data/nematode.rda", compress='xz')
+save(new_asso, file="data/new_asso.rda", compress='xz')
+save(newnema, file="data/newnema.rda", compress='xz')
+save(noassref, file="data/noassref.rda", compress='xz')
+save(nvpassoc, file="data/nvpassoc.rda", compress='xz')
+save(pathogen, file="data/pathogen.rda", compress='xz')
+save(pathTaxonomy, file="data/pathTaxonomy.rda", compress='xz')
+save(viraref, file="data/viraref.rda", compress='xz')
+save(viruses, file="data/viruses.rda", compress='xz')
 
 ```
-
-
-
-
-
-
-
-
-
-
-
-
-### Nematodes
-
-
-```{r}
-
-data(nematode)
-
-## Tried to add citations in, but couldn't determine citations for negatives.
-## There's also issues with the index being non-unique among data types (bad form). 
-#data(nemaref)
-#cites <- as.data.frame(table(nemaref$ERNnem))
-#colnames(cites) <- c('ERNnem', 'citations')
-#cites$ERNnem <- as.numeric(cites$ERNnem)
-#nematode <- left_join(nematode, cites, by='ERNnem')
-
-nema <- nematode[,c(2,3,4,5,7,8,9,10,12,13)]   #,16)]
-colnames(nema)[2] <- 'Pathogen'
-colnames(nema)[3:4] <- c('Order', 'Family')
-
-
-## There is no failed infection data for nematodes, as far as I can tell
-nDat <- as.data.frame(nema)
-
-```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### Viruses
-
-
-```{r}
-
-data(viruses)
-
-dat <- viruses[,c(2,5,3,4)]
-
-neg <- negative[which(negative$Group=='Viruses'), c(7,2,9,10,5:6,8,11:12)]
-colnames(neg)[2] <- 'Virus'
-
-dat$LogMaxDose <- NA
-dat$HostStageTested <- NA
-dat$Group <- 'Viruses'
-dat$Order <- NA
-dat$Family <- NA
-
-vDat <- cbind(presence=c(rep(1,nrow(dat)), rep(0, nrow(neg))), 
-	rbind(dat, neg))
-vDat <- as.data.frame(vDat)
-
-```
-
-
-
-
-
-
-
-
-
-
-
-
-
-```{r, eval=FALSE}
-
-write.csv(vDat, file='../inst/doc/vDat.csv')
-write.csv(nDat, file='../inst/doc/nDat.csv')
-write.csv(pDat, file='../inst/doc/pDat.csv')
-
-```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### Mashing everything together in one file 
-
-Note that this will lose some information specific to EDWIP subgroups, such as 'Host tissue infected', which is only available for nematodes (and is almost entirely labeled as 'hemocoel'). 
-
-
-```{r}
-
-cols <- c('Host', 'Pathogen', 'HighTaxon', 'LowTaxon', 'HostTissueInfected', 'LogMaxDose', 'HostStageTested', 'Group')
-
-colnames(nvpassoc)[9] <- 'HostStageTested'
-prot2 <- nvpassoc[ ,which(colnames(nvpassoc) %in% cols)]
-prot2$LogMaxDose <- NA
-
-
-nega2 <- negative[, which(colnames(negative) %in% cols)]
-nega2$HostTissueInfected <- NA
-
-
-nema2 <- nematode[, c(2,3,4,5,8,7,7,1)]
-nema2[,6] <- NA
-nema2[,8] <- 'Nematode'
-colnames(nema2) <- cols
-
-viru2 <- viruses[,c(2,5,3,4,7,1,6,1)]
-viru2[,6] <- NA
-viru2[,8] <- 'Viruses'
-colnames(viru2) <- cols
-
-prot2$interaction <- 1
-nema2$interaction <- 1
-viru2$interaction <- 1
-nega2$interaction <- 0
-
-edwip <- rbind(prot2[,order(colnames(prot2))], 
-  nema2[,order(colnames(nema2))],
-  viru2[,order(colnames(viru2))], 
-  nega2[,order(colnames(nega2))])  
-edwip$Group <- as.character(edwip$Group)
-edwip$Host <- trimws(as.character(edwip$Host))
-edwip$Pathogen <- trimws(as.character(edwip$Pathogen))
-
-edwip$Group[which(edwip$Group == 'Mollicutes')] <- "Bacteria"
-
-```
-
-
-
-
-
-Mashing in host 'status'
-
-```{r}
-
-data(hosts)
-status <- data.frame(Host= hosts$HostSpecies, 
-  insectStatus=as.character(hosts$InsectStatus))
-status$insectStatus[which(status$insectStatus %in% c('','uncertain', 'unknown species'))] <- NA
-status <- status[-which(duplicated(status$Host)),]
-
-edwip <- left_join(edwip, status, by='Host')
-
-```
-
 
 
 
@@ -286,10 +90,21 @@ data(pathTaxonomy)
 
 Set eval to FALSE, but users can run this. For now, we will cache the taxonomic data and read it in to format the data below. 
 
+
 ```{r eval=FALSE}
 
-hostTaxonomy <- getNCBI(edwip$Host, host=TRUE)
-pathTaxonomy <- getNCBI(as.character(edwip$Pathogen), host=FALSE)
+hostNames <- unique(c(hosts$HostSpecies, negative$HostSpecies, nematode$HostSpecies, 
+  noassref$HostSpecies, nvpassoc$HostSpecies, viruses$HostSpecies))
+hostTaxonomy <- getNCBI(hostNames, host=TRUE)
+write.csv(hostTaxonomy, file='csv/hostTaxonomy.csv')
+save(hostTaxonomy, file='data/hostTaxonomy.rda')
+
+
+pathNames <- unique(c(pathogen$PathogenSpecies, negative$PathogenSpecies, nematode$PathogenSpecies, 
+  noassref$PathogenSpecies, nvpassoc$PathogenSpecies, viruses$PathogenSpecies))
+pathTaxonomy <- getNCBI(as.character(pathNames), host=FALSE)
+write.csv(pathTaxonomy, file='csv/pathTaxonomy.csv')
+save(pathTaxonomy, file='data/pathTaxonomy.rda')
 
 ```
 
@@ -300,12 +115,7 @@ pathTaxonomy <- getNCBI(as.character(edwip$Pathogen), host=FALSE)
 
 
 
-```{r}
 
-edwip2 <- cbind(hostTaxonomy, pathTaxonomy, edwip)
-edwip2$X <- NULL
-
-```
 
 
 ```{r}
@@ -362,15 +172,17 @@ fillTaxon <- function(edwip){
       if(edwip$PathClass[i] %in% protzC | edwip$Pathogen[i] %in% protz){
         edwip$Group[i] <- 'Protozoa'
       }
-      if(edwip$Pathogen[i] %in% fungz){
+      if(edwip$PathogenSpecies[i] %in% fungz){
         edwip$Group[i] <- 'Fungi'
       }
-      if(edwip$Pathogen[i] %in% virz){
+      if(edwip$PathogenSpecies[i] %in% virz){
         edwip$Group[i] <- 'Viruses'
       }
 
     }
   }
+  # microsporidians used to be considered protozoa, but are now fungi.
+  edwip$Group[which(edwip$PathKingdom == 'Fungi' & edwip$Group != 'Fungi')] <- 'Fungi'
   return(edwip)
 }
 
@@ -386,22 +198,120 @@ fillTaxon <- function(edwip){
 
 
 
+### Process data to give each data file a corrected taxonomic backbone
+
+This should not really be run again, unless the csv files have changed, as it may be time-consuming, and the csv files should already have a taxonomic backbone in place by this point. This script is included for transparency, and to run in the future if/when the data are augmented with more interactions. 
 
 ```{r}
 
-edwip3 <- fillTaxon(edwip2)
 
+fixTaxonomy <- function(fileName){
+  tmp <- read.csv(paste('csv/', fileName, '.csv', sep=''))
 
+  if(any(colnames(tmp)=='X')){
+    tmp$X <- NULL
+  }
+  
+  if(!is.null(tmp$HostSpecies)){
+#    hostTax <- getNCBI(tmp$HostSpecies, host=TRUE)
+#    tmp <- cbind(tmp, hostTax)
+    data(hostTaxonomy)
+    tmp$HostOrder <- NULL
+    tmp$HostFamily <- NULL
+    tmp <- dplyr::left_join(tmp, unique(hostTaxonomy),
+      by='HostSpecies')
+  }
 
-# microsporidians used to be considered protozoa, but are now fungi.
-edwip3$Group[which(edwip3$PathKingdom == 'Fungi' & edwip3$Group != 'Fungi')] <- 'Fungi'
-edwip3$Group[which(edwip3$HighTaxon == 'Microspora')] <- 'Fungi'
-edwip3$X <- NULL
-
-
-write.csv(edwip3, file='edwip.csv')
+  if(!is.null(tmp$PathogenSpecies)){
+#    pathTax <- getNCBI(tmp$PathogenSpecies, host=FALSE)
+#    tmp <- cbind(tmp, pathTax)
+    data(pathTaxonomy)
+    tmp$PathOrder <- NULL
+    tmp$PathFamily <- NULL
+    tmp <- dplyr::left_join(tmp, unique(pathTaxonomy),
+      by='PathogenSpecies')
+  }
+  if(!is.null(tmp$Group)){
+    tmp <- fillTaxon(tmp)
+  }
+  return(tmp)
+}
 
 ```
+
+
+
+
+```{r eval=FALSE}
+
+assocref <- fixTaxonomy('assocref')
+citation <- fixTaxonomy('citation')
+hosts <- fixTaxonomy('hosts')
+negative <- fixTaxonomy('negative')
+nemaref <- fixTaxonomy('nemaref')
+nematode <- fixTaxonomy('nematode')
+new_asso <- fixTaxonomy('new_asso')
+newnema <- fixTaxonomy('newnema')
+noassref <- fixTaxonomy('noassref')
+nvpassoc <- fixTaxonomy('nvpassoc')
+pathogen <- fixTaxonomy('pathogen')
+viraref <- fixTaxonomy('viraref')
+viruses <- fixTaxonomy('viruses')
+
+
+write.csv(assocref, file='csv/assocref.csv')
+write.csv(citation, file='csv/citation.csv')
+write.csv(hosts, file='csv/hosts.csv')
+write.csv(negative, file='csv/negative.csv')
+write.csv(nemaref, file='csv/nemaref.csv')
+write.csv(nematode, file='csv/nematode.csv')
+write.csv(new_asso, file='csv/new_asso.csv')
+write.csv(newnema, file='csv/newnema.csv')
+write.csv(noassref, file='csv/noassref.csv')
+write.csv(nvpassoc, file='csv/nvpassoc.csv')
+write.csv(pathogen, file='csv/pathogen.csv')
+write.csv(viraref, file='csv/viraref.csv')
+write.csv(viruses, file='csv/viruses.csv')
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -420,13 +330,35 @@ Reproducing figures from the manuscript
 
 
 
-```{r}
+```{r eval=FALSE}
 
-bubble <- edwip3 %>%
+getSubset <- function(dat){
+  nms <- c('PathogenSpecies', 'HostSpecies', 'Group')
+  tmp <- dat[,which(colnames(dat) %in% nms)]
+  tmp <- tmp[,order(colnames(tmp))]
+  return(tmp)
+}
+
+edwip3 <- rbind(
+  getSubset(nematode), 
+  getSubset(viruses), 
+  getSubset(nvpassoc)
+)   
+
+edwip3$interaction <- 1
+
+neg <- getSubset(negative)
+neg$interaction <- 0
+
+edwip4 <- rbind(edwip3, neg)
+edwip4$Group[which(edwip4$Group == 'Mollicutes')] <- 'Bacteria'
+edwip4$Group[which(edwip4$Group == 'Viruses')] <- 'Virus'
+
+bubble <- edwip4 %>%
   group_by(Group) %>% 
-  summarise(n=length(Host), 
-    nHosts=length(unique(Host)), 
-    nPaths=length(unique(Pathogen)), 
+  summarise(n=length(HostSpecies), 
+    nHosts=length(unique(HostSpecies)), 
+    nPaths=length(unique(PathogenSpecies)), 
     positives=sum(interaction==1, na.rm=TRUE), 
     negatives=sum(interaction==0, na.rm=TRUE)
   ) 
@@ -497,7 +429,7 @@ dev.off()
 
 Diversity begets diversity, but not really
 
-```{r}
+```{r eval=FALSE}
 
 tmp <- as.data.frame.matrix(
   with(edwip3[which(edwip3$interaction==1),], 
@@ -531,7 +463,7 @@ dev.off()
 
 Relationship between positive and negative interactions for host species
 
-```{r}
+```{r eval=FALSE}
 
 tmp2 <- edwip3 %>%
   group_by(Host, Group) %>%
@@ -541,7 +473,6 @@ tmp2 <- edwip3 %>%
 cor.test(tmp2$nPos, tmp2$nNeg, method='spearman')
 
 ```
-
 
 
 

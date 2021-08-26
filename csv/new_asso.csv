@@ -1,20 +1,20 @@
-"","ERNnew","HostSpecies","HostOrder","HostFamily","HostHabitat","HostFood","HostGenYr","PathSpecies","PathGroup","PathHighTaxon","PathLowTaxon","StageInf","TissueInfected","Field","Country","IntermediateHost","Citation","MoreInfo","Who","CreationDate","ModificationDate","StainFCB"
-"1",235,"My host","Lepidoptera","Yponomeutidae","orchards","cherries","","Really bad disease","","","","","","","","","","","","12/14/2000","5/11/2001",""
-"2",236,"Cydia pomonella","Lepidoptera","Pyralidae","orchards","apples","","Aspergillus flavus","Fungi","","","","","Field","USA","","I can't find the citation on this one","","Susan, as a test","12/14/2000","12/14/2000",""
-"3",237,"Musca domestica","","","","","","wormy thing","","","","","","","","","","","","5/11/2001","5/11/2001",""
-"4",238,"My new host","","","","","","My new pathogen","","","","","","Field","","","Braxton 2001","","Susan Braxton","5/11/2001","5/11/2001",""
-"5",239,"zzz","","","","","","xxx","","","","","","","","","","","","5/16/2001","5/16/2001",""
-"6",240,"","","","","","","","","","","","","","","","","","","5/17/2001","5/17/2001",""
-"7",241,"Empoasca fabae","Homoptera","","","","","Cordyceps n. sp. #3","Fungi","","","A, N, E","hemocoel","Field","USA","","","","Susan, INHS","5/17/2001","5/17/2001",""
-"8",242,"Empoasca krameri","","","","","","Cordyceps n. sp. #14","","","","","","Field","USA","","","","Susan Braxton, INHS","5/17/2001","5/17/2001",""
-"9",243,"Blissus leucopterus","","","","","","Ascogregarina yomama","Protozoa","","","","","Field","USA","","","","Braxton, INHS","5/17/2001","5/17/2001",""
-"10",246,"Wee wee","","","","","","Woo woo","Not reported","","","","","Field","Germany","","","","Braxton, GSLIS","5/17/2001","5/17/2001",""
-"11",250,"Wee willy winky","Lepidoptera","","","oats","","Yippee yiyay","Protozoa","","","E, L, P","","Field","Argentina","","","","Braxton, Susan, INHS","5/17/2001","5/17/2001",""
-"12",251,"Diddle diddle dumpling","Lepidoptera","","","oats","","Yippee yiyay","Protozoa","","","E, L, P","","Field","Argentina","","","","Braxton, Susan, INHS","5/17/2001","5/17/2001",""
-"13",252,"Nicey nice","","","","","","Wicked","Fungi","Basidiomycetes","Septobasidiales","E","","Unknown","","","","","Susan Braxton, INHS","5/18/2001","5/18/2001",""
-"14",253,"","","","","","","","Not reported","Unknown","unknown","","","Unknown","","","","","","5/18/2001","5/18/2001","EggNymph"
-"15",254,"Vanessa sp.","Lepidoptera","Nymphalidae","","","","Cordyceps sp.","Fungi","Deuteromycetes","Endomycetales","","hemocoel","Field","USA","","Braxton, 2001.","I entered this record from home from my power mac, G4 mini tower, using Netscape 4.72.","Susan Braxton, INHS","5/19/2001","5/19/2001","LarvaPupaAdult"
-"16",255,"Epilachna varivestis","Coleoptera","Coccinellidae","crop","soybean (Glycine max)",">1","Tiddly piddly","Fungi","Basidiomycetes","Septobasidiales","","all","Field","USA","none","","","","6/1/2001","6/1/2001","EggLarvaPupaAdult"
-"17",256,"Epilachna varivestis","Coleoptera","Coccinellidae","crop","soybean (Glycine max)",">1","Tiddly piddly","Fungi","Basidiomycetes","Septobasidiales","","all","Field","USA","none","","","","6/1/2001","6/1/2001","EggLarvaPupaAdult"
-"18",257,"Your daddy too","","","","","1","Icky yuck","Fungi","unknown","unknown","","flight muscle","Field","","","not yet published.","It wiped out the entire population.","Susan Braxton, INHS, GSLIS, Biology Library","6/5/2001","6/5/2001","LarvaAdult"
-"19",258,"My new host","","","","","","My new record","Fungi","Basidiomycetes","Entomophthorales","","all","Field","USA ","","none","Entered on Dec 10, 2002 at 1:55pm","Susan Braxton","12/10/2002","12/10/2002","Adult"
+ERNnew,HostSpecies,HostHabitat,HostFood,HostGenYr,PathSpecies,PathGroup,PathHighTaxon,PathLowTaxon,StageInf,TissueInfected,Field,Country,IntermediateHost,Citation,MoreInfo,Who,CreationDate,ModificationDate,StainFCB,HostTaxID,HostGenus,HostFamily,HostOrder,HostClass
+235,My host,orchards,cherries,,Really bad disease,,,,,,,,,,,,12/14/2000,5/11/2001,,NA,NA,NA,NA,NA
+236,Cydia pomonella,orchards,apples,,Aspergillus flavus,Fungi,,,,,Field,USA,,I can't find the citation on this one,,"Susan, as a test",12/14/2000,12/14/2000,,82600,Cydia,Tortricidae,Lepidoptera,Insecta
+237,Musca domestica,,,,wormy thing,,,,,,,,,,,,5/11/2001,5/11/2001,,7370,Musca,Muscidae,Diptera,Insecta
+238,My new host,,,,My new pathogen,,,,,,Field,,,Braxton 2001,,Susan Braxton,5/11/2001,5/11/2001,,NA,NA,NA,NA,NA
+239,zzz,,,,xxx,,,,,,,,,,,,5/16/2001,5/16/2001,,NA,NA,NA,NA,NA
+240,,,,,,,,,,,,,,,,,5/17/2001,5/17/2001,,NA,NA,NA,NA,NA
+241,Empoasca fabae,,,,Cordyceps n. sp. #3,Fungi,,,"A, N, E",hemocoel,Field,USA,,,,"Susan, INHS",5/17/2001,5/17/2001,,139595,Empoasca,Cicadellidae,Hemiptera,Insecta
+242,Empoasca krameri,,,,Cordyceps n. sp. #14,,,,,,Field,USA,,,,"Susan Braxton, INHS",5/17/2001,5/17/2001,,NA,NA,NA,NA,NA
+243,Blissus leucopterus,,,,Ascogregarina yomama,Protozoa,,,,,Field,USA,,,,"Braxton, INHS",5/17/2001,5/17/2001,,1655880,Blissus,Blissidae,Hemiptera,Insecta
+246,Wee wee,,,,Woo woo,Not reported,,,,,Field,Germany,,,,"Braxton, GSLIS",5/17/2001,5/17/2001,,NA,NA,NA,NA,NA
+250,Wee willy winky,,oats,,Yippee yiyay,Protozoa,,,"E, L, P",,Field,Argentina,,,,"Braxton, Susan, INHS",5/17/2001,5/17/2001,,NA,NA,NA,NA,NA
+251,Diddle diddle dumpling,,oats,,Yippee yiyay,Protozoa,,,"E, L, P",,Field,Argentina,,,,"Braxton, Susan, INHS",5/17/2001,5/17/2001,,NA,NA,NA,NA,NA
+252,Nicey nice,,,,Wicked,Fungi,Basidiomycetes,Septobasidiales,E,,Unknown,,,,,"Susan Braxton, INHS",5/18/2001,5/18/2001,,NA,NA,NA,NA,NA
+253,,,,,,Not reported,Unknown,unknown,,,Unknown,,,,,,5/18/2001,5/18/2001,EggNymph,NA,NA,NA,NA,NA
+254,Vanessa sp.,,,,Cordyceps sp.,Fungi,Deuteromycetes,Endomycetales,,hemocoel,Field,USA,,"Braxton, 2001.","I entered this record from home from my power mac, G4 mini tower, using Netscape 4.72.","Susan Braxton, INHS",5/19/2001,5/19/2001,LarvaPupaAdult,NA,NA,NA,NA,NA
+255,Epilachna varivestis,crop,soybean (Glycine max),>1,Tiddly piddly,Fungi,Basidiomycetes,Septobasidiales,,all,Field,USA,none,,,,6/1/2001,6/1/2001,EggLarvaPupaAdult,447619,Epilachna,Coccinellidae,Coleoptera,Insecta
+256,Epilachna varivestis,crop,soybean (Glycine max),>1,Tiddly piddly,Fungi,Basidiomycetes,Septobasidiales,,all,Field,USA,none,,,,6/1/2001,6/1/2001,EggLarvaPupaAdult,447619,Epilachna,Coccinellidae,Coleoptera,Insecta
+257,Your daddy too,,,1,Icky yuck,Fungi,unknown,unknown,,flight muscle,Field,,,not yet published.,It wiped out the entire population.,"Susan Braxton, INHS, GSLIS, Biology Library",6/5/2001,6/5/2001,LarvaAdult,NA,NA,NA,NA,NA
+258,My new host,,,,My new record,Fungi,Basidiomycetes,Entomophthorales,,all,Field,USA ,,none,"Entered on Dec 10, 2002 at 1:55pm",Susan Braxton,12/10/2002,12/10/2002,Adult,NA,NA,NA,NA,NA

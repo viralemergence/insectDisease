@@ -8,8 +8,19 @@
 #'   \item ERNnem. EDWIP record number
 #'   \item refCode. Index of reference obtained from `nematode` data frame
 #'   \item Reference. Citation for host-nematode record
-#'   \item Host. Host species
-#'   \item Nematode. Nematode parasite species
+#'   \item HostSpecies. Host species
+#'   \item PathogenSpecies. Nematode parasite species
+#'   \item HostTaxID. Host NCBI ID number
+#'   \item HostGenus. Host genus
+#'   \item HostFamily. Host family
+#'   \item HostOrder. Host order
+#'   \item HostClass. Host class
+#'   \item PathTaxID. Pathogen NCBI ID number
+#'   \item PathGenus. Pathogen genus
+#'   \item PathFamily. Pathogen family
+#'   \item PathOrder. Pathogen order
+#'   \item PathClass. Pathogen class
+#'   \item PathKingdom. Pathogen kingdom
 #'  }
 #'
 #' @docType data

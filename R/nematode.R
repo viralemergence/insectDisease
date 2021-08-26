@@ -5,11 +5,9 @@
 #' 
 #' \itemize{
 #'   \item ERNnem
-#'   \item Host. Host species
-#'   \item Nematode. Nematode parasite species
-#'   \item NematodeOrder. Nematode parasite order
-#'   \item NematodeFamily. Nematode parasite family
-#'   \item NematodeStrain. Nematode parasite strain
+#'   \item HostSpecies. Host species
+#'   \item PathogenSpecies. Nematode parasite species
+#'   \item PathogenStrain. Nematode parasite strain
 #'   \item StageInfected. Host stage infected
 #'   \item TissueInfected. Host tissue infected
 #'   \item FieldOrLab. Was this a field or lab tested association?
@@ -19,6 +17,17 @@
 #'   \item IntermediateHost. Is there an intermediate host present?
 #'   \item CreationDate. Date of initial data entry
 #'   \item ModificationDate. Modification date of entry
+#'   \item HostTaxID. Host NCBI ID number
+#'   \item HostGenus. Host genus
+#'   \item HostFamily. Host family
+#'   \item HostOrder. Host order
+#'   \item HostClass. Host class
+#'   \item PathTaxID. Pathogen NCBI ID number
+#'   \item PathGenus. Pathogen genus
+#'   \item PathFamily. Pathogen family
+#'   \item PathOrder. Pathogen order
+#'   \item PathClass. Pathogen class
+#'   \item PathKingdom. Pathogen kingdom
 #'  }
 #'
 #' @docType data

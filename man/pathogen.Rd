@@ -17,9 +17,13 @@ Information on taxonomy of parasites present in this database
 \itemize{
   \item PathogenSpecies. Pathogen species.
   \item Group. Pathogen group (e.g. Protozoa)
-  \item HighTaxon. General classification of pathogen (e.g. Microspora)
-  \item LowTaxon. More specific classification of pathogen (e.g. Microsporea)
   \item AdditionalNotes. Some additional notes.
+  \item PathTaxID. Pathogen NCBI ID number
+  \item PathGenus. Pathogen genus
+  \item PathFamily. Pathogen family
+  \item PathOrder. Pathogen order
+  \item PathClass. Pathogen class
+  \item PathKingdom. Pathogen kingdom
  }
 }
 \keyword{datasets}

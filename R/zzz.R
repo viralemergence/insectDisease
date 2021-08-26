@@ -1,6 +1,9 @@
 #' new_asso
 #'
-#'
+#' These data are included because they were originally part of the EDWIP data. 
+#' We caution the user to not use these data, as we do not believe the records 
+#' are correct. 
+#' 
 #' \itemize{
 #'   \item ERNnew
 #'   \item HostSpecies
@@ -37,6 +40,9 @@
 
 #' newnema
 #'
+#' These data are included because they were originally part of the EDWIP data. 
+#' These data are identical to the `nematode` data, as far as we can tell.
+#' 
 #'
 #' \itemize{
 #'   \item ERNnem. EDWIP record number
@@ -68,13 +74,16 @@
 
 #' noassref
 #'
+#' These data are included because they were originally part of the EDWIP data. 
+#' We caution the user in using these data, as they do not have associated 
+#' metadata that the other records have.
 #'
 #' \itemize{
 #'   \item RefCode. Index of reference 
 #'   \item ERNntr. EDWIP record number
 #'   \item Host. Host species
 #'   \item Pathogen. Pathogen species
-#'   \item Citation. Citation for host-nematode record
+#'   \item Citation. Citation for host-pathogen record
 #'  }
 #'
 #' @docType data
