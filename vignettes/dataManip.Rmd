@@ -317,6 +317,14 @@ write.csv(viruses, file='csv/viruses.csv')
 
 
 
+negative <- read.csv(file='csv/negative.csv')
+nematode <- read.csv(file='csv/nematode.csv')
+nvpassoc <- read.csv(file='csv/nvpassoc.csv')
+viruses <- read.csv(file='csv/viruses.csv')
+
+
+
+
 
 
 
@@ -427,13 +435,15 @@ dev.off()
 
 
 
-Diversity begets diversity, but not really
+
+
+Correlation plot examining covariance among parasite species richness across hosts when parasite species are broken into their respective groups
 
 ```{r eval=FALSE}
 
 tmp <- as.data.frame.matrix(
-  with(edwip3[which(edwip3$interaction==1),], 
-    table(Host, Group)
+  with(edwip4[which(edwip4$interaction==1),], 
+    table(HostSpecies, Group)
   )
 )
 
@@ -442,7 +452,7 @@ tmp <- as.data.frame.matrix(
 pdf('corPlot.pdf', height=9,width=9)
 par(mar=c(2,2,0.5,0.5))
 
-corrplot.mixed(cor(tmp, method='spearman'), 
+corrplot::corrplot.mixed(cor(tmp, method='spearman'), 
 	lower='number', upper='ellipse',
 	cl.lim=c(0,1),
 	tl.col=1, 
@@ -466,7 +476,7 @@ Relationship between positive and negative interactions for host species
 ```{r eval=FALSE}
 
 tmp2 <- edwip3 %>%
-  group_by(Host, Group) %>%
+  group_by(HostSpecies, Group) %>%
   summarise(nPos=sum(interaction==1), 
   nNeg=sum(interaction==0))
 
