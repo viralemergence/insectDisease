@@ -1,0 +1,235 @@
+ERNnem,Host,Nematode,NemaOrder,NemaFamily,NemaStrain,HostStageInfected,HostTissueInfected,Field,Country,SoilType,AssociatedBacterium,IntermediateHost,CreationDate,ModificationDate
+32,Bibio ferruginatus,Steinernema affinis,Rhabditida,Steinernematidae,not maintained,Larva,Hemocoel,Field,Denmark,grain and others,Xenorhabdus bovienii,none,5/8/2097,9/21/2000
+33,Bibio hortulana,Steinernema affinis,Rhabditida,Steinernematidae,not maintained,Larva,Hemocoel,Field,Denmark,grain and others,Xenorhabdus bovienii,none,5/12/2097,2/23/2000
+34,Dilophus vulgaris,Steinernema affinis,Rhabditida,Steinernematidae,not maintained,Larva,Hemocoel,Field,Denmark,grain and others,Xenorhabdus bovienii,none,5/12/2097,2/12/2099
+35,Helina duplicata,Steinernema affinis,Rhabditida,Steinernematidae,not maintained,Larva,Hemocoel,Field,Germany,sand / pasture,Xenorhabdus bovienii,none,5/12/2097,2/12/2099
+36,Anomala dubia,Steinernema arenarium,Rhabditida,Steinernematidae,Riazan,Larva,Hemocoel,Field,Russia,,Xenorhabdus sp.,none,5/12/2097,2/12/2099
+37,Anomala dubia,Steinernema arenarium,Rhabditida,Steinernematidae,Voronez,Larva,Hemocoel,Field,Russia,,Xenorhabdus sp.,none,5/12/2097,2/12/2099
+38,Melolontha hippocastani,Steinernema arenarium,Rhabditida,Steinernematidae,arenaria (syn.),Larva,Hemocoel,Field,Russia,,Xenorhabdus sp.,none,5/14/2097,2/12/2099
+39,Agriotes lineatus,Steinernema carpocapsae,Rhabditida,Steinernematidae,Agriotos,Larva,Hemocoel,Field,Russia,,Xenorhabdus nematophilus,none,5/14/2097,2/12/2099
+40,Popillia japonica,Steinernema carpocapsae,Rhabditida,Steinernematidae,Chresima (syn.),Larva,Hemocoel,Field,USA,,Xenorhabdus nematophilus,none,5/14/2097,2/12/2099
+41,Popillia japonica,Steinernema carpocapsae,Rhabditida,Steinernematidae,unknown,Larva,Hemocoel,Field,USA,"golfcourse, sports fields, turf, potted yew",Xenorhabdus nematophilus,none,5/14/2097,2/12/2099
+42,Graphognathus leucoloma,Steinernema carpocapsae,Rhabditida,Steinernematidae,Argentinian,Larva,Hemocoel,Field,Argentina,,Xenorhabdus nematophilus,none,5/14/2097,12/7/2000
+43,Otiorhynchus sulcatus,Steinernema carpocapsae,Rhabditida,Steinernematidae,Breton,Larva,Hemocoel,Field,France,,Xenorhabdus nematophilus,none,5/14/2097,2/12/2099
+44,Cleonis mendicus,Steinernema carpocapsae,Rhabditida,Steinernematidae,menozzi (syn.),Larva,Hemocoel,Field,Italy,,Xenorhabdus nematophilus,none,5/14/2097,2/5/2000
+45,Hylobius pales,Steinernema carpocapsae,Rhabditida,Steinernematidae,not maintained,Larva,Hemocoel,Field,Sweden,coniferous forest,Xenorhabdus nematophilus,none,5/14/2097,2/12/2099
+46,Vespula sp.,Steinernema carpocapsae,Rhabditida,Steinernematidae,not maintained,Larva,Hemocoel,Field,Tasmania,,Xenorhabdus nematophilus,none,5/14/2097,2/12/2099
+229,Cephalcia lariciphila,Steinernema carpocapsae,Rhabditida,Steinernematidae,not maintained,Pupa,Hemocoel,Field,United Kingdom,coniferous forest (larch),Xenorhabdus nematophilus,none,5/14/2097,2/12/2099
+230,Rhagoletis pomonella,Steinernema carpocapsae,Rhabditida,Steinernematidae,Rhagoletis,Pupa,Hemocoel,Field,USA,orchards,Xenorhabdus nematophilus,none,5/14/2097,2/12/2099
+47,Cydia pomonella,Steinernema carpocapsae,Rhabditida,Steinernematidae,DD-136,Larva,Hemocoel,Field,USA,orchards,Xenorhabdus nematophilus,none,5/14/2097,2/12/2099
+48,Cydia pomonella,Steinernema carpocapsae,Rhabditida,Steinernematidae,Sierra,Larva,Hemocoel,Field,USA,,Xenorhabdus nematophilus,none,5/14/2097,2/12/2099
+49,Cydia pomonella,Steinernema carpocapsae,Rhabditida,Steinernematidae,Mexican,Larva,Hemocoel,Field,Mexico,,Xenorhabdus nematophilus,none,5/14/2097,2/12/2099
+50,Cydia pomonella,Steinernema carpocapsae,Rhabditida,Steinernematidae,Czechoslovakian,Larva,Hemocoel,Field,Czech Republic,,Xenorhabdus nematophilus,none,5/14/2097,2/12/2099
+51,Cydia pomonella,Steinernema carpocapsae,Rhabditida,Steinernematidae,not maintained,Larva,Hemocoel,Field,Poland,orchards,Xenorhabdus nematophilus,none,5/14/2097,2/12/2099
+52,Cydia pomonella,Steinernema carpocapsae,Rhabditida,Steinernematidae,XÐI,Larva,Hemocoel,Field,"Poland, Italy",orchards,Xenorhabdus nematophilus,none,5/14/2097,2/12/2099
+53,Cydia pomonella,Steinernema carpocapsae,Rhabditida,Steinernematidae,not maintained,Larva,Hemocoel,Field,Italy,orchards,Xenorhabdus nematophilus,none,5/14/2097,2/12/2099
+54,Cydia pomonella,Steinernema carpocapsae,Rhabditida,Steinernematidae,DDÐ517,Larva,Hemocoel,Field,,,Xenorhabdus nematophilus,none,5/14/2097,2/12/2099
+55,Agrotis segetum,Steinernema carpocapsae,Rhabditida,Steinernematidae,XÐIII,Larva,Hemocoel,Field,Poland,farmed land,Xenorhabdus nematophilus,none,5/14/2097,2/12/2099
+225,Mamestra brassicae,Steinernema carpocapsae,Rhabditida,Steinernematidae,not maintained,"Larva, Pupa",Hemocoel,Field,Poland,vegetables,Xenorhabdus nematophilus,none,5/14/2097,2/12/2099
+56,Helicoverpa armigera,Steinernema carpocapsae,Rhabditida,Steinernematidae,chresima (syn.),Larva,Hemocoel,Field,USA,grain,Xenorhabdus nematophilus,none,5/14/2097,2/12/2099
+226,Pieris brassicae,Steinernema carpocapsae,Rhabditida,Steinernematidae,XÐIV (Pieridarum),"Larva, Pupa",Hemocoel,Field,Poland,vegetables,Xenorhabdus nematophilus,none,5/14/2097,2/12/2099
+57,Vitacea polistiformis,Steinernema carpocapsae,Rhabditida,Steinernematidae,All,Larva,Hemocoel,Field,USA,,Xenorhabdus nematophilus,none,5/14/2097,2/12/2099
+58,Semiothisa pumila,Steinernema carpocapsae,Rhabditida,Steinernematidae,semiothisae (syn.),Larva,Hemocoel,Field,,,Xenorhabdus nematophilus,none,5/14/2097,2/12/2099
+59,Pardileus calceatus,Steinernema feltiae,Rhabditida,Steinernematidae,not maintained,Larva,Hemocoel,Field,,,Xenorhabdus bovienii,none,5/14/2097,2/12/2099
+60,Selatosomus melancholicus,Steinernema feltiae,Rhabditida,Steinernematidae,not maintained,Larva,Hemocoel,Field,Russia,loamy sand / pasture,Xenorhabdus bovienii,none,5/14/2097,2/12/2099
+61,Pytho depressus,Steinernema feltiae,Rhabditida,Steinernematidae,not maintained,Larva,Hemocoel,Field,Russia,loamy sand,Xenorhabdus bovienii,none,5/14/2097,2/12/2099
+62,Rhagium inquisitor,Steinernema feltiae,Rhabditida,Steinernematidae,not maintained,Larva,Hemocoel,Field,Russia,loamy sand,Xenorhabdus bovienii,none,5/14/2097,2/12/2099
+63,Amphimallon solstitialis,Steinernema feltiae,Rhabditida,Steinernematidae,georgica (syn.),Larva,Hemocoel,Field,,,Xenorhabdus bovienii,none,5/14/2097,2/12/2099
+64,Melolontha afflicta,Steinernema feltiae,Rhabditida,Steinernematidae,bothynoderi (syn.),Larva,Hemocoel,Field,,,Xenorhabdus bovienii,none,5/14/2097,2/12/2099
+65,Onitis alexis,Steinernema feltiae,Rhabditida,Steinernematidae,not maintained,Larva,Hemocoel,Field,,,Xenorhabdus bovienii,none,5/14/2097,2/12/2099
+66,Pentodon algerinum,Steinernema feltiae,Rhabditida,Steinernematidae,not maintained,Larva,Hemocoel,Field,,,Xenorhabdus bovienii,none,5/14/2097,2/12/2099
+67,Capnodis tenebrionis,Steinernema feltiae,Rhabditida,Steinernematidae,not maintained,Larva,Hemocoel,Field,Spain,loamy sand / orchards,Xenorhabdus bovienii,none,5/14/2097,2/12/2099
+68,Graphognathus leucoloma,Steinernema feltiae,Rhabditida,Steinernematidae,N60,Larva,Hemocoel,Field,New Zealand,,Xenorhabdus bovienii,none,5/14/2097,2/12/2099
+69,Otiorhynchus sulcatus,Steinernema feltiae,Rhabditida,Steinernematidae,T335,Larva,Hemocoel,Field,Tazmania,,Xenorhabdus bovienii,none,5/14/2097,2/12/2099
+70,Otiorhynchus ovatus,Steinernema feltiae,Rhabditida,Steinernematidae,SFÐS8,Larva,Hemocoel,Field,Finland,loamy sand / strawberries,Xenorhabdus bovienii,none,5/14/2097,2/12/2099
+71,Otiorhynchus dubius,Steinernema feltiae,Rhabditida,Steinernematidae,SFÐS8,Larva,Hemocoel,Field,Finland,loamy sand / berries,Xenorhabdus bovienii,none,5/14/2097,2/12/2099
+72,Phyllobius urticae,Steinernema feltiae,Rhabditida,Steinernematidae,Kle 3,Larva,Hemocoel,Field,Germany,loamy sand / strawberries,Xenorhabdus bovienii,none,5/14/2097,2/12/2099
+73,Bothynoderis punctiventris,Steinernema feltiae,Rhabditida,Steinernematidae,bothynoderi (syn.),Larva,Hemocoel,Field,,farmed land (sugarbeet?),Xenorhabdus bovienii,none,5/14/2097,2/12/2099
+74,Temnorrrhinus mendicus,Steinernema feltiae,Rhabditida,Steinernematidae,menozzi (syn.),Larva,Hemocoel,Field,Italy,public green (sugarbeet),Xenorhabdus bovienii,none,5/14/2097,2/12/2099
+12,Hylobius abietis,Steinernema feltiae,Rhabditida,Steinernematidae,not maintained,Adult,Hemocoel,Field,Czech Republic,coniferous forest,Xenorhabdus bovienii,none,5/14/2097,2/12/2099
+75,Bibio hortulana,Steinernema feltiae,Rhabditida,Steinernematidae,bibionis (syn.),Larva,Hemocoel,Field,Denmark,pasture,Xenorhabdus bovienii,none,5/14/2097,12/28/2000
+76,Bibio ferruginatus,Steinernema feltiae,Rhabditida,Steinernematidae,bibionis (syn.),Larva,Hemocoel,Field,Denmark,pasture,Xenorhabdus bovienii,none,5/14/2097,2/12/2099
+77,Bibio fulviventris,Steinernema feltiae,Rhabditida,Steinernematidae,bibionis (syn.),Larva,Hemocoel,Field,Germany,"litter / coniferous forest, deciduous forest",Xenorhabdus bovienii,none,5/14/2097,2/12/2099
+78,Bibio laniger,Steinernema feltiae,Rhabditida,Steinernematidae,bibionis (syn.),Larva,Hemocoel,Field,Germany,"litter / coniferous forest, deciduous forest",Xenorhabdus bovienii,none,5/14/2097,2/12/2099
+79,Bibio varipes,Steinernema feltiae,Rhabditida,Steinernematidae,bibionis (syn.),Larva,Hemocoel,Field,Germany,litter / coniferous & deciduous forest,Xenorhabdus bovienii,none,5/14/2097,2/12/2099
+80,Helicoverpa armigera,Steinernema feltiae,Rhabditida,Steinernematidae,Pinnock,Larva,Hemocoel,Field,Australia,,Xenorhabdus bovienii,none,5/26/2097,2/12/2099
+81,Crambus simplex,Steinernema feltiae,Rhabditida,Steinernematidae,leucaniae (syn.),Larva,Hemocoel,Field,New Zealand,orchards (tussock base),Xenorhabdus bovienii,none,5/26/2097,2/12/2099
+231,Leucania acontistis,Steinernema feltiae,Rhabditida,Steinernematidae,leucaniae (syn.),Pupa,Hemocoel,Field,New Zealand, orchards (tussock base),Xenorhabdus bovienii,none,5/26/2097,2/12/2099
+82,Agrotis ipsilon,Steinernema feltiae,Rhabditida,Steinernematidae,CA,Larva,Hemocoel,Field,"New Zealand, Spain","clay loam / home gardens, maize",Xenorhabdus bovienii,none,5/26/2097,2/12/2099
+83,Agrotis segetum,Steinernema feltiae,Rhabditida,Steinernematidae,not maintained ,Larva,Hemocoel,Field,Spain,clay loam / maize,Xenorhabdus bovienii,none,5/26/2097,2/12/2099
+84,Agrotinae sp.,Steinernema feltiae,Rhabditida,Steinernematidae,not maintained,Larva,Hemocoel,Field,Russia,loamy sand / pasture,Xenorhabdus bovienii,none,5/26/2097,2/12/2099
+85,Migdolus fryanus,Steinernema glaseri,Rhabditida,Steinernematidae,Araros,Larva,Hemocoel,Field,Brasil,,Xenorhabdus poinarii,none,5/26/2097,2/12/2099
+86,Popillia japonica,Steinernema glaseri,Rhabditida,Steinernematidae,N.J. ,Larva,Hemocoel,Field,USA,,Xenorhabdus poinarii,none,5/26/2097,2/12/2099
+87,Strigoderma arboricola,Steinernema glaseri,Rhabditida,Steinernematidae,N.C.,Larva,Hemocoel,Field,USA,,Xenorhabdus poinarii,none,5/26/2097,2/12/2099
+88,Anomala flavipennis,Steinernema glaseri,Rhabditida,Steinernematidae,Klein,Larva,Hemocoel,Field,USA,,Xenorhabdus poinarii,none,5/26/2097,2/12/2099
+232,Cephalcia abietis,Steinernema kraussei ,Rhabditida,Steinernematidae,not maintained ,Pupa,Hemocoel,Field,"Germany, Czech Republic, Austria",coniferous forest,Xenorhabdus bovienii,none,5/26/2097,2/12/2099
+89,Cephalcia abietis,Steinernema kraussei,Rhabditida,Steinernematidae,not maintained,Larva,Hemocoel,Field,Germany,coniferous forest,Xenorhabdus bovienii,none,5/26/2097,2/12/2099
+90,Cephalcia abietis,Steinernema kraussei,Rhabditida,Steinernematidae,not maintained,Larva,Hemocoel,Field,Czech Republic,coniferous forest,Xenorhabdus bovienii,none,5/26/2097,2/12/2099
+91,Cephalcia abietis,Steinernema kraussei,Rhabditida,Steinernematidae,not maintained,Larva,Hemocoel,Field,Austria,coniferous forest,Xenorhabdus bovienii,none,5/26/2097,2/12/2099
+92,Cephalcia falleni,Steinernema kraussei,Rhabditida,Steinernematidae,not maintained,Larva,Hemocoel,Field,Germany,coniferous forest,Xenorhabdus bovienii,none,5/26/2097,2/12/2099
+93,Anomala cuprea,Steinernema kushidai,Rhabditida,Steinernematidae,Hamakita,Larva,Hemocoel,Field,Japan,,Xenorhabdus japonica,none,5/26/2097,12/28/2000
+13,Neocurtilla hexadactyla,Steinernema neocurtillis,Rhabditida,Steinernematidae,not maintained,Adult,Hemocoel,Field,USA,,undescribed,none,5/26/2097,2/12/2099
+94,Heliothis sp.,Steinernema rarum,Rhabditida,Steinernematidae,Cordoba,Larva,Hemocoel,Field,Argentina,,Xenorhabdus sp.,none,5/26/2097,2/12/2099
+233,Helicoverpa zea,Steinernema riobravis,Rhabditida,Steinernematidae,unknown,Pupa,Hemocoel,Field,USA,maize,undescribed,none,5/26/2097,2/12/2099
+234,Spodoptera frugiperda,Steinernema riobravis,Rhabditida,Steinernematidae,unknown,Pupa,Hemocoel,Field,USA,maize,undescribed,none,5/26/2097,2/12/2099
+14,Scapteriscus vicinus,Steinernema scapterisci,Rhabditida,Steinernematidae,Uruguay,Adult,Hemocoel,Field,Uruguay,,Xenorhabdus sp.,none,5/26/2097,2/12/2099
+95,Scapteriscus borellii,Steinernema scapterisci,Rhabditida,Steinernematidae,unknown,Larva,Hemocoel,Field,Argentina,,Xenorhabdus sp.,none,5/26/2097,12/28/2000
+15,Scapteriscus vicinus,Steinernema scapterisci,Rhabditida,Steinernematidae,green acres,Adult,Hemocoel,Field,USA,"pasture, grassland",Xenorhabdus sp.,none,5/26/2097,2/12/2099
+16,Scapteriscus borellii,Steinernema scapterisci,Rhabditida,Steinernematidae,green acres,Adult,Hemocoel,Field,USA,"pasture, grassland",Xenorhabdus sp.,none,5/26/2097,12/28/2000
+96,Phyllopertha horticola,Steinernema sp.,Rhabditida,Steinernematidae,not maintained,Larva,Hemocoel,Field,The Netherlands,"sandy loam, loamy sand / grassland golf course",undescribed,none,5/26/2097,2/12/2099
+97,Amphimallon solstitialis,Steinernema sp.,Rhabditida,Steinernematidae,not maintained,Larva,Hemocoel,Field,The Netherlands,"sandy loam, loamy sand / grassland golf course",undescribed,none,5/26/2097,2/12/2099
+98,Scitala sericans,Steinernema sp.,Rhabditida,Steinernematidae,not maintained,Larva,Hemocoel,Field,Australia,,undescribed,none,5/26/2097,2/12/2099
+99,Adoryphorus couloni,Steinernema sp.,Rhabditida,Steinernematidae,not maintained,Larva,Hemocoel,Field,Australia,,undescribed,none,5/26/2097,2/12/2099
+100,Leptinotarsa decemlineata,Steinernema sp.,Rhabditida,Steinernematidae,X-II,Larva,Hemocoel,Field,,,undescribed,none,5/26/2097,2/12/2099
+101,Graphognathus sp.,Steinernema sp.,Rhabditida,Steinernematidae,,Larva,Hemocoel,Field,,,undescribed,none,5/27/2097,2/12/2099
+102,Cryptorrhynchus lapathi,Steinernema sp.,Rhabditida,Steinernematidae,not maintained,Larva,Hemocoel,Field,Czech Republic,,undescribed,none,5/27/2097,2/12/2099
+103,Acantholyda posticalis,Steinernema sp.,Rhabditida,Steinernematidae,syn. janicki,Larva,Hemocoel,Field,Poland,,undescribed,none,5/27/2097,2/12/2099
+104,Operophtera brumata,Steinernema sp.,Rhabditida,Steinernematidae,syn. thesami,Larva,Hemocoel,Field,,,undescribed,none,5/27/2097,2/12/2099
+105,Agrotis ipsilon,Steinernema sp.,Rhabditida,Steinernematidae,not maintained,Larva,Hemocoel,Field,Spain,clay loam / maize,undescribed,none,5/27/2097,2/12/2099
+106,Agrotis segetum,Steinernema sp.,Rhabditida,Steinernematidae,not maintained,Larva,Hemocoel,Field,Spain,clay loam / maize,undescribed,none,5/27/2097,2/12/2099
+107,Sesamia nonagrioides,Steinernema sp.,Rhabditida,Steinernematidae,not maintained,Larva,Hemocoel,Field,Spain,clay loam / maize,undescribed,none,5/27/2097,2/12/2099
+228,Reticulitermes flavipes,Neosteinernema longicurvicaudum,Rhabditida,Steinernematidae,not maintained,"Nymph, Adult",Head,Field,USA,loamy sand / orchard,undescribed,none,5/27/2097,2/12/2099
+108,Popillia japonica,Heterorhabditis bacteriophora,Rhabditida,Heterorhabditidae,Forschler ?,Larva,Hemocoel,Field,USA,,Photorhabdus luminescens,none,5/27/2097,2/12/2099
+109,Amphimallon solstitialis,Heterorhabditis bacteriophora,Rhabditida,Heterorhabditidae,,Larva,Hemocoel,Field,Germany,,Photorhabdus luminescens,none,5/27/2097,2/12/2099
+110,Cyclocephala hirta,Heterorhabditis bacteriophora,Rhabditida,Heterorhabditidae,Ali,Larva,Hemocoel,Field,USA,,Photorhabdus luminescens,none,5/27/2097,2/12/2099
+111,Phyllophaga sp.,Heterorhabditis bacteriophora,Rhabditida,Heterorhabditidae,HP88,Larva,Hemocoel,Field,USA,,Photorhabdus luminescens,none,5/27/2097,2/12/2099
+112,Diabrotica balteata,Heterorhabditis bacteriophora,Rhabditida,Heterorhabditidae,Creighton,Larva,Hemocoel,Field,USA,,Photorhabdus luminescens,none,5/27/2097,2/12/2099
+113,Curculio caryae,Heterorhabditis bacteriophora,Rhabditida,Heterorhabditidae,Hamm,Larva,Hemocoel,Field,USA,,Photorhabdus luminescens,none,5/27/2097,2/12/2099
+114,Diaprepes abbreviatus,Heterorhabditis bacteriophora,Rhabditida,Heterorhabditidae,McCoy,Larva,Hemocoel,Field,USA,,Photorhabdus luminescens,none,5/27/2097,2/12/2099
+115,Diaprepes abbreviatus,Heterorhabditis bacteriophora,Rhabditida,Heterorhabditidae,Schroeder,Larva,Hemocoel,Field,USA,,Photorhabdus luminescens,none,5/27/2097,2/12/2099
+116,Helicoverpa punctigera,Heterorhabditis bacteriophora,Rhabditida,Heterorhabditidae,HB1 ,Larva,Hemocoel,Field,Australia,,Photorhabdus luminescens,none,5/27/2097,2/12/2099
+117,Helicoverpa zea,Heterorhabditis bacteriophora,Rhabditida,Heterorhabditidae,NC1,Larva,Hemocoel,Field,USA,,Photorhabdus luminescens,none,5/27/2097,2/12/2099
+118,Diatraea grandiosella,Heterorhabditis bacteriophora,Rhabditida,Heterorhabditidae,Overholt,Larva,Hemocoel,Field,USA,,Photorhabdus sp.,none,5/27/2097,2/12/2099
+119,Popillia japonica,Heterorhabditis megidis,Rhabditida,Heterorhabditidae,not maintained ,Larva,Hemocoel,Field,USA,grassland golf course,Photorhabdus sp.,none,5/27/2097,2/12/2099
+120,Popillia japonica,Heterorhabditis megidis,Rhabditida,Heterorhabditidae,HO1,Larva,Hemocoel,Field,USA,grassland golf course,Photorhabdus sp.,none,5/27/2097,2/12/2099
+121,Phyllopertha horticola,Heterorhabditis megidis,Rhabditida,Heterorhabditidae,NLHB 87.1,Larva,Hemocoel,Field,The Netherlands,grassland,Photorhabdus sp.,none,5/27/2097,2/12/2099
+122,Phyllopertha horticola,Heterorhabditis megidis,Rhabditida,Heterorhabditidae,NLH Hi93,Larva,Hemocoel,Field,The Netherlands,"sandy loam, loamy sand / home gardens",Photorhabdus sp.,none,5/27/2097,2/12/2099
+123,Phyllopertha horticola,Heterorhabditis megidis,Rhabditida,Heterorhabditidae,NLH A93,Larva,Hemocoel,Field,The Netherlands,"sandy loam, loamy sand / cemetary",Photorhabdus sp.,none,5/27/2097,2/12/2099
+124,Phyllopertha horticola,Heterorhabditis megidis,Rhabditida,Heterorhabditidae,NLH H9292.2,Larva,Hemocoel,Field,The Netherlands,"sandy loam, loamy sand / grassland",Photorhabdus sp.,none,5/27/2097,2/12/2099
+125,Phyllopertha horticola,Heterorhabditis megidis,Rhabditida,Heterorhabditidae,NLH H94.1,Larva,Hemocoel,Field,The Netherlands,"sandy loam, loamy sand / grassland",Photorhabdus sp.,none,5/27/2097,2/12/2099
+126,Amphimallon solstitialis,Heterorhabditis megidis,Rhabditida,Heterorhabditidae,NLH HJun91,Larva,Hemocoel,Field,The Netherlands,"sandy loam, loamy sand / grassland golf course",Photorhabdus sp.,none,5/27/2097,2/12/2099
+127,Amphimallon solstitialis,Heterorhabditis megidis,Rhabditida,Heterorhabditidae,NLH AJ93,Larva,Hemocoel,Field,The Netherlands,"sandy loam, loamy sand / grassland golf course",Photorhabdus sp.,none,5/27/2097,2/12/2099
+128,Otiorhynchus sulcatus,Heterorhabditis megidis,Rhabditida,Heterorhabditidae,HSH1,Larva,Hemocoel,Field,Germany,home gardens,Photorhabdus sp.,none,5/27/2097,2/12/2099
+129,Heteronychus arator,Heterorhabditis zealandica,Rhabditida,Heterorhabditidae,NZH,Larva,Hemocoel,Field,New Zealand,,Photorhabdus sp.,none,5/27/2097,2/12/2099
+130,Agriotes ponticus,Heterorhabditis sp.,Rhabditida,Heterorhabditidae,not maintained,Larva,Hemocoel,Field,Republica Moldova,"loamy sand / vegetables, grain",Photorhabdus sp.,none,5/27/2097,2/12/2099
+131,Hoplocampa testudinae,Heterorhabditis sp.,Rhabditida,Heterorhabditidae,not maintained,Larva,Hemocoel,Field,Poland,sandy loam / orchards,Photorhabdus sp.,none,5/27/2097,2/12/2099
+132,Phyllopertha horticola,Heterorhabditis sp.,Rhabditida,Heterorhabditidae,HSH3,Larva,Hemocoel,Field,Germany,loamy sand / grassland golf courses,Photorhabdus sp.,none,5/27/2097,2/12/2099
+133,Popillia japonica,Heterorhabditis sp.,Rhabditida,Heterorhabditidae,not maintained ,Larva,Hemocoel,Field,USA,,Photorhabdus sp.,none,5/27/2097,2/12/2099
+134,Popillia japonica,Heterorhabditis sp.,Rhabditida,Heterorhabditidae,Elgria,Larva,Hemocoel,Field,USA,,Photorhabdus sp.,none,5/27/2097,2/12/2099
+135,Lepidiota crinita,Heterorhabditis sp.,Rhabditida,Heterorhabditidae,unknown,Larva,Hemocoel,Field,Australia,"coarse alluvial sand grading to fine silt / sugar cane, first ratoon",Photorhabdus sp.,none,5/27/2097,2/12/2099
+136,Lepidiota negatoria,Heterorhabditis sp.,Rhabditida,Heterorhabditidae,unknown,Larva,Hemocoel,Field,Australia,"coarse alluvial sand grading to fine silt / sugar cane, first ratoon",Photorhabdus sp.,none,5/27/2097,2/12/2099
+137,Lepidiota picticollis,Heterorhabditis sp.,Rhabditida,Heterorhabditidae,unknown,Larva,Hemocoel,Field,Australia,"coarse alluvial sand grading to fine silt / sugar cane, first ratoon",Photorhabdus sp.,none,5/27/2097,2/12/2099
+138,Antitrogus consanguineus,Heterorhabditis sp.,Rhabditida,Heterorhabditidae,unknown,Larva,Hemocoel,Field,Australia,"coarse alluvial sand grading to fine silt / sugar cane, first ratoon",Photorhabdus sp.,none,5/27/2097,2/12/2099
+139,Graphognathus leucoloma,Heterorhabditis sp.,Rhabditida,Heterorhabditidae,unknown,Larva,Hemocoel,Field,Australia,,Photorhabdus sp.,none,5/27/2097,12/28/2000
+140,Graphognathus leucoloma,Heterorhabditis sp.,Rhabditida,Heterorhabditidae,nematode 41088,Larva,Hemocoel,Field,"USA, Australia",,Photorhabdus lsp.,none,5/27/2097,12/28/2000
+141,Cylas formicarius,Heterorhabditis sp.,Rhabditida,Heterorhabditidae,Tetuan,Larva,Hemocoel,Field,Cuba,,Photorhabdus sp.,none,5/27/2097,2/12/2099
+142,Pachnaeus litus,Heterorhabditis sp.,Rhabditida,Heterorhabditidae,P2M,Larva,Hemocoel,Field,Cuba,,Photorhabdus sp.,none,5/27/2097,2/3/2000
+143,Pericoptus truncatus,Heterorhabditis sp.,Rhabditida,Heterorhabditidae,unknown,Larva,Hemocoel,Field,New Zealand,edge of sand,Photorhabdus sp.,none,5/27/2097,2/12/2099
+144,Hepialus californicus,Heterorhabditis hepialus ,Rhabditida,Heterorhabditidae,hepialus (syn.),Larva,Hemocoel,Field,USA,"orchards, bush lupines, lupines",Photorhabdus sp.,none,5/27/2097,2/12/2099
+145,Gasterocercodes brasiliensis,Heterorhabditis sp.,Rhabditida,Heterorhabditidae,not maintained,Larva,Hemocoel,Field,,,Photorhabdus sp.,none,5/27/2097,2/12/2099
+146,Dilophus vulgaris,Steinernema feltiae,Rhabditida,Steinernematidae,bibionis (syn.),Larva,Hemocoel,Field,Denmark,,Xenorhabdus bovienii,none,5/28/2097,2/12/2099
+17,Acheta domesticus,Steinernema scapterisci,Rhabditida,Steinernematidae,,Adult,hemocoel,Lab,USA,,none,none,6/3/2097,2/12/2099
+18,Scapteriscus borellii,Steinernema scapterisci,Rhabditida,Steinernematidae,,Adult,hemocoel,Lab,USA,,none,none,6/3/2097,12/28/2000
+19,Scapteriscus vicinus,Steinernema scapterisci,Rhabditida,Steinernematidae,,Adult,hemocoel,Lab,USA,,none,none,6/3/2097,2/12/2099
+147,Heteronychus arator,Heterorhabditis zealandica,Rhabditida,Heterorhabditidae,NZ,Larva,Hemocoel,Field,New Zealand,,Photorhabdus sp.,none,6/3/2097,2/12/2099
+148,Costelytra zealandica,Cephalobellus costelytrae,Rhabditida,Cephalobidae,,Larva,,Field,New Zealand,,none,,6/3/2097,2/12/2099
+1,Austrosimulium multicorne,Austromemermis namis,Stichosomida,Mermithidae,,,,Field,New Zealand,,none,,6/3/2097,2/12/2099
+2,Neocurupira hudsoni,Blepharomermis craigi,Stichosomida,Mermithidae,,,,Field,New Zealand,,none,,6/3/2097,2/12/2099
+3,Costelytra zealandica,Psammomermis canterburiensis,Stichosomida,Mermithidae,,,,Field,New Zealand,,none,,6/3/2097,2/12/2099
+4,Sirex noctilio,Delandenus siricidicola,Stichosomida,Mermithidae,,,,Field,New Zealand,,none,,6/3/2097,2/12/2099
+5,Platyzosteria novaeseelandiae,Blatticola tuapakae,Rhabditida,Thelastomatidae,,,,Field,New Zealand,,none,,6/3/2097,2/12/2099
+6,Platyzosteria novaeseelandiae,Protrellina gurri ,Rhabditida,Thelastomatidae,,,,Field,New Zealand,,none,,6/3/2097,2/12/2099
+149,Pericoptus truncatus,Tetleyus pericopti,Rhabditida,Thelastomatidae,,Larva,,Field,New Zealand,,none,,6/3/2097,2/12/2099
+7,Eudonia sabulosella,Steinernema feltiae,Rhabditida,Steinernematidae,unknown,,Hemocoel,Field,New Zealand,,Xenorhabdus bovienii,none,6/4/2097,2/12/2099
+150,Popillia japonica,Heterorhabditis bacteriophora,Rhabditida,Heterorhabditidae,HP88,Larva,Hemocoel,Field,,turf,Photorhabdus luminescens,none,6/4/2097,2/12/2099
+151,Cyclocephala borealis,Steinernema carpocapsae,Rhabditida,Steinernematidae,,Larva,hemocoel,Field,,,Xenorhabdus nematophilus,none,6/4/2097,12/28/2000
+152,Cyclocephala borealis,Heterorhabditis bacteriophora,Rhabditida,Heterorhabditidae,HP88,Larva,Hemocoel,Field,,,Photorhabdus luminescens,none,6/4/2097,12/28/2000
+153,Cyclocephala hirta,Heterorhabditis bacteriophora,Rhabditida,Heterorhabditidae,HP88,Larva,Hemocoel,Field,,,Photorhabdus luminescens,none,6/4/2097,2/12/2099
+154,Popillia japonica,Heterorhabditis bacteriophora,Rhabditida,Heterorhabditidae,unknown,Larva,Hemocoel,Field,USA,"turf, potted yew",Photorhabdus luminescens,none,6/4/2097,2/12/2099
+155,Popillia japonica,Heterorhabditis sp.,Rhabditida,Heterorhabditidae,unknown,Larva,Hemocoel,Lab,,potted yew,Photorhabdus sp.,none,6/4/2097,2/12/2099
+156,Popillia japonica,Steinernema carpocapsae,Rhabditida,Steinernematidae,Breton,Larva,Hemocoel,Field,,potted yew,Xenorhabdus nematophilus,none,6/4/2097,2/12/2099
+157,Rhizotrogus majalis,Steinernema carpocapsae,Rhabditida,Steinernematidae,,Larva,hemocoel,Field,,potted yew,Xenorhabdus nematophilus,none,6/4/2097,2/12/2099
+158,Rhizotrogus majalis,Steinernema glaseri,Rhabditida,Steinernematidae,,Larva,hemocoel,Field,,potted yew,Xenorhabdus poinarii,none,6/4/2097,2/12/2099
+159,Rhizotrogus majalis,Heterorhabditis bacteriophora,Rhabditida,Heterorhabditidae,unknown,Larva,Hemocoel,Field,,potted yew,Photorhabdus luminescens,none,6/4/2097,2/12/2099
+160,Rhizotrogus majalis,Heterorhabditis sp.,Rhabditida,Heterorhabditidae,unknown,Larva,Hemocoel,Field,,potted yew,Photorhabdus sp.,none,6/4/2097,2/12/2099
+161,Phyllopertha horticola,Heterorhabditis megidis,Rhabditida,Heterorhabditidae,NLH H92.1,Larva,Hemocoel,Field,The Netherlands,"sandy loam, loamy sand / grassland",Photorhabdus sp.,none,6/4/2097,2/12/2099
+162,Costelytra zealandica,Steinernema glaseri,Rhabditida,Steinernematidae,,Larva,hemocoel,Field,,pasture,Xenorhabdus poinarii,none,6/4/2097,2/12/2099
+163,Costelytra zealandica,Heterorhabditis bacteriophora,Rhabditida,Heterorhabditidae,unknown,Larva,Hemocoel,Field,,pasture,Photorhabdus luminescens,none,6/4/2097,2/12/2099
+164,Adoryphorus couloni,Steinernema glaseri,Rhabditida,Steinernematidae,,Larva,hemocoel,Field,,pasture,Xenorhabdus poinarii,none,6/4/2097,2/12/2099
+165,Alissonotum impressicolle,Steinernema glaseri,Rhabditida,Steinernematidae,,Larva,hemocoel,Field,,sugarcane,Xenorhabdus poinarii,none,6/4/2097,2/12/2099
+166,Ligyrus subtropicus,Steinernema glaseri,Rhabditida,Steinernematidae,,Larva,hemocoel,Field,,sugarcane,Xenorhabdus poinarii,none,6/4/2097,2/12/2099
+167,Alissonotum impressicolle,Heterorhabditis sp.,Rhabditida,Heterorhabditidae,unknown,Larva,Hemocoel,Field,,sugarcane,Photorhabdus sp.,none,6/4/2097,2/12/2099
+168,Ligyrus subtropicus,Steinernema carpocapsae,Rhabditida,Steinernematidae,,Larva,hemocoel,Field,,sugarcane,Xenorhabdus nematophilus,none,6/4/2097,2/12/2099
+169,Popillia japonica,Steinernema carpocapsae,Rhabditida,Steinernematidae,Agriotos,Larva,Hemocoel,Field,,potted yew,Xenorhabdus nematophilus,none,6/4/2097,2/12/2099
+170,Otiorhynchus sulcatus,Heterorhabditis bacteriophora,Rhabditida,Heterorhabditidae,,Larva,Hemocoel,Field,,cranberries,Photorhabdus sp.,none,6/4/2097,2/12/2099
+171,Otiorhynchus sulcatus,Heterorhabditis bacteriophora,Rhabditida,Heterorhabditidae,HP88,Larva,Hemocoel,Field,,,Photorhabdus sp.,none,6/4/2097,2/12/2099
+172,Otiorhynchus sulcatus,Heterorhabditis sp.,Rhabditida,Heterorhabditidae,,Larva,Hemocoel,Field,,yew,Photorhabdus sp.,none,6/4/2097,2/12/2099
+173,Otiorhynchus ovatus,Steinernema carpocapsae,Rhabditida,Steinernematidae,,Larva,Hemocoel,Field,,,Xenorhabdus bovienii,none,6/4/2097,2/12/2099
+174,Otiorhynchus ovatus,Steinernema glaseri,Rhabditida,Steinernematidae,,Larva,Hemocoel,Field,,,Xenorhabdus bovienii,none,6/4/2097,2/12/2099
+175,Otiorhynchus ovatus,Heterorhabditis bacteriophora,Rhabditida,Heterorhabditidae,,Larva,Hemocoel,Field,,,Photorhabdus sp.,none,6/4/2097,2/12/2099
+176,Diaprepes abbreviatus,Steinernema carpocapsae,Rhabditida,Steinernematidae,,Larva,Hemocoel,Field,,,Xenorhabdus nematophilus,none,6/4/2097,2/12/2099
+177,Diaprepes abbreviatus,Steinernema glaseri,Rhabditida,Steinernematidae,,Larva,Hemocoel,Field,,,Xenorhabdus bovienii,none,6/4/2097,2/12/2099
+178,Graphognathus sp.,Steinernema carpocapsae,Rhabditida,Steinernematidae,,Larva,Hemocoel,Field,,,undescribed,none,6/4/2097,2/12/2099
+179,Graphognathus sp.,Steinernema glaseri,Rhabditida,Steinernematidae,,Larva,hemocoel,Field,,,Xenorhabdus poinarii,none,6/4/2097,2/12/2099
+180,Hylobius abietis,Steinernema carpocapsae,Rhabditida,Steinernematidae,not maintained,Larva,Hemocoel,Field,,,Xenorhabdus nematophilus,none,6/4/2097,2/12/2099
+181,Curculio caryae,Steinernema carpocapsae,Rhabditida,Steinernematidae,not maintained,Larva,Hemocoel,Field,,,Xenorhabdus nematophilus,none,6/4/2097,2/12/2099
+182,Sphenophorus parvulus,Steinernema carpocapsae,Rhabditida,Steinernematidae,not maintained,Larva,Hemocoel,Field,,,Xenorhabdus nematophilus,none,6/4/2097,2/12/2099
+183,Sphenophorus parvulus,Heterorhabditis bacteriophora,Rhabditida,Heterorhabditidae,HP88,Larva,Hemocoel,Field,,,Photorhabdus sp.,none,6/4/2097,2/12/2099
+8,Anasa tristis,Steinernema carpocapsae,Rhabditida,Steinernematidae,not maintained,,hemocoel,Field,,,Xenorhabdus nematophilus,none,6/4/2097,2/12/2099
+184,Holcocerus insularis,Steinernema affinis,Rhabditida,Steinernematidae,,Larva,Hemocoel,Field,,,Xenorhabdus bovienii,none,6/4/2097,2/12/2099
+9,Amyelois transitella,Steinernema carpocapsae,Rhabditida,Steinernematidae,,,hemocoel,Field,,,Xenorhabdus nematophilus,none,6/4/2097,2/12/2099
+185,Cydia pomonella,Steinernema carpocapsae,Rhabditida,Steinernematidae,All,Larva,Hemocoel,Field,,,Xenorhabdus nematophilus,none,6/4/2097,2/12/2099
+186,Platyptilia carduidactyla,Steinernema carpocapsae,Rhabditida,Steinernematidae,,Larva,Hemocoel,Field,,,Xenorhabdus nematophilus,none,6/4/2097,2/12/2099
+187,Monochamus alternatus,Steinernema carpocapsae,Rhabditida,Steinernematidae,,Larva,Hemocoel,Field,Japan,,Xenorhabdus nematophilus,none,6/4/2097,2/12/2099
+188,Monochamus alternatus,Steinernema glaseri,Rhabditida,Steinernematidae,,Larva,hemocoel,Field,Japan,,Xenorhabdus poinarii,none,6/4/2097,2/12/2099
+10,Monochamus alternatus,Steinernema feltiae,Rhabditida,Steinernematidae,unknown,,Hemocoel,Field,Japan,,Xenorhabdus bovienii,none,6/4/2097,2/12/2099
+189,Monochamus alternatus,Heterorhabditis bacteriophora,Rhabditida,Heterorhabditidae,,Larva,Hemocoel,Field,Japan,,Photorhabdus sp.,none,6/4/2097,2/12/2099
+190,Liriomyza trifolii,Steinernema carpocapsae,Rhabditida,Steinernematidae,,Larva,Hemocoel,Lab,Japan,,Xenorhabdus nematophilus,none,6/4/2097,2/12/2099
+191,Blattella germanica,Steinernema carpocapsae,Rhabditida,Steinernematidae,,Larva,Hemocoel,Field,,,Xenorhabdus nematophilus,none,6/4/2097,2/12/2099
+227,Periplaneta americana,Heterorhabditis zealandica,Rhabditida,Heterorhabditidae,T327,Nymph,Hemocoel,Field,New Zealand,,Photorhabdus sp.,none,6/4/2097,2/12/2099
+20,Musca domestica,Heterorhabditis bacteriophora,Rhabditida,Heterorhabditidae,,Adult,Hemocoel,Field,,,Photorhabdus sp.,none,6/4/2097,2/12/2099
+21,Musca domestica,Steinernema carpocapsae,Rhabditida,Steinernematidae,,Adult,hemocoel,Field,,sucrose-baited traps,Xenorhabdus nematophilus,none,6/4/2097,2/12/2099
+192,Lycoriella auripila,Steinernema carpocapsae,Rhabditida,Steinernematidae,,Larva,hemocoel,Field,,sucrose-baited traps,Xenorhabdus nematophilus,none,6/4/2097,2/12/2099
+11,Lycoriella auripila,Steinernema feltiae,Rhabditida,Steinernematidae,unknown,,Hemocoel,Field,,,Xenorhabdus bovienii,none,6/4/2097,2/12/2099
+22,Lycoriella auripila,Heterorhabditis bacteriophora,Rhabditida,Heterorhabditidae,,Adult,Hemocoel,Field,,,Photorhabdus sp.,none,6/4/2097,2/12/2099
+193,Alphitobius diaperinus,Steinernema carpocapsae,Rhabditida,Steinernematidae,,Larva,hemocoel,Field,,,Xenorhabdus nematophilus,none,6/4/2097,2/12/2099
+194,Lissorhoptrus oryzophilus,Steinernema carpocapsae,Rhabditida,Steinernematidae,,Larva,hemocoel,Field,,,Xenorhabdus nematophilus,none,6/4/2097,2/12/2099
+23,Gryllus sp.,Steinernema scapterisci,Rhabditida,Steinernematidae,,Adult,hemocoel,Lab,USA,,none,none,6/4/2097,2/12/2099
+24,Periplaneta americana,Steinernema scapterisci,Rhabditida,Steinernematidae,,Adult,hemocoel,Lab,USA,,none,none,6/4/2097,2/12/2099
+25,Scapteriscus abbreviatus,Steinernema scapterisci,Rhabditida,Steinernematidae,,Adult,hemocoel,Lab,USA,,none,none,6/4/2097,2/12/2099
+26,Anticarsia gemmatalis,Steinernema scapterisci,Rhabditida,Steinernematidae,,Adult,hemocoel,Lab,USA,,none,none,6/4/2097,2/12/2099
+27,Feltia subterranea,Steinernema scapterisci,Rhabditida,Steinernematidae,,Adult,hemocoel,Lab,USA,,none,none,6/4/2097,2/12/2099
+28,Galleria mellonella,Steinernema scapterisci,Rhabditida,Steinernematidae,,Adult,hemocoel,Lab,USA,,none,none,6/4/2097,2/12/2099
+29,Spodoptera frugiperda,Steinernema scapterisci,Rhabditida,Steinernematidae,,Adult,hemocoel,Lab,USA,,none,none,6/4/2097,2/12/2099
+30,Apis mellifera,Steinernema scapterisci,Rhabditida,Steinernematidae,,Adult,hemocoel,Lab,USA,,none,none,6/4/2097,2/12/2099
+195,Sphenophorus venatus,Heterorhabditis bacteriophora,Rhabditida,Heterorhabditidae,UCD1,Larva,Hemocoel,Field,USA,"loam, turf",Photorhabdus luminescens,none,6/5/2097,2/12/2099
+196,Cyclocephala borealis,Steinernema carpocapsae,Rhabditida,Steinernematidae,Agriotos,Larva,hemocoel,Lab,,,Xenorhabdus nematophilus,none,6/6/2097,12/28/2000
+197,Cyclocephala borealis,Steinernema carpocapsae,Rhabditida,Steinernematidae,All,Larva,hemocoel,Lab,,,Xenorhabdus nematophilus,none,6/6/2097,12/28/2000
+198,Cyclocephala borealis,Steinernema carpocapsae,Rhabditida,Steinernematidae,Breton,Larva,hemocoel,Lab,,,Xenorhabdus nematophilus,none,6/6/2097,12/28/2000
+199,Cyclocephala borealis,Steinernema carpocapsae,Rhabditida,Steinernematidae,HOP,Larva,hemocoel,Lab,,,Xenorhabdus nematophilus,none,6/6/2097,12/28/2000
+200,Cyclocephala borealis,Steinernema carpocapsae,Rhabditida,Steinernematidae,Italian,Larva,hemocoel,Lab,,,Xenorhabdus nematophilus,none,6/6/2097,12/28/2000
+201,Cyclocephala borealis,Steinernema carpocapsae,Rhabditida,Steinernematidae,Mexican,Larva,hemocoel,Lab,,,Xenorhabdus nematophilus,none,6/6/2097,12/28/2000
+202,Cyclocephala borealis,Steinernema anomali,Rhabditida,Steinernematidae,,Larva,hemocoel,Lab,,,Xenorhabdus nematophilus,none,6/6/2097,12/28/2000
+203,Cyclocephala borealis,Steinernema glaseri,Rhabditida,Steinernematidae,,Larva,hemocoel,Lab,,,Xenorhabdus nematophilus,none,6/6/2097,12/28/2000
+204,Cyclocephala borealis,Heterorhabditis bacteriophora,Rhabditida,Heterorhabditidae,NC,Larva,Hemocoel,Lab,,,Photorhabdus luminescens,none,6/6/2097,12/28/2000
+205,Cyclocephala borealis,Heterorhabditis megidis,Rhabditida,Heterorhabditidae,,Larva,Hemocoel,Lab,,,Photorhabdus luminescens,none,6/6/2097,12/28/2000
+206,Popillia japonica,Steinernema carpocapsae,Rhabditida,Steinernematidae,All,Larva,Hemocoel,Lab,,,Xenorhabdus nematophilus,none,6/6/2097,2/12/2099
+207,Popillia japonica,Steinernema carpocapsae,Rhabditida,Steinernematidae,HOP,Larva,Hemocoel,Lab,,,Xenorhabdus nematophilus,none,6/6/2097,2/12/2099
+208,Popillia japonica,Steinernema carpocapsae,Rhabditida,Steinernematidae,Italian,Larva,Hemocoel,Lab,,,Xenorhabdus nematophilus,none,6/6/2097,2/12/2099
+209,Popillia japonica,Steinernema carpocapsae,Rhabditida,Steinernematidae,Mexican,Larva,Hemocoel,Lab,,,Xenorhabdus nematophilus,none,6/6/2097,2/12/2099
+210,Popillia japonica,Steinernema carpocapsae,Rhabditida,Steinernematidae,Pye,Larva,Hemocoel,Lab,,,Xenorhabdus nematophilus,none,6/6/2097,2/12/2099
+211,Popillia japonica,Steinernema carpocapsae,Rhabditida,Steinernematidae,Ohio,Larva,Hemocoel,Lab,,,Xenorhabdus nematophilus,none,6/6/2097,2/12/2099
+212,Popillia japonica,Steinernema anomali,Rhabditida,Steinernematidae,,Larva,Hemocoel,Lab,,,Xenorhabdus nematophilus,none,6/6/2097,2/12/2099
+213,Popillia japonica,Steinernema glaseri,Rhabditida,Steinernematidae,,Larva,Hemocoel,Lab,,,Xenorhabdus nematophilus,none,6/6/2097,2/12/2099
+214,Popillia japonica,Heterorhabditis bacteriophora,Rhabditida,Heterorhabditidae,NC,Larva,Hemocoel,Lab,,potted yew,Photorhabdus sp.,none,6/6/2097,2/12/2099
+215,Melolontha afflicta,Steinernema bothynodera,Rhabditida,Steinernematidae,,Larva,Hemocoel,Field,Europe,,Xenorhabdus bovienii,none,6/9/2097,12/28/2000
+216,Amphimallon solstitialis,Steinernema georgica,Rhabditida,Steinernematidae,,Larva,Hemocoel,Field,Europe,,Xenorhabdus bovienii,none,6/9/2097,2/12/2099
+217,Eupeodes corollae,Steinernema feltiae,Rhabditida,Steinernematidae,,Larva,Hemocoel,Lab,,,Xenorhabdus bovienii,none,6/14/2097,2/12/2099
+218,Eupeodes corollae,Heterorhabditis bacteriophora,Rhabditida,Heterorhabditidae,T-327,Larva,Hemocoel,Lab,,,Photorhabdus luminescens,none,6/14/2097,2/12/2099
+219,Pterostichus cupreus,Heterorhabditis bacteriophora,Rhabditida,Heterorhabditidae,T-327,Larva,Hemocoel,Lab,,,Photorhabdus luminescens,none,6/14/2097,8/29/2000
+220,Pterostichus cupreus,Heterorhabditis bacteriophora,Rhabditida,Heterorhabditidae,HSH,Larva,Hemocoel,Lab,,,Photorhabdus luminescens,none,6/14/2097,12/28/2000
+221,Pterostichus cupreus,Heterorhabditis sp.,Rhabditida,Heterorhabditidae,HD 01,Larva,Hemocoel,Lab,,,Photorhabdus luminescens,none,6/14/2097,12/28/2000
+222,Platynus dorsalis,Heterorhabditis sp.,Rhabditida,Heterorhabditidae,HD 01,Larva,Hemocoel,Lab,,,Photorhabdus luminescens,none,6/14/2097,2/12/2099
+223,Eupeodes corollae,Heterorhabditis sp.,Rhabditida,Heterorhabditidae,HD 01,Larva,Hemocoel,Lab,,,Photorhabdus luminescens,none,6/14/2097,2/12/2099
+224,Pterostichus cupreus,Steinernema feltiae,Rhabditida,Steinernematidae,,Larva,Hemocoel,Lab,,,Xenorhabdus bovienii,none,6/14/2097,12/28/2000
+31,Platynus dorsalis,Steinernema feltiae,Rhabditida,Steinernematidae,,Adult,,Field,Germany,,Xenorhabdus bovienii,none,6/18/2097,2/12/2099

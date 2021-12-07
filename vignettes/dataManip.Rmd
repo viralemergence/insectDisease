@@ -13,315 +13,14 @@ vignette: >
 
 ## load required packages for vignette
 
-```{r}
+```{r, results='hide'}
 
 library(insectDisease)
 library(plyr)
 library(dplyr)
 library(corrplot)
-
+knitr::opts_chunk$set(fig.width=6, fig.height=6) 
 ```
-
-
-
-
-## Loading in and cleaning/manipulating data
-
-This outputs all the `.csv` files to `.rda` for use in the package. The `.csv` files are the data with updated taxonomic backbone. See the help files for each data object (`?nvpassoc`) for information on each specific data subfile. 
-
-```{r eval=FALSE}
-
-assocref <- read.csv('csv/assocref.csv')
-citation <- read.csv('csv/citation.csv')
-hosts <- read.csv('csv/hosts.csv')
-hostTaxonomy <- read.csv('csv/hostTaxonomy.csv')
-negative <- read.csv('csv/negative.csv')
-nemaref <- read.csv('csv/nemaref.csv')
-nematode <- read.csv('csv/nematode.csv')
-new_asso <- read.csv('csv/new_asso.csv')
-newnema <- read.csv('csv/newnema.csv')
-noassref <- read.csv('csv/noassref.csv')
-nvpassoc <- read.csv('csv/nvpassoc.csv')
-pathogen <- read.csv('csv/pathogen.csv')
-pathTaxonomy <- read.csv('csv/pathTaxonomy.csv')
-viraref <- read.csv('csv/viraref.csv')
-viruses <- read.csv('csv/viruses.csv')
-
-
-save(assocref, file="data/assocref.rda", compress='xz')
-save(citation, file="data/citation.rda", compress='xz')
-save(hosts, file="data/hosts.rda", compress='xz')
-save(hostTaxonomy, file="data/hostTaxonomy.rda", compress='xz')
-save(negative, file="data/negative.rda", compress='xz')
-save(nemaref, file="data/nemaref.rda", compress='xz')
-save(nematode, file="data/nematode.rda", compress='xz')
-save(new_asso, file="data/new_asso.rda", compress='xz')
-save(newnema, file="data/newnema.rda", compress='xz')
-save(noassref, file="data/noassref.rda", compress='xz')
-save(nvpassoc, file="data/nvpassoc.rda", compress='xz')
-save(pathogen, file="data/pathogen.rda", compress='xz')
-save(pathTaxonomy, file="data/pathTaxonomy.rda", compress='xz')
-save(viraref, file="data/viraref.rda", compress='xz')
-save(viruses, file="data/viruses.rda", compress='xz')
-
-```
-
-
-
-
-
-
-### Getting host taxonomic data
-
-
-
-### Providing a taxonomic backbone to host and pathogen records
-
-Read in cached taxonomy (to do this every time would be computationally costly).
-
-```{r eval=TRUE}
-
-data(hostTaxonomy)
-data(pathTaxonomy)
-
-```
-
-
-
-Set eval to FALSE, but users can run this. For now, we will cache the taxonomic data and read it in to format the data below. 
-
-
-```{r eval=FALSE}
-
-hostNames <- unique(c(hosts$HostSpecies, negative$HostSpecies, nematode$HostSpecies, 
-  noassref$HostSpecies, nvpassoc$HostSpecies, viruses$HostSpecies))
-hostTaxonomy <- getNCBI(hostNames, host=TRUE)
-write.csv(hostTaxonomy, file='csv/hostTaxonomy.csv')
-save(hostTaxonomy, file='data/hostTaxonomy.rda')
-
-
-pathNames <- unique(c(pathogen$PathogenSpecies, negative$PathogenSpecies, nematode$PathogenSpecies, 
-  noassref$PathogenSpecies, nvpassoc$PathogenSpecies, viruses$PathogenSpecies))
-pathTaxonomy <- getNCBI(as.character(pathNames), host=FALSE)
-write.csv(pathTaxonomy, file='csv/pathTaxonomy.csv')
-save(pathTaxonomy, file='data/pathTaxonomy.rda')
-
-```
-
-
-
-
-
-
-
-
-
-
-
-```{r}
-
-#' Programmatically adjust pathogen "Group" column based on taxonomy
-#'
-#' @param dat the data.frame containing a column "Group"
-#' @param tax the taxonomy data.frame from above
-#'
-#' @return dat, but with updated "Group" designations based on taxonomy
-
-fillTaxon <- function(edwip){
-    
-  protzC <- c('Kinetoplastea')
-  bactC <- c('Gammaproteobacteria', 'Bacilli')
-  
-  fungz <- c('Unikaryon ixodis', 'Tompetchia webberi', 
-    'Sphaerostilbe auranticola', 'Erynia sepulchralis',
-    'Furia vomitoriae', 'Hymenostilbe sp.', 'Hymenostilbe spp.', 
-    'Aquamortierella elegans', "Sorosporella sp.", "Coreomycetopsis oedipus",
-    "Termitaria coronata", "Herpomyces paranensis", "Herpomyces tricuspidatus", 
-    "Herpomyces arietinus", "Herpomyces nyctoborae", "Strongwellsea sp. nov. 1", 
-    "Strongwellsea sp. nov. 2", "Strongwellsea sp. nov. 3", 
-    "Strongwellsea sp. nov. 6", "Strongwellsea sp. nov. 5", 
-    "Strongwellsea sp. nov. 4", "Eryniopsis lampyridarum", 
-    "Entomophthora erupta", "Erynia erinacea", "Erynia spp.",
-    "Thaxterosporium turbinatum", "Diheterospora sp.", "Neozygites cf floridana", 
-    "Coelomomyces sp.", "Pandora gammae", "Myiophagus sp.", 
-    "Septobasidium spp.", "Neozygites cucumeriformis", 
-    "Synnematium sp.", "Fusarium oxysporum var. orthoceras", 
-    "Fusarium sp. near solani","Apergillus sp.","Leptolegnia sp.", 
-    "Zoophthora curvispora")
-
-  virz <- c("Thymelicus lineola NPV", 
-    "Carposina niponensis GV", "Colias eurytheme NPV", 
-    "Celerio euphorbiae NPV", "Aedes taeniorhynchus IV (RMIV)", 
-    "Bombyx mori CPV", "Dendrolimus spectabilis CPV")
-
-  protz <- c('Gregarina guatemalensis', 'Hoplorhynchus polyhamatus', 
-    'Adelina legeri', "Leishmania major") 
-
-  bactz <- c("Rickettsiella sp.", "Pseudomonas florescens", "Bacillus tuviensis")
-
-  # now go through rows where group is unknown and try to fix that
-  for(i in 1:nrow(edwip)){
-    if(edwip$Group[i] %in% c('', 'Not defined in EDWIP')){
-
-      if(!is.na(edwip$PathKingdom[i]) & edwip$PathKingdom[i] == 'Fungi'){
-        edwip$Group[i] <- 'Fungi'
-      }
-      if(edwip$PathClass[i] %in% bactC | edwip$Pathogen[i] %in% bactz){
-        edwip$Group[i] <- 'Bacteria'
-      }
-      if(edwip$PathClass[i] %in% protzC | edwip$Pathogen[i] %in% protz){
-        edwip$Group[i] <- 'Protozoa'
-      }
-      if(edwip$PathogenSpecies[i] %in% fungz){
-        edwip$Group[i] <- 'Fungi'
-      }
-      if(edwip$PathogenSpecies[i] %in% virz){
-        edwip$Group[i] <- 'Viruses'
-      }
-
-    }
-  }
-  # microsporidians used to be considered protozoa, but are now fungi.
-  edwip$Group[which(edwip$PathKingdom == 'Fungi' & edwip$Group != 'Fungi')] <- 'Fungi'
-  return(edwip)
-}
-
-```
-
-
-
-
-
-
-
-
-
-
-
-### Process data to give each data file a corrected taxonomic backbone
-
-This should not really be run again, unless the csv files have changed, as it may be time-consuming, and the csv files should already have a taxonomic backbone in place by this point. This script is included for transparency, and to run in the future if/when the data are augmented with more interactions. 
-
-```{r}
-
-
-fixTaxonomy <- function(fileName){
-  tmp <- read.csv(paste('csv/', fileName, '.csv', sep=''))
-
-  if(any(colnames(tmp)=='X')){
-    tmp$X <- NULL
-  }
-  
-  if(!is.null(tmp$HostSpecies)){
-#    hostTax <- getNCBI(tmp$HostSpecies, host=TRUE)
-#    tmp <- cbind(tmp, hostTax)
-    data(hostTaxonomy)
-    tmp$HostOrder <- NULL
-    tmp$HostFamily <- NULL
-    tmp <- dplyr::left_join(tmp, unique(hostTaxonomy),
-      by='HostSpecies')
-  }
-
-  if(!is.null(tmp$PathogenSpecies)){
-#    pathTax <- getNCBI(tmp$PathogenSpecies, host=FALSE)
-#    tmp <- cbind(tmp, pathTax)
-    data(pathTaxonomy)
-    tmp$PathOrder <- NULL
-    tmp$PathFamily <- NULL
-    tmp <- dplyr::left_join(tmp, unique(pathTaxonomy),
-      by='PathogenSpecies')
-  }
-  if(!is.null(tmp$Group)){
-    tmp <- fillTaxon(tmp)
-  }
-  return(tmp)
-}
-
-```
-
-
-
-
-```{r eval=FALSE}
-
-assocref <- fixTaxonomy('assocref')
-citation <- fixTaxonomy('citation')
-hosts <- fixTaxonomy('hosts')
-negative <- fixTaxonomy('negative')
-nemaref <- fixTaxonomy('nemaref')
-nematode <- fixTaxonomy('nematode')
-new_asso <- fixTaxonomy('new_asso')
-newnema <- fixTaxonomy('newnema')
-noassref <- fixTaxonomy('noassref')
-nvpassoc <- fixTaxonomy('nvpassoc')
-pathogen <- fixTaxonomy('pathogen')
-viraref <- fixTaxonomy('viraref')
-viruses <- fixTaxonomy('viruses')
-
-
-write.csv(assocref, file='csv/assocref.csv')
-write.csv(citation, file='csv/citation.csv')
-write.csv(hosts, file='csv/hosts.csv')
-write.csv(negative, file='csv/negative.csv')
-write.csv(nemaref, file='csv/nemaref.csv')
-write.csv(nematode, file='csv/nematode.csv')
-write.csv(new_asso, file='csv/new_asso.csv')
-write.csv(newnema, file='csv/newnema.csv')
-write.csv(noassref, file='csv/noassref.csv')
-write.csv(nvpassoc, file='csv/nvpassoc.csv')
-write.csv(pathogen, file='csv/pathogen.csv')
-write.csv(viraref, file='csv/viraref.csv')
-write.csv(viruses, file='csv/viruses.csv')
-
-```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-negative <- read.csv(file='csv/negative.csv')
-nematode <- read.csv(file='csv/nematode.csv')
-nvpassoc <- read.csv(file='csv/nvpassoc.csv')
-viruses <- read.csv(file='csv/viruses.csv')
-
 
 
 
@@ -332,13 +31,21 @@ viruses <- read.csv(file='csv/viruses.csv')
 
 ### Visualizing the data
 
-Reproducing figures from the manuscript
+Reproducing the manuscript figures
 
-> Dallas, Onstad, and Carlson. 2022. "  " journal
+```{r eval=TRUE}
+
+data(negative)
+data(nematode)
+data(nvpassoc)
+data(viruses)
 
 
-
-```{r eval=FALSE}
+#' subset the edwip data objects
+#' 
+#' @param dat the edwip data.frame
+#' 
+#' @return subset data
 
 getSubset <- function(dat){
   nms <- c('PathogenSpecies', 'HostSpecies', 'Group')
@@ -347,13 +54,16 @@ getSubset <- function(dat){
   return(tmp)
 }
 
+
+
 edwip3 <- rbind(
   getSubset(nematode), 
   getSubset(viruses), 
   getSubset(nvpassoc)
 )   
-
 edwip3$interaction <- 1
+
+
 
 neg <- getSubset(negative)
 neg$interaction <- 0
@@ -371,12 +81,10 @@ bubble <- edwip4 %>%
     negatives=sum(interaction==0, na.rm=TRUE)
   ) 
 
-
-
 colorz <- c('#E5FCC2', '#9DE0AD', '#45ADA8', '#547980', '#594F4F')
 
 
-pdf('bubble.pdf')
+
 
 par(mar=c(4,6,0.5,0.5))
 plot(x=1:2, 
@@ -421,7 +129,6 @@ axis(2, at = 1:5, las=1,
   labels=bubble$Group
 )
 
-dev.off()
 
 ```
 
@@ -439,7 +146,7 @@ dev.off()
 
 Correlation plot examining covariance among parasite species richness across hosts when parasite species are broken into their respective groups
 
-```{r eval=FALSE}
+```{r eval=TRUE}
 
 tmp <- as.data.frame.matrix(
   with(edwip4[which(edwip4$interaction==1),], 
@@ -447,44 +154,18 @@ tmp <- as.data.frame.matrix(
   )
 )
 
-
-## Corplot
-pdf('corPlot.pdf', height=9,width=9)
 par(mar=c(2,2,0.5,0.5))
 
 corrplot::corrplot.mixed(cor(tmp, method='spearman'), 
 	lower='number', upper='ellipse',
-	cl.lim=c(0,1),
 	tl.col=1, 
   insig='label_sig',
   number.cex=1.5, 
 	addgrid.col=grey(0.5,0.5), 
 	mar=c(0,0,1,0)
 )
-dev.off()
+
 
 ```
-
-
-
-
-
-
-
-Relationship between positive and negative interactions for host species
-
-```{r eval=FALSE}
-
-tmp2 <- edwip3 %>%
-  group_by(HostSpecies, Group) %>%
-  summarise(nPos=sum(interaction==1), 
-  nNeg=sum(interaction==0))
-
-cor.test(tmp2$nPos, tmp2$nNeg, method='spearman')
-
-```
-
-
-
 
 

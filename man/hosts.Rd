@@ -30,8 +30,8 @@ Data on host species taxonomy, habitat, diet preferences, and distribution (in C
     7 unique values
   \item ModificationDate. Modification date of entry
   \item InCanada. Citations for presence/absence of host in Canada. Numeric indices can be
-    related to the citations in the `citations.rda` data file. `Y` and `N` relate to presence and
-    absence, respectively.
+    related to the citations in the `citations.rda` data file. `Y` and `N` 
+    relate to presence and absence, respectively.
   \item ChangeSpeciesTo. 
   \item CommonNameOther. Other common names?
   \item Complete. Is this record complete?

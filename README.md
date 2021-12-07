@@ -1,14 +1,9 @@
-### *insectDisease*: insect disease data from the USDA's Ecological Database of the World's Insect Pathogens
+### *insectDisease*: insect disease data from the Ecological Database of the World's Insect Pathogens
 
 [![R build status](https://github.com/viralemergence/insectDisease/workflows/R-CMD-check/badge.svg)](https://github.com/viralemergence/insectDisease/actions)
 
 
-
-
-
-David Onstad from the USDA provided us with this USDA-gathered insect disease database, sometimes referred to as the "Ecological Database of the World's Insect Pathogens" or EDWIP. Files have been converted from SQL to csv, and ported into R for easy exploration and analysis. 
-
-
+This is a database of known pathogens of many species of insects and other arthropods. This database was designed by David Onstad, and first described in Braxton et al (2003). The database is somewhat unique in that in addition to host-parasite associations that occur in nature, it also contains some true host absences: records of instances where a given host species was inoculated with a pathogen and found not to be susceptible to it. This database also contains a large amount of ecological data on hosts and parasites. Here, we document and preserve these data as an R package, also providing csv flatfiles in the `csv` folder and an [interactive web platform](https://edwip.ecology.uga.edu/download)
 
 
 ### Install
@@ -35,6 +30,26 @@ The raw data can be called using the `data()` function on the various files with
 
 
 
+
+
+
+
+
+*When using this database, cite this reference*
+
+> Braxton, S. M., et al. "Description and analysis of two internet-based databases of insect pathogens: EDWIP and VIDIL." Journal of Invertebrate Pathology 83.3 (2003): 185-195.
+
+
+Also, this database was originally created by the following people, to whom we are indebted:
+
+David W. Onstad, EDWIP Director.
+Center for Economic Entomology, Illinois Natural History Survey
+
+Ellen Brewer, Research Programmer
+Center for Economic Entomology, Illinois Natural History Survey
+ 
+Susan Braxton, Science & Technology Librarian
+Milner Library, Illinois State University
 
 
 
