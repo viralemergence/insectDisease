@@ -10,7 +10,7 @@
 #' @importFrom taxize classification get_uid
 #' @importFrom stats na.omit 
 #' @importFrom utils tail
-#' @importFrom dplyr mutate
+#' @importFrom plyr mutate
 #' @export
 
 
@@ -19,7 +19,7 @@ getNCBI <- function(species, host=TRUE){
 
   mutate_cond <- function(.data, condition, ..., envir = parent.frame()) {
     condition <- eval(substitute(condition), .data, envir)
-    .data[condition, ] <- dplyr::mutate(.data[condition, ], ...)
+    .data[condition, ] <- plyr::mutate(.data[condition, ], ...)
     .data
   }
   names.orig <- species

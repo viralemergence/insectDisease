@@ -5,12 +5,12 @@ Author: Tad Dallas, David Onstad
 Maintainer: Tad Dallas <tad.a.dallas@gmail.com>
 Description: David Onstad from the USDA provided us with this USDA-gathered insect disease database, sometimes referred to as the "Ecological Database of the World's Insect Pathogens" or EDWIP. Files have been converted from SQL to csv, and ported into R for easy exploration and analysis. Thanks to the Macroecology of Infectious Disease RCN for funding and support.
 Depends:
-  R (>= 3.5.0)
-Suggests:
+  R (>= 3.5.0),
   plyr,
-  dplyr, 
+  taxize
+Suggests:
   corrplot,
-  taxize, 
+  dplyr,
   knitr, 
   rmarkdown
 License: GPL-2
