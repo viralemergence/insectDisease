@@ -10,12 +10,14 @@ Suggests:
   plyr,
   dplyr, 
   corrplot,
-  taxize
+  taxize, 
+  knitr, 
+  rmarkdown
 License: GPL-2
 LazyData: true
 RoxygenNote: 7.1.1
 VignetteBuilder: knitr
-Suggests: knitr, rmarkdown
+
 
 
 
