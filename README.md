@@ -6,6 +6,16 @@
 This is a database of known pathogens of many species of insects and other arthropods. This database was designed by David Onstad, and first described in Braxton et al (2003). The database is somewhat unique in that in addition to host-parasite associations that occur in nature, it also contains some true host absences: records of instances where a given host species was inoculated with a pathogen and found not to be susceptible to it. This database also contains a large amount of ecological data on hosts and parasites. Here, we document and preserve these data as an R package, also providing csv flatfiles in the `csv` folder and an [interactive web platform](https://edwip.ecology.uga.edu/download)
 
 
+
+Data are available programmatically through R or can be downloaded from the `csv` folder and used outside of R. The data consist of a set of files that maintain the original structure of the EDWIP data resource, with the main files serving to detail the interactions between insect hosts and nematode (`?nematode` or `csv/nematode.csv`), viral ((`?viruses` or `csv/viruses.csv`) and non-viral pathogens such as bacteria and protozoans (`?nvpassoc` or `csv/nvpassoc.csv`). There are also data on negative associations, which are failed inoculation attempts (`?negative` or `csv/negative.csv`) and represent "true zeros", which are quite rare to have data on. Other information on citations (`assocref`, `citation`, `viraref` and `noassref`) are provided as well as host (`hosts`) and pathogne (`pathogen`) trait data. Cached versions of host and pathogen taxonomy are also included (`hostTaxonomy` and `pathTaxonomy`) and will be updated (along with the taxonomic information within each data product) with every release of the data. 
+
+
+
+
+
+
+
+
 ### Install
 
 Install from GitHub using the code below. 
@@ -42,14 +52,11 @@ The raw data can be called using the `data()` function on the various files with
 
 Also, this database was originally created by the following people, to whom we are indebted:
 
-David W. Onstad, EDWIP Director.
-Center for Economic Entomology, Illinois Natural History Survey
++ David W. Onstad, EDWIP Director. Center for Economic Entomology, Illinois Natural History Survey
 
-Ellen Brewer, Research Programmer
-Center for Economic Entomology, Illinois Natural History Survey
- 
-Susan Braxton, Science & Technology Librarian
-Milner Library, Illinois State University
++ Ellen Brewer, Research Programmer. Center for Economic Entomology, Illinois Natural History Survey
+
++ Susan Braxton, Science & Technology Librarian. Milner Library, Illinois State University
 
 
 

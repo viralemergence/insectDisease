@@ -194,6 +194,106 @@ viruses  <- fixDates(viruses)
 
 
 
+
+
+
+#' check for weird \v characters
+#' 
+#' @param data 
+#'
+#' @return updated data.frame
+
+fixV <- function(data){
+
+  inds <- apply(data, 2, function(x){any(grep('\v', x))})
+  if(any(inds==TRUE)){
+    inds <- which(inds)
+    for(i in 1:length(inds)){
+      # host species had some \v characters too caused by unicode garbo and bad data formatting
+      if(names(inds)[i] %in% c('HostSpecies', 'PathogenSpecies', 'Reference', 'ChangeSpeciesTo', 'LogMaxDose', 'NemaOrder', 'Citation', 'AdditionalNotes', 'Virus', 'Country') ){
+        data[,inds[i]] <- gsub('\v', '', data[,inds[i]])    
+      }else{
+      # but the focus is on providing separation for multiple entry columns like HostStageInfected
+       data[,inds[i]] <- gsub('\v', ';', data[,inds[i]])
+      }
+    }
+  }
+  return(data)
+}
+
+
+
+
+assocref <- fixV(assocref)
+citation <- fixV(citation)
+hosts    <- fixV(hosts)
+negative <- fixV(negative)
+nemaref  <- fixV(nemaref)
+nematode <- fixV(nematode)
+new_asso <- fixV(new_asso)
+newnema  <- fixV(newnema)
+noassref <- fixV(noassref)
+nvpassoc <- fixV(nvpassoc)
+pathogen <- fixV(pathogen)
+viraref  <- fixV(viraref)
+viruses  <- fixV(viruses)
+
+
+
+
+
+
+#' insert NA where data were just empty
+#' 
+#' @param data 
+#'
+#' @return updated data.frame
+
+fixNA <- function(data){
+  data <- as.data.frame(
+    lapply(data, function(x){
+      if(any(nchar(x)==0, na.rm=TRUE)){
+        x[which(nchar(x)==0)] <- NA
+      }
+      return(x)
+    })
+  )
+  return(data)
+}
+
+
+
+
+assocref <- fixNA(assocref)
+citation <- fixNA(citation)
+hosts    <- fixNA(hosts)
+negative <- fixNA(negative)
+nemaref  <- fixNA(nemaref)
+nematode <- fixNA(nematode)
+new_asso <- fixNA(new_asso)
+newnema  <- fixNA(newnema)
+noassref <- fixNA(noassref)
+nvpassoc <- fixNA(nvpassoc)
+pathogen <- fixNA(pathogen)
+viraref  <- fixNA(viraref)
+viruses  <- fixNA(viruses)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ## write to csv 
 
 write.csv(assocref, file='../csv/assocref.csv', row.names=FALSE)

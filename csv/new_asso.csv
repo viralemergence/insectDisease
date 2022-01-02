@@ -1,20 +1,20 @@
 "ERNnew","HostSpecies","HostHabitat","HostFood","HostGenYr","PathSpecies","PathGroup","PathHighTaxon","PathLowTaxon","StageInf","TissueInfected","Field","Country","IntermediateHost","Citation","MoreInfo","Who","CreationDate","ModificationDate","StainFCB","HostTaxID","HostGenus","HostFamily","HostOrder","HostClass"
-235,"My host","orchards","cherries","","Really bad disease","","","","","","","","","","","",2000-12-14,2001-05-11,"",NA,NA,NA,NA,NA
-236,"Cydia pomonella","orchards","apples","","Aspergillus flavus","Fungi","","","","","Field","USA","","I can't find the citation on this one","","Susan, as a test",2000-12-14,2000-12-14,"",82600,"Cydia","Tortricidae","Lepidoptera","Insecta"
-237,"Musca domestica","","","","wormy thing","","","","","","","","","","","",2001-05-11,2001-05-11,"",7370,"Musca","Muscidae","Diptera","Insecta"
-238,"My new host","","","","My new pathogen","","","","","","Field","","","Braxton 2001","","Susan Braxton",2001-05-11,2001-05-11,"",NA,NA,NA,NA,NA
-239,"zzz","","","","xxx","","","","","","","","","","","",2001-05-16,2001-05-16,"",NA,NA,NA,NA,NA
-240,"","","","","","","","","","","","","","","","",2001-05-17,2001-05-17,"",NA,NA,NA,NA,NA
-241,"Empoasca fabae","","","","Cordyceps n. sp. #3","Fungi","","","A, N, E","hemocoel","Field","USA","","","","Susan, INHS",2001-05-17,2001-05-17,"",139595,"Empoasca","Cicadellidae","Hemiptera","Insecta"
-242,"Empoasca krameri","","","","Cordyceps n. sp. #14","","","","","","Field","USA","","","","Susan Braxton, INHS",2001-05-17,2001-05-17,"",NA,NA,NA,NA,NA
-243,"Blissus leucopterus","","","","Ascogregarina yomama","Protozoa","","","","","Field","USA","","","","Braxton, INHS",2001-05-17,2001-05-17,"",1655880,"Blissus","Blissidae","Hemiptera","Insecta"
-246,"Wee wee","","","","Woo woo","Not reported","","","","","Field","Germany","","","","Braxton, GSLIS",2001-05-17,2001-05-17,"",NA,NA,NA,NA,NA
-250,"Wee willy winky","","oats","","Yippee yiyay","Protozoa","","","E, L, P","","Field","Argentina","","","","Braxton, Susan, INHS",2001-05-17,2001-05-17,"",NA,NA,NA,NA,NA
-251,"Diddle diddle dumpling","","oats","","Yippee yiyay","Protozoa","","","E, L, P","","Field","Argentina","","","","Braxton, Susan, INHS",2001-05-17,2001-05-17,"",NA,NA,NA,NA,NA
-252,"Nicey nice","","","","Wicked","Fungi","Basidiomycetes","Septobasidiales","E","","Unknown","","","","","Susan Braxton, INHS",2001-05-18,2001-05-18,"",NA,NA,NA,NA,NA
-253,"","","","","","Not reported","Unknown","unknown","","","Unknown","","","","","",2001-05-18,2001-05-18,"EggNymph",NA,NA,NA,NA,NA
-254,"Vanessa sp.","","","","Cordyceps sp.","Fungi","Deuteromycetes","Endomycetales","","hemocoel","Field","USA","","Braxton, 2001.","I entered this record from home from my power mac, G4 mini tower, using Netscape 4.72.","Susan Braxton, INHS",2001-05-19,2001-05-19,"LarvaPupaAdult",NA,NA,NA,NA,NA
-255,"Epilachna varivestis","crop","soybean (Glycine max)",">1","Tiddly piddly","Fungi","Basidiomycetes","Septobasidiales","","all","Field","USA","none","","","",2001-06-01,2001-06-01,"EggLarvaPupaAdult",447619,"Epilachna","Coccinellidae","Coleoptera","Insecta"
-256,"Epilachna varivestis","crop","soybean (Glycine max)",">1","Tiddly piddly","Fungi","Basidiomycetes","Septobasidiales","","all","Field","USA","none","","","",2001-06-01,2001-06-01,"EggLarvaPupaAdult",447619,"Epilachna","Coccinellidae","Coleoptera","Insecta"
-257,"Your daddy too","","","1","Icky yuck","Fungi","unknown","unknown","","flight muscle","Field","","","not yet published.","It wiped out the entire population.","Susan Braxton, INHS, GSLIS, Biology Library",2001-06-05,2001-06-05,"LarvaAdult",NA,NA,NA,NA,NA
-258,"My new host","","","","My new record","Fungi","Basidiomycetes","Entomophthorales","","all","Field","USA ","","none","Entered on Dec 10, 2002 at 1:55pm","Susan Braxton",2002-12-10,2002-12-10,"Adult",NA,NA,NA,NA,NA
+235,"My host","orchards","cherries",NA,"Really bad disease",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,2000-12-14,2001-05-11,NA,NA,NA,NA,NA,NA
+236,"Cydia pomonella","orchards","apples",NA,"Aspergillus flavus","Fungi",NA,NA,NA,NA,"Field","USA",NA,"I can't find the citation on this one",NA,"Susan, as a test",2000-12-14,2000-12-14,NA,82600,"Cydia","Tortricidae","Lepidoptera","Insecta"
+237,"Musca domestica",NA,NA,NA,"wormy thing",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,2001-05-11,2001-05-11,NA,7370,"Musca","Muscidae","Diptera","Insecta"
+238,"My new host",NA,NA,NA,"My new pathogen",NA,NA,NA,NA,NA,"Field",NA,NA,"Braxton 2001",NA,"Susan Braxton",2001-05-11,2001-05-11,NA,NA,NA,NA,NA,NA
+239,"zzz",NA,NA,NA,"xxx",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,2001-05-16,2001-05-16,NA,NA,NA,NA,NA,NA
+240,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,2001-05-17,2001-05-17,NA,NA,NA,NA,NA,NA
+241,"Empoasca fabae",NA,NA,NA,"Cordyceps n. sp. #3","Fungi",NA,NA,"A, N, E","hemocoel","Field","USA",NA,NA,NA,"Susan, INHS",2001-05-17,2001-05-17,NA,139595,"Empoasca","Cicadellidae","Hemiptera","Insecta"
+242,"Empoasca krameri",NA,NA,NA,"Cordyceps n. sp. #14",NA,NA,NA,NA,NA,"Field","USA",NA,NA,NA,"Susan Braxton, INHS",2001-05-17,2001-05-17,NA,NA,NA,NA,NA,NA
+243,"Blissus leucopterus",NA,NA,NA,"Ascogregarina yomama","Protozoa",NA,NA,NA,NA,"Field","USA",NA,NA,NA,"Braxton, INHS",2001-05-17,2001-05-17,NA,1655880,"Blissus","Blissidae","Hemiptera","Insecta"
+246,"Wee wee",NA,NA,NA,"Woo woo","Not reported",NA,NA,NA,NA,"Field","Germany",NA,NA,NA,"Braxton, GSLIS",2001-05-17,2001-05-17,NA,NA,NA,NA,NA,NA
+250,"Wee willy winky",NA,"oats",NA,"Yippee yiyay","Protozoa",NA,NA,"E, L, P",NA,"Field","Argentina",NA,NA,NA,"Braxton, Susan, INHS",2001-05-17,2001-05-17,NA,NA,NA,NA,NA,NA
+251,"Diddle diddle dumpling",NA,"oats",NA,"Yippee yiyay","Protozoa",NA,NA,"E, L, P",NA,"Field","Argentina",NA,NA,NA,"Braxton, Susan, INHS",2001-05-17,2001-05-17,NA,NA,NA,NA,NA,NA
+252,"Nicey nice",NA,NA,NA,"Wicked","Fungi","Basidiomycetes","Septobasidiales","E",NA,"Unknown",NA,NA,NA,NA,"Susan Braxton, INHS",2001-05-18,2001-05-18,NA,NA,NA,NA,NA,NA
+253,NA,NA,NA,NA,NA,"Not reported","Unknown","unknown",NA,NA,"Unknown",NA,NA,NA,NA,NA,2001-05-18,2001-05-18,"Egg;Nymph",NA,NA,NA,NA,NA
+254,"Vanessa sp.",NA,NA,NA,"Cordyceps sp.","Fungi","Deuteromycetes","Endomycetales",NA,"hemocoel","Field","USA",NA,"Braxton, 2001.","I entered this record from home from my power mac, G4 mini tower, using Netscape 4.72.","Susan Braxton, INHS",2001-05-19,2001-05-19,"Larva;Pupa;Adult",NA,NA,NA,NA,NA
+255,"Epilachna varivestis","crop","soybean (Glycine max)",">1","Tiddly piddly","Fungi","Basidiomycetes","Septobasidiales",NA,"all","Field","USA","none",NA,NA,NA,2001-06-01,2001-06-01,"Egg;Larva;Pupa;Adult",447619,"Epilachna","Coccinellidae","Coleoptera","Insecta"
+256,"Epilachna varivestis","crop","soybean (Glycine max)",">1","Tiddly piddly","Fungi","Basidiomycetes","Septobasidiales",NA,"all","Field","USA","none",NA,NA,NA,2001-06-01,2001-06-01,"Egg;Larva;Pupa;Adult",447619,"Epilachna","Coccinellidae","Coleoptera","Insecta"
+257,"Your daddy too",NA,NA,"1","Icky yuck","Fungi","unknown","unknown",NA,"flight muscle","Field",NA,NA,"not yet published.","It wiped out the entire population.","Susan Braxton, INHS, GSLIS, Biology Library",2001-06-05,2001-06-05,"Larva;Adult",NA,NA,NA,NA,NA
+258,"My new host",NA,NA,NA,"My new record","Fungi","Basidiomycetes","Entomophthorales",NA,"all","Field","USA ",NA,"none","Entered on Dec 10, 2002 at 1:55pm","Susan Braxton",2002-12-10,2002-12-10,"Adult",NA,NA,NA,NA,NA

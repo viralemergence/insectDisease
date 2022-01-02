@@ -12,7 +12,8 @@ Suggests:
   corrplot,
   dplyr,
   knitr, 
-  rmarkdown
+  rmarkdown,
+  testthat
 License: GPL-2
 LazyData: true
 RoxygenNote: 7.1.1
