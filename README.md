@@ -3,6 +3,10 @@
 [![R build status](https://github.com/viralemergence/insectDisease/workflows/R-CMD-check/badge.svg)](https://github.com/viralemergence/insectDisease/actions)
 
 
+[![DOI](https://zenodo.org/badge/314071063.svg)](https://zenodo.org/badge/latestdoi/314071063)
+
+
+
 This is a database of known pathogens of many species of insects and other arthropods. This database was designed by David Onstad, and first described in Braxton et al (2003). The database is somewhat unique in that in addition to host-parasite associations that occur in nature, it also contains some true host absences: records of instances where a given host species was inoculated with a pathogen and found not to be susceptible to it. This database also contains a large amount of ecological data on hosts and parasites. Here, we document and preserve these data as an R package, also providing csv flatfiles in the `csv` folder and an [interactive web platform](https://edwip.ecology.uga.edu/download)
 
 
