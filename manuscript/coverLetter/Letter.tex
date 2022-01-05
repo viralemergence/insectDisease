@@ -3,7 +3,6 @@
 \usepackage{amsmath}
 \usepackage{amsfonts}
 \usepackage{amssymb}
-\usepackage{setspace}
 \usepackage{amsthm}
 \newcommand{\email}[1]{\href{mailto:#1}{\tt \textcolor{cornflower}{#1}}}
 \usepackage{xcolor}
@@ -30,9 +29,9 @@
 
 \begin{minipage}[c]{8in}\vskip-2cm
 \begin{flushleft}
-	\begin{minipage}[c]{4cm}
+	\begin{minipage}[c]{6cm}
 		\begin{flushleft}
-			\includegraphics*[width=4cm]{lsu.png}%
+			\includegraphics*[width=6cm]{usc.jpg}%
 		\end{flushleft}
 	\end{minipage}
 	\,\,
@@ -45,10 +44,9 @@
 		{\sffamily
 			Tad Dallas \\
 			Department of Biological Sciences \\
-			Louisiana State University \\
-			Baton Rouge, LA 70802 \\
-			phone: +1 225 239 0410  \\
-			\email{tad.a.dallas@gmail.com}
+			University of South Carolina\\
+			Columbia, SC 29208 \\
+			\email{tdallas@mailbox.sc.edu}
 		}
 	\end{minipage}
 \end{flushleft}
@@ -62,15 +60,14 @@
 
 
 
+
 {\noindent Dear \textit{Ecology Letters} editorial board,} \vskip4pt
 
-Please find the enclosed manuscript ``A latitudinal signal in the relationship between species geographic range size and climatic niche area'', which we submit for consideration as a research article. \\
+Please find the enclosed manuscript ``\texttt{insectDisease}: programmatic access to the \textit{Ecological Database of the World's Insect Pathogens}'', which we re-submit for consideration as a research article. \\
 
-Species with wider climatic niche breadths are expected to be more widely distributed geographically. But while there appears to be strong evidence for this relationship, an understanding of when deviations would be expected as a result of geographic effects or species traits is an open question. Here, we use data on over 3000 species of mammal, bird, and tree, relating the model residuals from the relationship between geographic range size and climatic niche area to species traits and geographic position, and compare these residuals to what would be expected under a null model. \\
+Curated databases of species interactions are instrumental to exploring and understanding the spatial distribution of species and their biotic interactions. In the process of conducting such projects, data development and curation efforts may give rise to a data product with utility beyond the scope of the original work, but which becomes inaccessible over time. We present one such example, the "Ecological Database of World's Insect Pathogens". The R data package and manuscript text have benefitted from the comments of two reviewers and editor Dr. Michael Borregaard. These comments centered on the package structure and the presentation of the data. Specifically, the data required processing, but we were unaware of the current standard practice of having a \texttt{data-raw} folder and a processing script. We have incorporated this, and made more data checks -- including the incorporation of unit tests in the pacakge -- to handle odd date issues, remove bad unicode characters, and provide some signal of potential error as these data will be augmented in the future with more records. The comments from all reviewers seemed to indicate that substantial revision was necessary, and we believe we have made substantial modifications to both manuscript text and R package structure. We thank the reviewers and the editor for their critiques. \\
 
-We find evidence for an effect of species latitudinal centre on model residuals, suggesting the existence of a consistent spatial signal in deviation from range size -- climatic niche area scaling relationships across a diverse set of species. Some species traits were also important (e.g., body size for mammals), but the distribution of model residuals comparing empirical to null relationship did not differ appreciably. Together, our analyses suggest that geographic range size -- climatic niche area relationships are more a function of the landscape and a spatially autocorrelated environment than driven by species traits. \\
-
-We believe this article will be of interest to a broad range of ecologists and biogeographers, as it addresses a longstanding question in ecology concerning the link between species niche and distribution. In advance, we appreciate your consideration and assistance. Please don't hesitate to contact us with any questions. 
+We believe this article will be of interest to a broad range of ecologists interested in pest management, disease, species interactions, and more. In advance, we appreciate your consideration and assistance. Please don't hesitate to contact us with any questions. 
 
 
 \changepage{}{}{}{}{}{1cm}{}{}{}
