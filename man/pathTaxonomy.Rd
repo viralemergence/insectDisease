@@ -18,7 +18,7 @@ data(pathTaxonomy)
   \item PathFamily pathogen family
   \item PathOrder pathogen order
   \item PathClass  pathogen class
-  \item PathKingdom  pathogen class
+  \item PathKingdom  pathogen kingdom
  }
 }
 \keyword{datasets}

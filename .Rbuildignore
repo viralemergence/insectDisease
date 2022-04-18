@@ -6,3 +6,6 @@ csv
 ^Meta$
 ^\.github$
 .Renviron
+CONDUCT.md
+README.Rmd
+data-raw

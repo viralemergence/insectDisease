@@ -1,19 +1,24 @@
 ---
-title: "Cleaning and formatting the insect pathogen data"
+title: "Exploring the Ecological Database of World's Insect Pathogens"
 author: "Tad Dallas"
 output: rmarkdown::html_vignette
 vignette: >
   %\VignetteEngine{knitr::rmarkdown}
-  %\VignetteIndexEntry{Cleaning and formatting the insect pathogen data}
+  %\VignetteIndexEntry{EDWIP data exploration}
   %\VignetteEncoding{UTF-8}
 ---
 
 
 
 
+This vignette is designed to introduce you to the EDWIP data contained within the `insectDisease` data package. This serves to reproduce the figures presented in the manuscript, as well as to go over some of the data processing steps and idiosyncracies of this data resource. 
+
+
+
+
 ## load required packages for vignette
 
-```{r, results='hide'}
+```{r, results='hide', message=FALSE}
 
 library(insectDisease)
 library(plyr)
@@ -27,20 +32,134 @@ knitr::opts_chunk$set(fig.width=6, fig.height=6)
 
 
 
+### Loading the data 
+
+Each data product (see the `R` folder, `man` folder, or the package README for more information on each data product) can be loaded into the workspace using the `data()` function. Here, we'll load the four main data products, corresponding to 1) nematode-insect associations, 2) virus-insect associations, 3) non-viral pathogen - insect associations, and 4) all the negative associations (attempted and failed infections). 
+
+
+```{r}
+
+data(nematode)
+data(viruses)
+data(nvpassoc)
+data(negative)
+
+```
+
+
+We can explore the structure of these data using R functions like `head`, `tail`, `table`, and `summary`. 
+
+By example, we can see that `head(nematode)` provides some detail on the nematode association data, including host species (`HostSpecies`), nematode species (`PathogenSpecies`), and other relevant taxonomic and infection information, including the country where the interaction was recorded, the soil type, and the host tissue and stage infected. 
+
+```{r}
+
+head(nematode)
+
+```
+
+The focus of the EDWIP data is largely on insect pests. This becomes a bit clearer when we look at the insect host species data (available in the `data(hosts`) produce), and at the parasite species richness for given insect hosts. 
+
+```{r}
+
+data(hosts)
+table(hosts$InsectStatus) 
+
+```
+
+This `hosts` data also has information on insect generation time, habitat, and diet preferences. Looking at nematode parasite richness, and sorting parasite species richness from largest to smallest value, we see that ...
+
+
+```{r}
+
+sort(table(nematode$HostSpecies), decreasing=TRUE)[1:5]
+
+```
+
+... the Japanese beetle (_Popillia japonica_) has the most nematode associations in the data currently. This beetle is a documented generalist pest species in North America and Europe. In fact, all of the top five host species in terms of nematode parasite species richness are defined as 'pests'. Some of the associations are repeated observations, as the number of unique nematode species per host is often less than the above sorted table of interactions would suggest. 
+
+
+The identity of these highly parasitized (or well-sampled) insect host species changes as a function of what data resource we consider, as the insect hosts with a large number of interactions with viruses tend to be markedly different (fewer beetles and more loopworms, earworms, and bees). 
+
+```{r}
+
+sort(table(viruses$HostSpecies), decreasing=TRUE)[1:5]
+
+```
+
+
+
+
+
+If we wanted to actually get at true parasite species richness, we would calculate the number of unique pathogen species per host species, whereas above we just consider the total number of interactions recorded. That is, a host species could be infected by the same pathogen 20 times in the above calculation, whereas these differences in unique pathogen species would be evident below. 
+
+Here, we plot histograms for nematode parasite species richnes and viral richness of insect hosts. 
+
+```{r}
+
+nema2 <- nematode %>% 
+  dplyr::group_by(HostSpecies) %>% 
+  dplyr::summarise(uniqueNema=length(unique(PathogenSpecies)))
+
+par(mar=c(4,4,0.5,0.5))
+hist(nema2$uniqueNema, col='dodgerblue', 
+  main='', ylab='Frequency', 
+  xlab='Unique nematode species per host species')
+
+
+viru2 <- viruses %>% 
+  dplyr::group_by(HostSpecies) %>% 
+  dplyr::summarise(uniqueViru=length(unique(PathogenSpecies)))
+
+par(mar=c(4,4,0.5,0.5))
+hist(viru2$uniqueViru, col='dodgerblue', 
+  main='', ylab='Frequency', 
+  xlab='Unique viruses per host species')
+
+```
+
+
+
+Then we join the two resulting data.frame objects to allow the comparison of host species by their pathogen species richness. That is, do insect species with more nematode species infecting them also have more recorded viruses which infect them? We do not find very strong support for this idea given the data. 
+
+
+```{r}
+
+nemaViru <- dplyr::full_join(nema2, viru2, by='HostSpecies')
+
+plot(y=nemaViru$uniqueNema, 
+  x=nemaViru$uniqueViru, 
+  xlab='Unique viruses per host', 
+  ylab='Unique nematodes per host', 
+  pch=16, las=1,
+  col=adjustcolor('dodgerblue',0.25)
+)
+
+```
+
+
+
+
+
+
+
+> NOTE: Some of the columns in the different data sets are different, as the nematode data have information on soil type (`SoilType`), associated bacteria (`AssociatedBacterium`) and intermediate hosts (`IntermediateHost`), while the non-viral pathogen data have information on biogeographic realm (`BiogeographicRegion`), for example. 
+
+
+
+
+
+
+
 
 
 
 ### Visualizing the data
 
-Reproducing the manuscript figures
+Another way to explore the EDWIP data in the package is through visualization. Here, we reproduce the manuscript figures, highlighting aspects of data size in terms of number of unique species and interactions across the different pathogen types. Below, we write a quick function to subset each data product down to just columns `PathogenSpecies`, `HostSpecies`, and `Group`. 
+
+
 
 ```{r eval=TRUE}
-
-data(negative)
-data(nematode)
-data(nvpassoc)
-data(viruses)
-
 
 #' subset the edwip data objects
 #' 
@@ -54,9 +173,12 @@ getSubset <- function(dat){
   tmp <- tmp[,order(colnames(tmp))]
   return(tmp)
 }
+```
 
 
+We then bind all these rows together into one data.frame called `edwip3`, and create a column called `interaction` which describes the presence or absence of a known interaction between host and pathogen. 
 
+```{r}
 edwip3 <- rbind(
   getSubset(nematode), 
   getSubset(viruses), 
@@ -64,18 +186,38 @@ edwip3 <- rbind(
 )   
 edwip3$interaction <- 1
 
+```
 
+This data.frame is then joined with a subset version of the `negative` data, which describes attempted (and failed) infections of hosts by pathogens. This is incredibly important (and rarely known) information that sets clear barriers on host usage. For these interactions, we set the `interaction` column to 0, as these correspond to known non-interactions. 
+
+```{r} 
 
 neg <- getSubset(negative)
 neg$interaction <- 0
+
+```
+
+
+
+We then bind everything together, and change a couple of instances where `Group` was incorrect or misleading (e.g., `Mollicutes` should be included as `Bacteria`). 
+
+```{r}
 
 edwip4 <- rbind(edwip3, neg)
 edwip4$Group[which(edwip4$Group == 'Mollicutes')] <- 'Bacteria'
 edwip4$Group[which(edwip4$Group == 'Viruses')] <- 'Virus'
 
+```
+
+
+
+We can then make the bubble plot, which describes the number of unique hosts, pathogens, and the number of known interactions (both successful infections and failed infections). 
+
+```{r}
+
 bubble <- edwip4 %>%
-  group_by(Group) %>% 
-  summarise(n=length(HostSpecies), 
+  dplyr::group_by(Group) %>% 
+  dplyr::summarise(n=length(HostSpecies), 
     nHosts=length(unique(HostSpecies)), 
     nPaths=length(unique(PathogenSpecies)), 
     positives=sum(interaction==1, na.rm=TRUE), 
@@ -83,9 +225,6 @@ bubble <- edwip4 %>%
   ) 
 
 colorz <- c('#E5FCC2', '#9DE0AD', '#45ADA8', '#547980', '#594F4F')
-
-
-
 
 par(mar=c(4,6,0.5,0.5))
 plot(x=1:2, 
@@ -130,8 +269,11 @@ axis(2, at = 1:5, las=1,
   labels=bubble$Group
 )
 
-
 ```
+
+
+
+
 
 
 
@@ -165,8 +307,6 @@ corrplot::corrplot.mixed(cor(tmp, method='spearman'),
 	addgrid.col=grey(0.5,0.5), 
 	mar=c(0,0,1,0)
 )
-
-
 ```
 
 
