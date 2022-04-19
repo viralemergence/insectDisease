@@ -44,19 +44,18 @@ Data are available programmatically through R or can be downloaded from the `csv
 |   genYr| Number of generations per year| Can be <1, =1, >1, or some combination of these   | 
 |   CommonName| Host common name   | 
 |   ProvinceI| Canadian provinces where host has been found.  | 
-|   InsectStatus| Is the insect a pest, beneficial, endangered, unknown? Factor variable with
-    7 unique values  | 
-|   ModificationDate| Modification date of entry  | 
-|   InCanada| Citations for presence/absence of host in Canada. Numeric indices can be     related to the citations in the `citations.rda` data file. `Y` and `N` relate to presence and absence, respectively.  | 
-|   ChangeSpeciesTo|   | 
-|   CommonNameOther| Other common names?  | 
-|   Complete| Is this record complete?  | 
-|   AdditionalReferences| Additional reference indices.   | 
-|   HostTaxID| Host NCBI ID number  | 
-|   HostGenus| Host genus  | 
-|   HostFamily| Host family  | 
-|   HostOrder| Host order  | 
-|   HostClass| Host class  | 
+|   InsectStatus| Is the insect a pest, beneficial, endangered, unknown? Factor variable with 7 unique values  | 
+|  ModificationDate| Modification date of entry  | 
+|  InCanada| Citations for presence/absence of host in Canada. Numeric indices can be     related to the citations in the `citations.rda` data file. `Y` and `N` relate to presence and absence, respectively.  | 
+|  ChangeSpeciesTo|   | 
+|  CommonNameOther| Other common names?  | 
+|  Complete| Is this record complete?  | 
+|  AdditionalReferences| Additional reference indices.   | 
+|  HostTaxID| Host NCBI ID number  | 
+|  HostGenus| Host genus  | 
+|  HostFamily| Host family  | 
+|  HostOrder| Host order  | 
+|  HostClass| Host class  | 
   
 
 
@@ -117,7 +116,7 @@ created with getNCBI, so can be regenerated if/when new data are added.
 |   LogMaxDose| Dosage, in many different units    |
 |   HostStageTested| Host stage exposed to pathogen (e.g. Larvae, Nymph, Adult)    |
 |   HostSpecies| Host species examined    |
-|   Group| Pathogen group (e|g| viruses)     |
+|   Group| Pathogen group (e.g. viruses)     |
 |   HighTaxon| General classification of pathogen (e.g. DNA virus)    |
 |   LowTaxon| More specific classification of pathogen (e.g. Baculoviridae)    |
 |   HostTaxID| Host NCBI ID number    |
