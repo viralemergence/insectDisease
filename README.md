@@ -8,7 +8,7 @@ insectDisease
 
 > Programmatically access insect disease data from the Ecological Database of the World's Insect Pathogens
 
-See software note in _Ecography_ ([available here](http://onlinelibrary.wiley.com/doi/10.1111/ecog.02131/full))
+See preprint ([available here](https://ecoevorxiv.org/yd3x5/))
 
 
 
