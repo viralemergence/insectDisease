@@ -6,7 +6,7 @@ insectDisease
 [![DOI](https://zenodo.org/badge/314071063.svg)](https://zenodo.org/badge/latestdoi/314071063)
 
 
-> Programmatically access insect disease data from the Ecological Database of the World's Insect Pathogens (EDWIP)
+# insectDisease: Programmatically access insect disease data from the Ecological Database of the World's Insect Pathogens (EDWIP)
 
 See preprint ([available here](https://ecoevorxiv.org/yd3x5/))
 
