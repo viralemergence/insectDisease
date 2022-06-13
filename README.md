@@ -428,12 +428,12 @@ The raw data can be called using the `data()` function on the various files with
 
 
 
-*When using this database, cite this reference*
+*When using this database, in addition to citing this package, cite this reference*
 
 > Braxton, S. M., et al. "Description and analysis of two internet-based databases of insect pathogens: EDWIP and VIDIL." Journal of Invertebrate Pathology 83.3 (2003): 185-195.
 
 
-Also, this database was originally created by the following people, to whom we are indebted:
+This database was originally created by the following people, to whom we are indebted:
 
 + David W. Onstad, EDWIP Director. Center for Economic Entomology, Illinois Natural History Survey
 
@@ -452,7 +452,7 @@ Feel free to fork it and contribute some functionality.
 
 
 ### Funding
-This work has been supported by funding to the Viral Emergence Research Initiative (VERENA) consortium, including a grant from the U.S. National Science Foundation (NSF-BII-2021909) and a grant from Institut de Valorisation des Données (IVADO). This study is additionally supported by the U.S. National Science Foundation Research Coordination Network (NSF/NIH/USDA DEB 131223).
+This work has been supported by funding to the Viral Emergence Research Initiative (VERENA) consortium, including a grant from the U.S. National Science Foundation (NSF-BII-2021909). This study was additionally supported by the U.S. National Science Foundation Research Coordination Network (NSF/NIH/USDA DEB 131223).
 
 
 
