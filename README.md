@@ -452,7 +452,7 @@ Feel free to fork it and contribute some functionality.
 
 
 ### Funding
-This work has been supported by funding to the Viral Emergence Research Initiative (VERENA) consortium, including a grant from the U.S. National Science Foundation (NSF-BII-2021909). This study was additionally supported by the U.S. National Science Foundation Research Coordination Network (NSF/NIH/USDA DEB 131223).
+This work has been supported by funding to the Viral Emergence Research Initiative (VERENA) consortium, including a grant from the U.S. National Science Foundation (NSF-BII-2021909) and a grant from Institut de Valorisation des Données (IVADO). This study was additionally supported by the U.S. National Science Foundation Research Coordination Network (NSF/NIH/USDA DEB 131223).
 
 
 
