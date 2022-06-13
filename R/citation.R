@@ -10,9 +10,9 @@
 #'   \item Reference. Actual citation
 #'   \item CreationDate. Record creation date
 #'   \item ModificationDate. Record modification date
-#'   \item ReadBy. 
-#'   \item GetIt. 
-#'   \item nvpCount. 
+#'   \item ReadBy. Comments about the reading and identity of reader 
+#'   \item GetIt. Notes on article acquisition    
+#'   \item nvpCount. Number of pathogens reported in the citation.
 #'  }
 #'
 #' @docType data

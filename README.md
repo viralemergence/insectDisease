@@ -201,9 +201,9 @@ more data on host-parasite interactions. CreationDate and ModificationDate are i
 |   Reference| Actual citation |
 |   CreationDate| Record creation date |
 |   ModificationDate| Record modification date |
-|   ReadBy |                  | 
-|   GetIt |               |
-|   nvpCount |            |
+|   ReadBy |     Comments about the reading and identity of reader         | 
+|   GetIt |  Notes on article acquisition             |
+|   nvpCount |  Number of pathogens reported in the citation          |
 
 
 
@@ -219,7 +219,7 @@ more data on host-parasite interactions. CreationDate and ModificationDate are i
 
 ---
 
-I think assocref are links and citations for nvpassoc, but there are around 3k more rows of data for assocref?! But nvpassoc has more host and pathogen species recorded. nvpassoc has more unique host-pathogen association data as well, so perhaps the assocref gives multiple citations for the same interaction. 
+We believe `assocref` are links and citations for `nvpassoc`, but there are around 3k more rows of data for assocref. However, `nvpassoc` has more unique host-pathogen association data, so the `assocref` data may provide multiple citations for the same interaction. 
 
 ### assocref
 
@@ -361,7 +361,6 @@ These data are included because they were originally part of the EDWIP data.
 We caution the user to not use these data, as we do not believe the records 
 are correct.
 
-These data are identical to the `nematode` data, as far as we can tell.
 
 |  column name | description |
 |  --------    |  --------------- |
@@ -369,24 +368,24 @@ These data are identical to the `nematode` data, as far as we can tell.
 |   HostSpecies   | Host species | 
 |   HostOrder   | Host order | 
 |   HostFamily | Host family |
-|   HostHabitat | 
-|   HostFood |
-|   HostGenYr |
+|   HostHabitat | Habitat type of host | 
+|   HostFood | What does the host eat? | 
+|   HostGenYr | Number of generations of hosts per year |
 |   PathSpecies | Nematode species | 
-|   PathGroup | 
-|   PathHighTaxon |
-|   PathLowTaxon |
+|   PathGroup | Pathogen group (fungi, protozoa, nematode, etc.) |
+|   PathHighTaxon | Pathogen taxonomic information (mostly `NA`) | 
+|   PathLowTaxon | Pathogen taxonomic information (mostly `NA`) | 
 |   StageInf | Host life stage infected |
 |   TissueInfected | Host tissue infected |
 |   Field | Was this a field or lab tested association? |
 |   Country | Country of host-pathogen association |
 |   IntermediateHost |  Information on intermediate hosts |
 |   Citation| Citation for host-pathogen record |
-|   MoreInfo |
-|   Who |
+|   MoreInfo | Additional comments or notes | 
+|   Who | Identity of researcher who entered data | 
 |   CreationDate| Record creation date |
 |   ModificationDate| Record modification date |
-|   StainFCB  |
+|   StainFCB | takes values: Adult, egg, larvae, pupa   |
 
 
 
@@ -396,7 +395,28 @@ These data are identical to the `nematode` data, as far as we can tell.
 
 
 
+### newnema
 
+These data are identical to the `nematode` data, as far as we can tell.
+
+|  column name | description |
+|  --------    |  --------------- |
+| ERNnem |   EDWIP record identifier |
+| Host| Host species |
+| Nematode | Nematode parasite species |
+| NemaOrder | Pathogen order |
+| NemaFamily | Pathogen family |
+| NemaStrain  | Pathogen strain |
+| StageInfected  | Host stage infected | 
+| TissueInfected  | Host tissue infected |
+| FieldOrLab  |Was this a field or lab tested association? |
+| Country| What country did the interaction occur in? |
+| SoilType| Type of soil where interaction was observed |
+| AssociatedBacterium| Associated bacterium| |
+| IntermediateHost| Is there an intermediate host present?   |
+| CreationDate| Date of initial data entry |
+| ModificationDate| Modification date of entry |
+| Group | all just say 'nematode' | 
 
 
 
