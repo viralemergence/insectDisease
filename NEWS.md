@@ -1,8 +1,7 @@
 insectDisease 1.2.1
 ==============
 
-Reviewer comments came back. Suggestions include some further README documentation, releasing the package through CRAN, updating Zenodo link (adding .zenodo.json file, and changing license. 
-
+Reviewer comments came back. Suggestions include some further README documentation, releasing the package through CRAN, updating Zenodo link (adding .zenodo.json file, and changing license). 
 
 
 
