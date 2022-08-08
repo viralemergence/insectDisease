@@ -34,6 +34,6 @@
 #' @keywords datasets
 #' @name negative
 #' @usage data(negative)
-#' @format A data.frame with 529 observations of 12 variables
+#' @format A data.frame with 529 observations 
 
 "negative"

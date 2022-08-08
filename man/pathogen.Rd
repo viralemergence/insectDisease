@@ -5,7 +5,7 @@
 \alias{pathogen}
 \title{Information on pathogen species in the database}
 \format{
-A data.frame with 2041 observations of 5 variables
+A data.frame with 2041 observations
 }
 \usage{
 data(pathogen)

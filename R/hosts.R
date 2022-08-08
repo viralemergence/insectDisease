@@ -10,8 +10,6 @@
 #'   \item DateEntered. Date of initial data entry
 #'   \item Habitat. Habitat of host
 #'   \item HostSpecies. Host species
-#'   \item HostOrder. Host order
-#'   \item HostFamily. Host family
 #'   \item Synonyms. Other names for the host species
 #'   \item Food. What does the host eat?
 #'   \item genYr. Number of generations per year. Can be <1, =1, >1, or some combination of these.
@@ -23,7 +21,7 @@
 #'   \item InCanada. Citations for presence/absence of host in Canada. Numeric indices can be
 #'     related to the citations in the `citations.rda` data file. `Y` and `N` 
 #'     relate to presence and absence, respectively.
-#'   \item ChangeSpeciesTo. 
+#'   \item ChangeSpeciesTo. Taxonomic verification column
 #'   \item CommonNameOther. Other common names?
 #'   \item Complete. Is this record complete?
 #'   \item AdditionalReferences. Additional reference indices. 
@@ -38,7 +36,7 @@
 #' @keywords datasets
 #' @name hosts
 #' @usage data(hosts)
-#' @format A data.frame with 4392 observations of 18 variables
+#' @format A data.frame with 4392 observations 
 
 
 

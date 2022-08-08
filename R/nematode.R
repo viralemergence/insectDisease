@@ -4,7 +4,7 @@
 #' 
 #' 
 #' \itemize{
-#'   \item ERNnem
+#'   \item ERNnem.  EDWIP record identifier
 #'   \item HostSpecies. Host species
 #'   \item PathogenSpecies. Nematode parasite species
 #'   \item PathogenStrain. Nematode parasite strain
@@ -34,6 +34,6 @@
 #' @keywords datasets
 #' @name nematode
 #' @usage data(nematode)
-#' @format A data.frame with 234 observations of 15 variables
+#' @format A data.frame with 234 observations
 
 "nematode"

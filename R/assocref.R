@@ -26,7 +26,7 @@
 #' @keywords datasets
 #' @name assocref
 #' @usage data(assocref)
-#' @format A data.frame with 11005 observations of 5 variables
+#' @format A data.frame with 11005 observations 
 
 
 

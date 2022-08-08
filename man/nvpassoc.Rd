@@ -5,7 +5,7 @@
 \alias{nvpassoc}
 \title{Information on non-viral pathogens of insect hosts}
 \format{
-A data.frame with 7164 observations of 16 variables
+A data.frame with 7164 observations
 }
 \usage{
 data(nvpassoc)

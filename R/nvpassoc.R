@@ -35,6 +35,6 @@
 #' @keywords datasets
 #' @name nvpassoc
 #' @usage data(nvpassoc)
-#' @format A data.frame with 7164 observations of 16 variables
+#' @format A data.frame with 7164 observations
 
 "nvpassoc"

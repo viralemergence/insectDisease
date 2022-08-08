@@ -5,7 +5,7 @@
 \alias{negative}
 \title{Information on negative host-parasite interactions}
 \format{
-A data.frame with 529 observations of 12 variables
+A data.frame with 529 observations
 }
 \usage{
 data(negative)

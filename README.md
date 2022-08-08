@@ -3,10 +3,10 @@ insectDisease
 
 [![R build status](https://github.com/viralemergence/insectDisease/workflows/R-CMD-check/badge.svg)](https://github.com/viralemergence/insectDisease/actions)
 
-[![DOI](https://zenodo.org/badge/314071063.svg)](https://zenodo.org/badge/latestdoi/314071063)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.5821896.svg)](https://doi.org/10.5281/zenodo.5821896)
 
 
-# insectDisease: Programmatically access insect disease data from the Ecological Database of the World's Insect Pathogens (EDWIP)
+## insectDisease: Programmatically access insect disease data from the Ecological Database of the World's Insect Pathogens (EDWIP)
 
 See preprint ([available here](https://ecoevorxiv.org/yd3x5/))
 
@@ -33,8 +33,6 @@ Data are available programmatically through R or can be downloaded from the `csv
 |   DateEntered| Date of initial data entry  | 
 |   Habitat| Habitat of host  | 
 |   HostSpecies| Host species  | 
-|   HostOrder| Host order  | 
-|   HostFamily| Host family  | 
 |   Synonyms| Other names for the host species  | 
 |   Food| What does the host eat?  | 
 |   genYr| Number of generations per year| Can be <1, =1, >1, or some combination of these   | 
@@ -43,7 +41,7 @@ Data are available programmatically through R or can be downloaded from the `csv
 |   InsectStatus| Is the insect a pest, beneficial, endangered, unknown? Factor variable with 7 unique values  | 
 |  ModificationDate| Modification date of entry  | 
 |  InCanada| Citations for presence/absence of host in Canada. Numeric indices can be     related to the citations in the `citations.rda` data file. `Y` and `N` relate to presence and absence, respectively.  | 
-|  ChangeSpeciesTo|   | 
+|  ChangeSpeciesTo| Taxonomic verification column  | 
 |  CommonNameOther| Other common names?  | 
 |  Complete| Is this record complete?  | 
 |  AdditionalReferences| Additional reference indices.   | 
@@ -53,6 +51,21 @@ Data are available programmatically through R or can be downloaded from the `csv
 |  HostOrder| Host order  | 
 |  HostClass| Host class  | 
   
+
+
+### pathogen
+
+|  column name | description |
+|  --------    |  --------------- |
+| PathogenSpecies | Pathogen species.
+| Group | Pathogen group (e.g. Protozoa)|
+| AdditionalNotes | Some additional notes |
+| PathTaxID || Pathogen NCBI ID number|
+| PathGenus | Pathogen genus|
+| PathFamily| Pathogen family|
+| PathOrder | Pathogen order|
+| PathClass | Pathogen class|
+| PathKingdom | Pathogen kingdom |
 
 
 
@@ -87,6 +100,7 @@ created with getNCBI, so can be regenerated if/when new data are added.
 
 |  column name | description |
 |  --------    |  --------------- |
+|   PathogenSpecies| Pathogen species    |
 |   PathTaxID | NCBI taxonomic ID  |
 |   PathNCBIResolved |  is the pathogen found in NCBI   |
 |   PathGenus |  Pathogen genus  |
@@ -305,7 +319,6 @@ We believe `assocref` are links and citations for `nvpassoc`, but there are arou
 |   ERNv| EDWIP record number|
 |   HostSpecies| Host species|
 |   VirusType| DNA or RNA virus|
-|   Group| Viruses|
 |   PathogenSpecies| Viral family |
 |   Virus| Virus identity|
 |   HostStageInfected| Host stage infected|
@@ -317,6 +330,7 @@ We believe `assocref` are links and citations for `nvpassoc`, but there are arou
 |   ModificationDate| Modification date of entry (wrong)|
 |   ProvinceA| Canadian provinces where host-virus interaction occurs|
 |   PathogenValue| Is there value to the pathogen (can it be used as a control agent?)|
+|   Group| Viruses|
 |   HostTaxID| Host NCBI ID number|
 |   HostGenus| Host genus|
 |   HostFamily| Host family|
@@ -347,9 +361,22 @@ metadata that the other records have.
 |  --------    |  --------------- |
 |   RefCode| Index of reference  |
 |   ERNntr| EDWIP record number |
-|   Host| Host species |
-|   Pathogen| Pathogen species |
+|   HostSpecies| Host species |
+|   PathogenSpecies| Virus name |
 |   Citation| Citation for host-pathogen record |
+|   HostTaxID| Host NCBI ID number |
+|   HostGenus| Host genus |
+|   HostFamily| Host family |
+|   HostOrder| Host order |
+|   HostClass| Host class |
+|   PathTaxID| Pathogen NCBI ID number |
+|   PathGenus| Pathogen genus |
+|   PathFamily| Pathogen family |
+|   PathOrder| Pathogen order |
+|   PathClass| Pathogen class |
+|   PathKingdom| Pathogen kingdom |
+
+
   
   
 ### new_asso

@@ -5,7 +5,7 @@
 \alias{citation}
 \title{Citation information for a subset of host-pathogen interactions}
 \format{
-A data.frame with 1966 observations of 7 variables
+A data.frame with 1966 observations
 }
 \usage{
 data(citation)
@@ -22,9 +22,9 @@ variables are as follows:
   \item Reference. Actual citation
   \item CreationDate. Record creation date
   \item ModificationDate. Record modification date
-  \item ReadBy. 
-  \item GetIt. 
-  \item nvpCount. 
+  \item ReadBy. Comments about the reading and identity of reader 
+  \item GetIt. Notes on article acquisition    
+  \item nvpCount. Number of pathogens reported in the citation.
  }
 }
 \keyword{datasets}

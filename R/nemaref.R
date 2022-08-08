@@ -27,7 +27,7 @@
 #' @keywords datasets
 #' @name nemaref
 #' @usage data(nemaref)
-#' @format A data.frame with 338 observations of 5 variables
+#' @format A data.frame with 338 observations
 
 
 

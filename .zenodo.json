@@ -1,0 +1,97 @@
+{
+  "files": [
+    {
+      "links": {
+        "self": "https://zenodo.org/api/files/725e04cd-24e8-4dbb-9ab4-a0bc43c7c016/viralemergence/insectDisease-1.2.0.zip"
+      }, 
+      "checksum": "md5:80d9fb1f6ce7a3190c853acc83a88308", 
+      "bucket": "725e04cd-24e8-4dbb-9ab4-a0bc43c7c016", 
+      "key": "viralemergence/insectDisease-1.2.0.zip", 
+      "type": "zip", 
+      "size": 4001969
+    }
+  ], 
+  "owners": [
+    7136
+  ], 
+  "doi": "10.5281/zenodo.5821896", 
+  "stats": {
+    "version_unique_downloads": 2.0, 
+    "unique_views": 70.0, 
+    "views": 77.0, 
+    "version_views": 78.0, 
+    "unique_downloads": 2.0, 
+    "version_unique_views": 71.0, 
+    "volume": 8003938.0, 
+    "version_downloads": 2.0, 
+    "downloads": 2.0, 
+    "version_volume": 8003938.0
+  }, 
+  "links": {
+    "doi": "https://doi.org/10.5281/zenodo.5821896", 
+    "conceptdoi": "https://doi.org/10.5281/zenodo.5821895", 
+    "bucket": "https://zenodo.org/api/files/725e04cd-24e8-4dbb-9ab4-a0bc43c7c016", 
+    "conceptbadge": "https://zenodo.org/badge/doi/10.5281/zenodo.5821895.svg", 
+    "html": "https://zenodo.org/record/5821896", 
+    "latest_html": "https://zenodo.org/record/5821896", 
+    "badge": "https://zenodo.org/badge/doi/10.5281/zenodo.5821896.svg", 
+    "latest": "https://zenodo.org/api/records/5821896"
+  }, 
+  "conceptdoi": "10.5281/zenodo.5821895", 
+  "created": "2022-01-05T15:36:26.343161+00:00", 
+  "updated": "2022-01-06T01:48:51.319817+00:00", 
+  "conceptrecid": "5821895", 
+  "revision": 3, 
+  "id": 5821896, 
+  "metadata": {
+    "access_right_category": "success", 
+    "doi": "10.5281/zenodo.5821896", 
+    "description": "<p>Added unit tests, expanded README, <code>data-raw</code> folder with processing script to work with odd date issues and unicode characters, etc.</p>", 
+    "license": {
+      "id": "other-open"
+    }, 
+    "title": "viralemergence/insectDisease: v 1.2.0", 
+    "relations": {
+      "version": [
+        {
+          "count": 1, 
+          "index": 0, 
+          "parent": {
+            "pid_type": "recid", 
+            "pid_value": "5821895"
+          }, 
+          "is_last": true, 
+          "last_child": {
+            "pid_type": "recid", 
+            "pid_value": "5821896"
+          }
+        }
+      ]
+    }, 
+    "version": "1.2.0", 
+    "publication_date": "2022-01-05", 
+    "creators": [
+      {
+        "affiliation": "Louisiana State University", 
+        "name": "Tad Dallas"
+      }
+    ], 
+    "access_right": "open", 
+    "resource_type": {
+      "type": "software", 
+      "title": "Software"
+    }, 
+    "related_identifiers": [
+      {
+        "scheme": "url", 
+        "identifier": "https://github.com/viralemergence/insectDisease/tree/1.2.0", 
+        "relation": "isSupplementTo"
+      }, 
+      {
+        "scheme": "doi", 
+        "identifier": "10.5281/zenodo.5821895", 
+        "relation": "isVersionOf"
+      }
+    ]
+  }
+}

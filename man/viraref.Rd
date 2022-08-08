@@ -5,7 +5,7 @@
 \alias{viraref}
 \title{Citation information for host-virus interactions}
 \format{
-A data.frame with 2124 observations of 5 variables
+A data.frame with 2124 observations
 }
 \usage{
 data(viraref)

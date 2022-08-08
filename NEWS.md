@@ -1,7 +1,9 @@
 insectDisease 1.2.1
 ==============
 
-Reviewer comments came back. We have expanded the vignette and changed the README to better describe the data product in response to reviewer suggestions. Reviewers also suggested that we release documentation through `pkgdown`, as this is the most in vogue way of releasing docs. We will look into this. 
+Reviewer comments came back. Suggestions include some further README documentation, releasing the package through CRAN, updating Zenodo link (adding .zenodo.json file, and changing license. 
+
+
 
 
 insectDisease 1.2.0

@@ -25,46 +25,47 @@ These data are identical to the `nematode` data, as far as we can tell.
 }
 \details{
 \itemize{
-  \item ERNnew
-  \item HostSpecies
-  \item HostOrder
-  \item HostFamily
-  \item HostHabitat
-  \item HostFood
-  \item HostGenYr
-  \item PathSpecies
-  \item PathGroup
-  \item PathHighTaxon
-  \item PathLowTaxon
-  \item StageInf
-  \item TissueInfected
-  \item Field
-  \item Country
-  \item IntermediateHost
-  \item Citation
-  \item MoreInfo
-  \item Who
-  \item CreationDate
-  \item ModificationDate
-  \item StainFCB
+\item ERNnew. EDWIP record number
+\item    HostSpecies. Host species  
+\item    HostOrder. Host order  
+\item    HostFamily. Host family 
+\item    HostHabitat. Habitat type of host 
+\item    HostFood. What does the host eat? 
+\item    HostGenYr. Number of generations of hosts per year
+\item    PathSpecies. Nematode species 
+\item    PathGroup. Pathogen group (fungi, protozoa, nematode, etc.) 
+\item    PathHighTaxon. Pathogen taxonomic information (mostly `NA`)  
+\item    PathLowTaxon. Pathogen taxonomic information (mostly `NA`) 
+\item    StageInf. Host life stage infected 
+\item    TissueInfected. Host tissue infected 
+\item    Field. Was this a field or lab tested association? 
+\item    Country. Country of host-pathogen association 
+\item    IntermediateHost .  Information on intermediate hosts 
+\item    Citation. Citation for host-pathogen record 
+\item    MoreInfo. Additional comments or notes  
+\item    Who. Identity of researcher who entered data 
+\item    CreationDate. Record creation date 
+\item    ModificationDate. Record modification date 
+\item    StainFCB . takes values: Adult, egg, larvae, pupa   
  }
 
 \itemize{
-  \item ERNnem. EDWIP record number
-  \item Host
-  \item Nematode
-  \item NemaOrder
-  \item NemaFamily
-  \item NemaStrain
-  \item StageInfected
-  \item TissueInfected
-  \item FieldOrLab
-  \item Country
-  \item SoilType
-  \item AssociatedBacterium
-  \item IntermediateHost
-  \item CreationDate
-  \item ModificationDate
+\item ERNnem .   EDWIP record identifier
+\item  Host. Host species
+\item  Nematode. Nematode parasite species
+\item  NemaOrder. Pathogen order
+\item  NemaFamily. Pathogen family 
+\item  NemaStrain. Pathogen strain 
+\item  StageInfected. Host stage infected 
+\item  TissueInfected. Host tissue infected 
+\item  FieldOrLab. Was this a field or lab tested association? 
+\item  Country. What country did the interaction occur in? 
+\item  SoilType. Type of soil where interaction was observed 
+\item  AssociatedBacterium. Associated bacterium
+\item  IntermediateHost. Is there an intermediate host present? 
+\item  CreationDate. Date of initial data entry
+\item  ModificationDate. Modification date of entry 
+\item  Group. all just say 'nematode'  
  }
 }
 \keyword{datasets}

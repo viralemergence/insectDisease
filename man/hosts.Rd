@@ -5,7 +5,7 @@
 \alias{hosts}
 \title{Detailed information on insect host species}
 \format{
-A data.frame with 4392 observations of 18 variables
+A data.frame with 4392 observations
 }
 \usage{
 data(hosts)
@@ -19,8 +19,6 @@ Data on host species taxonomy, habitat, diet preferences, and distribution (in C
   \item DateEntered. Date of initial data entry
   \item Habitat. Habitat of host
   \item HostSpecies. Host species
-  \item HostOrder. Host order
-  \item HostFamily. Host family
   \item Synonyms. Other names for the host species
   \item Food. What does the host eat?
   \item genYr. Number of generations per year. Can be <1, =1, >1, or some combination of these.
@@ -32,7 +30,7 @@ Data on host species taxonomy, habitat, diet preferences, and distribution (in C
   \item InCanada. Citations for presence/absence of host in Canada. Numeric indices can be
     related to the citations in the `citations.rda` data file. `Y` and `N` 
     relate to presence and absence, respectively.
-  \item ChangeSpeciesTo. 
+  \item ChangeSpeciesTo. Taxonomic verification column
   \item CommonNameOther. Other common names?
   \item Complete. Is this record complete?
   \item AdditionalReferences. Additional reference indices. 

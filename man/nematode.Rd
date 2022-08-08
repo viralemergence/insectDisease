@@ -5,7 +5,7 @@
 \alias{nematode}
 \title{Information on nematode parasite occurrences}
 \format{
-A data.frame with 234 observations of 15 variables
+A data.frame with 234 observations
 }
 \usage{
 data(nematode)
@@ -15,7 +15,7 @@ Host associations for nematode parasites
 }
 \details{
 \itemize{
-  \item ERNnem
+  \item ERNnem.  EDWIP record identifier
   \item HostSpecies. Host species
   \item PathogenSpecies. Nematode parasite species
   \item PathogenStrain. Nematode parasite strain

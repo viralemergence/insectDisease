@@ -28,6 +28,6 @@
 #' @keywords datasets
 #' @name viraref
 #' @usage data(viraref)
-#' @format A data.frame with 2124 observations of 5 variables
+#' @format A data.frame with 2124 observations 
 
 "viraref"

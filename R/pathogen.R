@@ -19,6 +19,6 @@
 #' @keywords datasets
 #' @name pathogen
 #' @usage data(pathogen)
-#' @format A data.frame with 2041 observations of 5 variables
+#' @format A data.frame with 2041 observations 
 
 "pathogen"

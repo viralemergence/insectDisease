@@ -5,7 +5,7 @@
 \alias{assocref}
 \title{Insect host-parasite interactions}
 \format{
-A data.frame with 11005 observations of 5 variables
+A data.frame with 11005 observations
 }
 \usage{
 data(assocref)

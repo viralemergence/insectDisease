@@ -5,7 +5,7 @@
 \alias{nemaref}
 \title{Citation information for host-nematode interactions}
 \format{
-A data.frame with 338 observations of 5 variables
+A data.frame with 338 observations
 }
 \usage{
 data(nemaref)

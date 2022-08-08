@@ -19,7 +19,7 @@
 #' @keywords datasets
 #' @name citation
 #' @usage data(citation)
-#' @format A data.frame with 1966 observations of 7 variables
+#' @format A data.frame with 1966 observations
 
 
 

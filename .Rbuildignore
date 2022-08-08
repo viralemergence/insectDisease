@@ -9,3 +9,4 @@ csv
 CONDUCT.md
 README.Rmd
 data-raw
+.zenodo.json
