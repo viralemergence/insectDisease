@@ -10,3 +10,5 @@ CONDUCT.md
 README.Rmd
 data-raw
 .zenodo.json
+cran-comments.md
+^CRAN-SUBMISSION$

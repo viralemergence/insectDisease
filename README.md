@@ -1,12 +1,11 @@
-insectDisease
-=======
+### insectDisease
+
 
 [![R build status](https://github.com/viralemergence/insectDisease/workflows/R-CMD-check/badge.svg)](https://github.com/viralemergence/insectDisease/actions)
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.5821896.svg)](https://doi.org/10.5281/zenodo.5821896)
 
-
-## insectDisease: Programmatically access insect disease data from the Ecological Database of the World's Insect Pathogens (EDWIP)
+### insectDisease: Programmatically access insect disease data from the Ecological Database of the World's Insect Pathogens (EDWIP)
 
 See preprint ([available here](https://ecoevorxiv.org/yd3x5/))
 
@@ -15,12 +14,7 @@ This is a database of known pathogens of many species of insects and other arthr
 
 Data are available programmatically through R or can be downloaded from the `csv` folder and used outside of R. The data consist of a set of files that maintain the original structure of the EDWIP data resource, with the main files serving to detail the interactions between insect hosts and nematode (`?nematode` or `csv/nematode.csv`), viral ((`?viruses` or `csv/viruses.csv`) and non-viral pathogens such as bacteria and protozoans (`?nvpassoc` or `csv/nvpassoc.csv`). There are also data on negative associations, which are failed inoculation attempts (`?negative` or `csv/negative.csv`) and represent "true zeros", which are rare data. Other information on citations (`assocref`, `citation`, `viraref` and `noassref`) are provided as well as host (`hosts`) and pathogne (`pathogen`) trait data. Cached versions of host and pathogen taxonomy are also included (`hostTaxonomy` and `pathTaxonomy`) and will be updated (along with the taxonomic information within each data product) with every release of the data. 
 
-
-
-
-
 ---
-
 
 ## The Data
 
