@@ -4,3 +4,4 @@ Meta
 manuscript/comments
 manuscript/webVersion
 manuscript/coverLetter
+^cran-comments\.md$
