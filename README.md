@@ -22,26 +22,26 @@ Data are available programmatically through R or can be downloaded from the `csv
 |  column name | description |
 |  --------    |  --------------- |
 |   RecordNo | Sequence from 1:nrow(hosts)  | 
-|   DateEntered| Date of initial data entry  | 
-|   Habitat| Habitat of host  | 
-|   HostSpecies| Host species  | 
-|   Synonyms| Other names for the host species  | 
-|   Food| What does the host eat?  | 
-|   genYr| Number of generations per year| Can be <1, =1, >1, or some combination of these   | 
-|   CommonName| Host common name   | 
-|   ProvinceI| Canadian provinces where host has been found.  | 
-|   InsectStatus| Is the insect a pest, beneficial, endangered, unknown? Factor variable with 7 unique values  | 
-|  ModificationDate| Modification date of entry  | 
-|  InCanada| Citations for presence/absence of host in Canada. Numeric indices can be     related to the citations in the `citations.rda` data file. `Y` and `N` relate to presence and absence, respectively.  | 
-|  ChangeSpeciesTo| Taxonomic verification column  | 
-|  CommonNameOther| Other common names?  | 
-|  Complete| Is this record complete?  | 
-|  AdditionalReferences| Additional reference indices.   | 
-|  HostTaxID| Host NCBI ID number  | 
-|  HostGenus| Host genus  | 
-|  HostFamily| Host family  | 
-|  HostOrder| Host order  | 
-|  HostClass| Host class  | 
+|   DateEntered | Date of initial data entry  | 
+|   Habitat | Habitat of host  | 
+|   HostSpecies | Host species  | 
+|   Synonyms | Other names for the host species  | 
+|   Food | What does the host eat?  | 
+|   genYr | Number of generations per year| Can be <1, =1, >1, or some combination of these   | 
+|   CommonName | Host common name   | 
+|   ProvinceI | Canadian provinces where host has been found.  | 
+|   InsectStatus | Is the insect a pest, beneficial, endangered, unknown? Factor variable with 7 unique values  | 
+|  ModificationDate | Modification date of entry  | 
+|  InCanada | Citations for presence/absence of host in Canada. Numeric indices can be     related to the citations in the `citations.rda` data file. `Y` and `N` relate to presence and absence, respectively.  | 
+|  ChangeSpeciesTo | Taxonomic verification column  | 
+|  CommonNameOther | Other common names?  | 
+|  Complete | Is this record complete?  | 
+|  AdditionalReferences | Additional reference indices.   | 
+|  HostTaxID | Host NCBI ID number  | 
+|  HostGenus | Host genus  | 
+|  HostFamily | Host family  | 
+|  HostOrder | Host order  | 
+|  HostClass | Host class  | 
   
 
 
@@ -52,7 +52,7 @@ Data are available programmatically through R or can be downloaded from the `csv
 | PathogenSpecies | Pathogen species.
 | Group | Pathogen group (e.g. Protozoa)|
 | AdditionalNotes | Some additional notes |
-| PathTaxID || Pathogen NCBI ID number|
+| PathTaxID | Pathogen NCBI ID number|
 | PathGenus | Pathogen genus|
 | PathFamily| Pathogen family|
 | PathOrder | Pathogen order|
@@ -111,27 +111,27 @@ created with getNCBI, so can be regenerated if/when new data are added.
 
 |  column name | description |
 |  --------    |  --------------- |
-|   ERNntr| EDWIP record number    |
-|   PathogenSpecies| Pathogen species    |
-|   DateEntered| Date of initial data entry    |
-|   DateModified| Modification date of entry    |
-|   LogMaxDose| Dosage, in many different units    |
-|   HostStageTested| Host stage exposed to pathogen (e.g. Larvae, Nymph, Adult)    |
-|   HostSpecies| Host species examined    |
-|   Group| Pathogen group (e.g. viruses)     |
-|   HighTaxon| General classification of pathogen (e.g. DNA virus)    |
-|   LowTaxon| More specific classification of pathogen (e.g. Baculoviridae)    |
-|   HostTaxID| Host NCBI ID number    |
-|   HostGenus| Host genus    |
-|   HostFamily| Host family    |
-|   HostOrder| Host order    |
-|   HostClass| Host class    |
-|   PathTaxID| Pathogen NCBI ID number    |
-|   PathGenus| Pathogen genus    |
-|   PathFamily| Pathogen family    |
-|   PathOrder| Pathogen order    |
-|   PathClass| Pathogen class    |
-|   PathKingdom| Pathogen kingdom    |
+|   ERNntr | EDWIP record number    |
+|   PathogenSpecies | Pathogen species    |
+|   DateEntered | Date of initial data entry    |
+|   DateModified | Modification date of entry    |
+|   LogMaxDose | Dosage, in many different units    |
+|   HostStageTested | Host stage exposed to pathogen (e.g. Larvae, Nymph, Adult)    |
+|   HostSpecies | Host species examined    |
+|   Group | Pathogen group (e.g. viruses)     |
+|   HighTaxon | General classification of pathogen (e.g. DNA virus)    |
+|   LowTaxon | More specific classification of pathogen (e.g. Baculoviridae)    |
+|   HostTaxID | Host NCBI ID number    |
+|   HostGenus | Host genus    |
+|   HostFamily | Host family    |
+|   HostOrder | Host order    |
+|   HostClass | Host class    |
+|   PathTaxID | Pathogen NCBI ID number    |
+|   PathGenus | Pathogen genus    |
+|   PathFamily | Pathogen family    |
+|   PathOrder | Pathogen order    |
+|   PathClass | Pathogen class    |
+|   PathKingdom | Pathogen kingdom    |
 
 
 
@@ -141,22 +141,22 @@ created with getNCBI, so can be regenerated if/when new data are added.
 
 |  column name | description |
 |  --------    |  --------------- |
-|   ERNnem| EDWIP record number  |
-|   refCode| Index of reference obtained from `nematode` data frame  |
-|   Reference| Citation for host-nematode record  |
-|   HostSpecies| Host species  |
-|   PathogenSpecies| Nematode parasite species  |
-|   HostTaxID| Host NCBI ID number  |
-|   HostGenus| Host genus  |
+|   ERNnem | EDWIP record number  |
+|   refCode | Index of reference obtained from `nematode` data frame  |
+|   Reference | Citation for host-nematode record  |
+|   HostSpecies | Host species  |
+|   PathogenSpecies | Nematode parasite species  |
+|   HostTaxID | Host NCBI ID number  |
+|   HostGenus | Host genus  |
 |   HostFamily| Host family  |
-|   HostOrder| Host order  |
-|   HostClass| Host class  |
-|   PathTaxID| Pathogen NCBI ID number  |
-|   PathGenus| Pathogen genus  |
-|   PathFamily| Pathogen family  |
-|   PathOrder| Pathogen order  |
-|   PathClass| Pathogen class  |
-|   PathKingdom| Pathogen kingdom  |
+|   HostOrder | Host order  |
+|   HostClass | Host class  |
+|   PathTaxID | Pathogen NCBI ID number  |
+|   PathGenus | Pathogen genus  |
+|   PathFamily | Pathogen family  |
+|   PathOrder | Pathogen order  |
+|   PathClass | Pathogen class  |
+|   PathKingdom | Pathogen kingdom  |
 
 
 ### nematode

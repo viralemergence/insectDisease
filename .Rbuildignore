@@ -8,7 +8,9 @@ csv
 .Renviron
 CONDUCT.md
 README.Rmd
+README.md
 data-raw
 .zenodo.json
 cran-comments.md
 ^CRAN-SUBMISSION$
+LICENSE
