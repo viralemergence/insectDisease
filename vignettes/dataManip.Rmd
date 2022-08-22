@@ -215,6 +215,8 @@ We can then make the bubble plot, which describes the number of unique hosts, pa
 
 ```{r}
 
+oldpar <- par(mar=c(4,4,0.5,0.5))
+
 bubble <- edwip4 %>%
   dplyr::group_by(Group) %>% 
   dplyr::summarise(n=length(HostSpecies), 
@@ -307,6 +309,8 @@ corrplot::corrplot.mixed(cor(tmp, method='spearman'),
 	addgrid.col=grey(0.5,0.5), 
 	mar=c(0,0,1,0)
 )
+
+par(oldpar) 
 ```
 
 
