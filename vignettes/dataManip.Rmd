@@ -25,6 +25,7 @@ library(plyr)
 library(dplyr)
 library(corrplot)
 knitr::opts_chunk$set(fig.width=6, fig.height=6) 
+oldpar <- par(mar=c(4,4,0.5,0.5))
 
 ```
 
@@ -215,7 +216,7 @@ We can then make the bubble plot, which describes the number of unique hosts, pa
 
 ```{r}
 
-oldpar <- par(mar=c(4,4,0.5,0.5))
+
 
 bubble <- edwip4 %>%
   dplyr::group_by(Group) %>% 

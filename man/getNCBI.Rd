@@ -17,3 +17,7 @@ a data.frame with nrow == length(species)
 \description{
 Process through a vector of species names to obtain taxonomic data
 }
+\examples{
+  mouse <- getNCBI("Peromyscus leucopus")
+  worm  <- getNCBI("Ascaris lumbricoides", host=FALSE)
+}
