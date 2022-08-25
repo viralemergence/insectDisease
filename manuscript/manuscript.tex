@@ -49,27 +49,6 @@
  \date{ \small *Corresponding author: tad.a.dallas@gmail.com}
 
 
-%%% Target journal
-% Ecography (software note) -- maybe we shouldn't re-submit and pay $3000 to publish? 
-% Journal of Open Source Software 
-% Ecology (data paper)
-% 
-
-
-%%% Potential reviewers
-% Lewis Bartlett  lewis.Bartlett@uga.edu UGA
-% Philipp Boersch  pboesu@gmail.com   British Trust for Ornithology
-% Ben Longdon b.longdon2@exeter.ac.uk Uni of Exeter
-% Susan Braxton braxton@illinois.edu U Illinois (could be COI with Onstad though)
-% 
-% 
-
-%%% Editors
-% Thiago Rangel
-% 
-% 
-
-
 
 \begin{document}
 
@@ -90,26 +69,15 @@
 
 
 \clearpage
-\setstretch{1.35}
+\setstretch{1.25}
 \linenumbers
 
+\noindent \texttt{insectDisease}: programmatic access to the \textit{Ecological Database of the World's Insect Pathogens}
 
 
 
 \subsection*{Abstract}
 Curated databases of species interactions are instrumental to exploring and understanding the spatial distribution of species and their biotic interactions. In the process of conducting such projects, data development and curation efforts may give rise to a data product with utility beyond the scope of the original work, but which becomes inaccessible over time. Data describing insect host-pathogen interactions are fairly rare, and should thus be preserved and curated with appropriate metadata. Here, we introduce the \texttt{insectDisease} $R$ package, a mechanism for curating, updating, and distributing data from the \textit{Ecological Database of the World's Insect Pathogens}, a database of insect host-pathogen associations, including attempted inoculations and infection outcomes for insect hosts and pathogens (bacteria, fungi, nematodes, protozoans, and viruses). This dataset has been utilized for several projects since its inception, but without a well-defined, curated and permanent repository, its existence and access have been limited to word-of-mouth connections. The current effort presented here aims to provide a means to preserve, augment, and disseminate the database in a documented and versioned format. This project is an example of the type of effort that will be necessary to maintain valuable databases after the original funding disappears.
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -133,6 +101,8 @@ Curated databases of species interactions are instrumental to exploring and unde
 
 
 \clearpage
+
+
 \setstretch{1.9}
 \section*{Introduction}
 
@@ -160,7 +130,7 @@ Initially created in 1992, the data have been updated prior to 2000, but no clea
 
 
 \subsection*{Solution statement}
-To preserve these data in a format that is well-documented, openly accessible, versioned, and flexible for continued development, we created the \texttt{insectDisease} R package. In doing so, we implicitly adhere to the FAIR (Findable, Accessible, Interoperable, Resuable) guidelines for managing data \citep{wilkinson2016}. By hosting the data openly on GitHub, and versioning releases of the data with a permanent identifier (DOI), we ensure the longevity and versioned curation of this data resource. Finally, the incorporation of taxonomic data through \texttt{taxize} \citep{chamberlain2013} ensures that host and pathogen taxonomic names are updated periodically to accommodate for dynamic data or changing taxonomies. 
+To preserve these data in a format that is well-documented, openly accessible, versioned, and flexible for continued development, we created the \texttt{insectDisease} R package. In doing so, we implicitly adhere to the FAIR (Findable, Accessible, Interoperable, Resuable) guidelines for managing data \citep{wilkinson2016}. By hosting the data openly on GitHub (\texttt{https://github.com/viralemergence/insectDisease/}) -- versioning releases of the data with a permanent identifier (DOI) on Zenodo -- and on CRAN (\texttt{https://cran.r-project.org/web/packages/insectDisease/index.html}), we ensure the longevity and versioned curation of this data resource. Finally, the incorporation of taxonomic data through \texttt{taxize} \citep{chamberlain2013} ensures that host and pathogen taxonomic names are updated periodically to accommodate for dynamic data or changing taxonomies. 
 
 
 
@@ -213,7 +183,7 @@ The first, and perhaps most important, novel augmentation, is the resolution of 
 
 
 \paragraph*{}
-Maintaining the data dynamically as described above allows users to access the data programmatically or as versioned flatfiles (i.e., \texttt{.csv} files). However, for users who do not wish to download the entire data resource, and simply want to quickly query a static version of the database, there is also a standalone web user interface (\texttt{https://edwip.ecology.uga.edu/}) that allows users to easily subset and explore the data. The web interface serves arguably the most important subset of the overall data (data files \texttt{nematode}, \texttt{viruses},\texttt{nvpassoc}, \texttt{negative}, and \texttt{hosts}). This interface allows users to quickly query based on host or parasite taxonomy as a dropdown list. This is perhaps more useful as a teaching tool or for initial exploration of the data, while the programmatic interface and dynamic data may be more useful for more rigorous analysis. This version of the EDWIP data will also only be deployed with a single static copy of the data, such that users wanting to benefit from versioned and dynamic data will need to access the data through the GitHub repository. Future efforts to integrate the web interface and the existing dynamic data structure will be explored, but this is not currently integrated. 
+Maintaining the data dynamically as described above allows users to access the data programmatically or as versioned flatfiles (i.e., \texttt{.csv} files). However, for users who do not wish to download the entire data resource, and simply want to quickly query a static version of the database, there is also a standalone web user interface (\texttt{https://edwip.ecology.uga.edu/}) that allows users to easily subset and explore the data. The web interface serves arguably the most important subset of the overall data (data files \texttt{nematode}, \ \texttt{viruses}, \ \texttt{nvpassoc}, \ \texttt{negative}, and \ \texttt{hosts}). This interface allows users to quickly query based on host or parasite taxonomy as a dropdown list. This is perhaps more useful as a teaching tool or for initial exploration of the data, while the programmatic interface and dynamic data may be more useful for more rigorous analysis. This version of the EDWIP data will also only be deployed with a single static copy of the data, such that users wanting to benefit from versioned and dynamic data will need to access the data through the GitHub repository. Future efforts to integrate the web interface and the existing dynamic data structure will be explored, but this is not currently integrated. 
 
 
 
@@ -239,8 +209,8 @@ While ecological data are growing in availability, size, accessibility, and stab
 
 
 \subsection*{Data accessibility}
-The \texttt{insectDisease} R package is currently available on GitHub \\ (github.com/viralemergence/insectDisease), with `.csv' files in the csv directory for long-term data stability. GitHub releases of the data ensure versioning is maintained and all versions are accessible. At the time of this writing, the current version is 1.2.0 (available at \\ \texttt{https://github.com/viralemergence/insectDisease/releases/tag/1.2.0}). \\
-Releases are given a DOI through integration with Zenodo (available at \\ \texttt{https://doi.org/10.5281/zenodo.5821896}). 
+The \texttt{insectDisease} R package is currently available on GitHub \\ (github.com/viralemergence/insectDisease), with `.csv' files in the csv directory for long-term data stability. GitHub releases of the data ensure versioning is maintained and all versions are accessible. At the time of this writing, the current version is 1.2.1 (available at \\ \texttt{https://github.com/viralemergence/insectDisease/releases/tag/1.2.1}). \\
+Releases are given a DOI through integration with Zenodo (available at \\ \texttt{https://doi.org/10.5281/zenodo.5821896}). The package (release version 1.2.1) is also available on CRAN \\ \texttt{https://cran.r-project.org/web/packages/insectDisease/index.html}. 
  
 
 
@@ -309,7 +279,7 @@ Releases are given a DOI through integration with Zenodo (available at \\ \textt
    \texttt{hosts} & 4392  & 21  & insect host trait data\\   
    \texttt{hostTaxonomy} & 4489  & 7  & host taxonomic data updated with the \texttt{getNCBI()} function \\
    \texttt{negative} & 529  & 21  & information on negative host-pathogen associations  \\
-   \texttt{nemaref} & 338  & 5  & references from nematode pathogens  \\
+   \texttt{nemaref} & 338  & 16  & references from nematode pathogens  \\
    \texttt{nematode} & 234  & 24  & host-nematode interaction data \\   
    \texttt{new\_asso} & 19  & 25  & likely a training document (perhaps do not use)  \\ 
    \texttt{noassref} & 569  & 16  &  references for some host-pathogen associations  \\
@@ -317,7 +287,7 @@ Releases are given a DOI through integration with Zenodo (available at \\ \textt
    \texttt{pathogen} & 2041  & 9  &  pathogen trait data  \\   
    \texttt{pathTaxonomy} & 2282  & 7  & pathogen taxonomic data updated with the \texttt{getNCBI()} function  \\
    \texttt{viraref} & 2124  & 16  & references from viral infections  \\   
-   \texttt{viruses} & 1659  & 25  & host-viral interaction data  \\      
+   \texttt{viruses} & 1659  & 26  & host-viral interaction data  \\      
   \hline
 \end{tabular}
 \end{table}

@@ -1,5 +1,7 @@
 # insectDisease
 
+[![CRAN status](https://www.r-pkg.org/badges/version/insectDisease)](https://cran.r-project.org/package=insectDisease)
+
 [![R build status](https://github.com/viralemergence/insectDisease/workflows/R-CMD-check/badge.svg)](https://github.com/viralemergence/insectDisease/actions)
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.5821896.svg)](https://doi.org/10.5281/zenodo.5821896)
