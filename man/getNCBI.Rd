@@ -18,6 +18,8 @@ a data.frame with nrow == length(species)
 Process through a vector of species names to obtain taxonomic data
 }
 \examples{
+ \dontrun{
   mouse <- getNCBI("Peromyscus leucopus")
   worm  <- getNCBI("Ascaris lumbricoides", host=FALSE)
+ }
 }

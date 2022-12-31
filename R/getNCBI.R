@@ -8,8 +8,10 @@
 #' @return a data.frame with nrow == length(species) 
 #' @name getNCBI
 #' @examples
+#'  \dontrun{
 #'   mouse <- getNCBI("Peromyscus leucopus")
 #'   worm  <- getNCBI("Ascaris lumbricoides", host=FALSE)
+#'  }
 #' @importFrom taxize classification get_uid
 #' @importFrom stats na.omit 
 #' @importFrom utils tail
