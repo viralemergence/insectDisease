@@ -1,3 +1,9 @@
+insectDisease 1.2.2
+==============
+
+fixed example in `getNCBI` function (was not broken, but now it's more not broken).
+
+
 insectDisease 1.2.1
 ==============
 
