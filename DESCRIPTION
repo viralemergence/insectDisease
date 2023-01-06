@@ -17,6 +17,6 @@ Suggests:
 License: GPL-3
 LazyData: true
 BugReports: https://github.com/viralemergence/insectDisease/issues/
-RoxygenNote: 7.2.1
+RoxygenNote: 7.2.3
 VignetteBuilder: knitr
 Encoding: UTF-8

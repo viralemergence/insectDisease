@@ -30,20 +30,26 @@ getNCBI <- function(species, host=TRUE){
   species <- gsub(" cf\\.","", species)
   species <- gsub(" sp\\.","", species)
   species <- gsub(" gen\\.","",species)
-  u <- taxize::get_uid(species, 
+  u <- try(taxize::get_uid(species, 
     rank_filter = c("subspecies", "species", "genus", "family", "order", "class"), 
-      ask = FALSE)
-  c <- taxize::classification(u, batch_size=50, max_tries=500)
+      ask = FALSE))
+  if(inherits(u, 'try-error')){
+    stop('NCBI resource is unavailable. Try again later.')
+  }
+  cc <- try(taxize::classification(u, batch_size=50, max_tries=500))
+  if(inherits(cc, 'try-error')){
+    stop('NCBI resource is unavailable. Try again later.')
+  }
   n <- !is.na(u)
   attributes(u) <- NULL
-  s <- unlist(lapply(c, function(x){tryCatch(x$name[[which(x$rank=="species")]], error = function(e) {NA})}), use.names = FALSE)
-  g <- unlist(lapply(c, function(x){tryCatch(x$name[[which(x$rank=="genus")]], error = function(e) {NA})}), use.names = FALSE)
-  f <- unlist(lapply(c, function(x){tryCatch(x$name[[which(x$rank=="family")]], error = function(e) {NA})}), use.names = FALSE)
-  o <- unlist(lapply(c, function(x){tryCatch(x$name[[which(x$rank=="order")]], error = function(e) {NA})}), use.names = FALSE)
-  c2 <- unlist(lapply(c, function(x){tryCatch(x$name[[which(x$rank=="class")]], error = function(e) {NA})}), use.names = FALSE)
-  k <- unlist(lapply(c, function(x){tryCatch(x$name[[which(x$rank=="kingdom")]], error = function(e) {NA})}), use.names = FALSE)  
+  s <- unlist(lapply(cc, function(x){tryCatch(x$name[[which(x$rank=="species")]], error = function(e) {NA})}), use.names = FALSE)
+  g <- unlist(lapply(cc, function(x){tryCatch(x$name[[which(x$rank=="genus")]], error = function(e) {NA})}), use.names = FALSE)
+  f <- unlist(lapply(cc, function(x){tryCatch(x$name[[which(x$rank=="family")]], error = function(e) {NA})}), use.names = FALSE)
+  o <- unlist(lapply(cc, function(x){tryCatch(x$name[[which(x$rank=="order")]], error = function(e) {NA})}), use.names = FALSE)
+  c2 <- unlist(lapply(cc, function(x){tryCatch(x$name[[which(x$rank=="class")]], error = function(e) {NA})}), use.names = FALSE)
+  k <- unlist(lapply(cc, function(x){tryCatch(x$name[[which(x$rank=="kingdom")]], error = function(e) {NA})}), use.names = FALSE)  
   levels <- c("species", "genus", "family", "order", "class")
-  u <- unlist(lapply(c, function(x){
+  u <- unlist(lapply(cc, function(x){
     tryCatch(tail(na.omit(x[x$rank %in% levels,'id']),1), 
       error = function(e) {NA})}), use.names = FALSE)
   
