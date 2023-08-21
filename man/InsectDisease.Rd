@@ -3,6 +3,8 @@
 \docType{package}
 \name{InsectDisease}
 \alias{InsectDisease}
+\alias{_PACKAGE}
+\alias{insectDisease-package}
 \title{InsectDisease.}
 \description{
 This package provides a `R` workspace with insect disease database data already
@@ -27,4 +29,15 @@ Center for Economic Entomology, Illinois Natural History Survey
 
 Susan Braxton, Science & Technology Librarian
 Milner Library, Illinois State University
+}
+\seealso{
+Useful links:
+\itemize{
+  \item Report bugs at \url{https://github.com/viralemergence/insectDisease/issues/}
+}
+
+}
+\author{
+\strong{Maintainer}: Tad Dallas \email{tad.a.dallas@gmail.com}
+
 }

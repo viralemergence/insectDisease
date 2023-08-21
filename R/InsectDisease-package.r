@@ -1,7 +1,8 @@
 #' InsectDisease.
 #' 
 #' @name InsectDisease
-#' @docType package
+#' @aliases insectDisease-package
+#' 
 #' @description This package provides a `R` workspace with insect disease database data already
 #' present. Data are visible by using the R command ls("package:InsectDisease")`, and individual
 #' data frames can be imported to your local workspace by using the command `data(NAMEOFDATA)`
@@ -26,10 +27,5 @@
 #' Milner Library, Illinois State University
 #'
 #'
+"_PACKAGE"
 
-
-
-
-
-
-NULL
